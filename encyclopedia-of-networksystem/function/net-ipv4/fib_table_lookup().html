@@ -1,0 +1,329 @@
+<!DOCTYPE html> <html><head>
+		<title>fib_table_lookup()</title>
+		<base href="../../../">
+		<meta id="root-path" root-path="../../../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="NetSys_Obsidian - fib_table_lookup()">
+		<meta property="og:title" content="fib_table_lookup()">
+		<meta property="og:description" content="NetSys_Obsidian - fib_table_lookup()">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="encyclopedia-of-networksystem/function/net-ipv4/fib_table_lookup().html">
+		<meta property="og:image" content="lib/media/pasted-image-20240904095723-1.png">
+		<meta property="og:site_name" content="NetSys_Obsidian">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/other-plugins.css"></noscript><link rel="stylesheet" href="lib/styles/theme.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/supported-plugins.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript><link rel="preload" href="lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/snippets.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon ctp-latte ctp-mocha ctp-accent-light-sapphire ctp-accent-rosewater anuppuccin-accent-toggle anp-callout-color-toggle anp-custom-checkboxes anp-speech-bubble anp-codeblock-numbers anp-h1-red anp-h2-peach anp-h3-green anp-h4-teal anp-h5-lavender anp-h6-mauve anp-bold-red anp-italic-green anp-highlight-yellow anp-colorful-frame anp-file-icons anp-collapse-folders anp-full-rainbow-color-toggle anp-background-image-toggle rainbow-repeat-11 rainbow-color-1-mauve rainbow-color-2-flamingo rainbow-color-3-rosewater rainbow-color-4-red rainbow-color-5-peach rainbow-color-6-yellow rainbow-color-7-green rainbow-color-8-teal rainbow-color-9-sky rainbow-color-10-blue rainbow-color-11-lavender ctp-atom-light ctp-material-mint-dark code-styler code-styler-style-inline code-styler-gutter-highlight mk-readable-line mk-folder-lines mk-spaces-enabled mk-inline-context-enabled mk-flow-seamless"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles"></style><pre class="frontmatter language-yaml" tabindex="0" style="display: none;"><code class="language-yaml is-loaded"><span class="token key atrule">Parameter</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> fib_table
+  <span class="token punctuation">-</span> flowi4
+  <span class="token punctuation">-</span> fib_result
+  <span class="token punctuation">-</span> int
+<span class="token key atrule">Return</span><span class="token punctuation">:</span> int
+<span class="token key atrule">Location</span><span class="token punctuation">:</span> /net/ipv4/fib_trie.c</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="fib_table_lookup()"><p dir="auto">fib_table_lookup()</p></h1><div class="el-pre"><pre class="language-c" tabindex="0"><code data-line="0" class="language-c is-loaded"><span class="token comment">/* should be called with rcu_read_lock */</span>
+<span class="token keyword">int</span> <span class="token function">fib_table_lookup</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">fib_table</span> <span class="token operator">*</span>tb<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">flowi4</span> <span class="token operator">*</span>flp<span class="token punctuation">,</span>
+             <span class="token keyword">struct</span> <span class="token class-name">fib_result</span> <span class="token operator">*</span>res<span class="token punctuation">,</span> <span class="token keyword">int</span> fib_flags<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">struct</span> <span class="token class-name">trie</span> <span class="token operator">*</span>t <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">trie</span> <span class="token operator">*</span><span class="token punctuation">)</span> tb<span class="token operator">-&gt;</span>tb_data<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_IP_FIB_TRIE_STATS</span></span>
+    <span class="token keyword">struct</span> <span class="token class-name">trie_use_stats</span> __percpu <span class="token operator">*</span>stats <span class="token operator">=</span> t<span class="token operator">-&gt;</span>stats<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+    <span class="token keyword">const</span> t_key key <span class="token operator">=</span> <span class="token function">ntohl</span><span class="token punctuation">(</span>flp<span class="token operator">-&gt;</span>daddr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">struct</span> <span class="token class-name">key_vector</span> <span class="token operator">*</span>n<span class="token punctuation">,</span> <span class="token operator">*</span>pn<span class="token punctuation">;</span>
+    <span class="token keyword">struct</span> <span class="token class-name">fib_alias</span> <span class="token operator">*</span>fa<span class="token punctuation">;</span>
+    <span class="token keyword">unsigned</span> <span class="token keyword">long</span> index<span class="token punctuation">;</span>
+    t_key cindex<span class="token punctuation">;</span>
+  
+    pn <span class="token operator">=</span> t<span class="token operator">-&gt;</span>kv<span class="token punctuation">;</span>
+    cindex <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  
+    n <span class="token operator">=</span> <span class="token function">get_child_rcu</span><span class="token punctuation">(</span>pn<span class="token punctuation">,</span> cindex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">trace_fib_table_lookup</span><span class="token punctuation">(</span>tb<span class="token operator">-&gt;</span>tb_id<span class="token punctuation">,</span> flp<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token operator">-</span>EAGAIN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span>EAGAIN<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_IP_FIB_TRIE_STATS</span></span>
+    <span class="token function">this_cpu_inc</span><span class="token punctuation">(</span>stats<span class="token operator">-&gt;</span>gets<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+  
+    <span class="token comment">/* Step 1: Travel to the longest prefix match in the trie */</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span><span class="token punctuation">;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        index <span class="token operator">=</span> <span class="token function">get_cindex</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+        <span class="token comment">/* This bit of code is a bit tricky but it combines multiple
+         * checks into a single check.  The prefix consists of the
+         * prefix plus zeros for the "bits" in the prefix. The index
+         * is the difference between the key and this value.  From
+         * this we can actually derive several pieces of data.
+         *   if (index &gt;= (1ul &lt;&lt; bits))
+         *     we have a mismatch in skip bits and failed
+         *   else
+         *     we know the value is cindex
+         *
+         * This check is safe even if bits == KEYLENGTH due to the
+         * fact that we can only allocate a node with 32 bits if a
+         * long is greater than 32 bits.
+         */</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&gt;=</span> <span class="token punctuation">(</span><span class="token number">1ul</span> <span class="token operator">&lt;&lt;</span> n<span class="token operator">-&gt;</span>bits<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+  
+        <span class="token comment">/* we have found a leaf. Prefixes have already been compared */</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">IS_LEAF</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">goto</span> found<span class="token punctuation">;</span>
+  
+        <span class="token comment">/* only record pn and cindex if we are going to be chopping
+         * bits later.  Otherwise we are just wasting cycles.
+         */</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>n<span class="token operator">-&gt;</span>slen <span class="token operator">&gt;</span> n<span class="token operator">-&gt;</span>pos<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            pn <span class="token operator">=</span> n<span class="token punctuation">;</span>
+            cindex <span class="token operator">=</span> index<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+  
+        n <span class="token operator">=</span> <span class="token function">get_child_rcu</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">unlikely</span><span class="token punctuation">(</span><span class="token operator">!</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">goto</span> backtrace<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  
+    <span class="token comment">/* Step 2: Sort out leaves and begin backtracing for longest prefix */</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span><span class="token punctuation">;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">/* record the pointer where our next node pointer is stored */</span>
+        <span class="token keyword">struct</span> <span class="token class-name">key_vector</span> __rcu <span class="token operator">*</span><span class="token operator">*</span>cptr <span class="token operator">=</span> n<span class="token operator">-&gt;</span>tnode<span class="token punctuation">;</span>
+  
+        <span class="token comment">/* This test verifies that none of the bits that differ
+         * between the key and the prefix exist in the region of
+         * the lsb and higher in the prefix.
+         */</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">unlikely</span><span class="token punctuation">(</span><span class="token function">prefix_mismatch</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span>n<span class="token operator">-&gt;</span>slen <span class="token operator">==</span> n<span class="token operator">-&gt;</span>pos<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">goto</span> backtrace<span class="token punctuation">;</span>
+  
+        <span class="token comment">/* exit out and process leaf */</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">unlikely</span><span class="token punctuation">(</span><span class="token function">IS_LEAF</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+  
+        <span class="token comment">/* Don't bother recording parent info.  Since we are in
+         * prefix match mode we will have to come back to wherever
+         * we started this traversal anyway
+         */</span>
+  
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>n <span class="token operator">=</span> <span class="token function">rcu_dereference</span><span class="token punctuation">(</span><span class="token operator">*</span>cptr<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+backtrace<span class="token operator">:</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_IP_FIB_TRIE_STATS</span></span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>n<span class="token punctuation">)</span>
+                <span class="token function">this_cpu_inc</span><span class="token punctuation">(</span>stats<span class="token operator">-&gt;</span>null_node_hit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+            <span class="token comment">/* If we are at cindex 0 there are no more bits for
+             * us to strip at this level so we must ascend back
+             * up one level to see if there are any more bits to
+             * be stripped there.
+             */</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>cindex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                t_key pkey <span class="token operator">=</span> pn<span class="token operator">-&gt;</span>key<span class="token punctuation">;</span>
+  
+                <span class="token comment">/* If we don't have a parent then there is
+                 * nothing for us to do as we do not have any
+                 * further nodes to parse.
+                 */</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">IS_TRIE</span><span class="token punctuation">(</span>pn<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">trace_fib_table_lookup</span><span class="token punctuation">(</span>tb<span class="token operator">-&gt;</span>tb_id<span class="token punctuation">,</span> flp<span class="token punctuation">,</span>
+                                   <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token operator">-</span>EAGAIN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">return</span> <span class="token operator">-</span>EAGAIN<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_IP_FIB_TRIE_STATS</span></span>
+                <span class="token function">this_cpu_inc</span><span class="token punctuation">(</span>stats<span class="token operator">-&gt;</span>backtrack<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+                <span class="token comment">/* Get Child's index */</span>
+                pn <span class="token operator">=</span> <span class="token function">node_parent_rcu</span><span class="token punctuation">(</span>pn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                cindex <span class="token operator">=</span> <span class="token function">get_index</span><span class="token punctuation">(</span>pkey<span class="token punctuation">,</span> pn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+  
+            <span class="token comment">/* strip the least significant bit from the cindex */</span>
+            cindex <span class="token operator">&amp;=</span> cindex <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  
+            <span class="token comment">/* grab pointer for next child node */</span>
+            cptr <span class="token operator">=</span> <span class="token operator">&amp;</span>pn<span class="token operator">-&gt;</span>tnode<span class="token punctuation">[</span>cindex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  
+found<span class="token operator">:</span>
+    <span class="token comment">/* this line carries forward the xor from earlier in the function */</span>
+    index <span class="token operator">=</span> key <span class="token operator">^</span> n<span class="token operator">-&gt;</span>key<span class="token punctuation">;</span>
+  
+    <span class="token comment">/* Step 3: Process the leaf, if that fails fall back to backtracing */</span>
+    <span class="token function">hlist_for_each_entry_rcu</span><span class="token punctuation">(</span>fa<span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token operator">-&gt;</span>leaf<span class="token punctuation">,</span> fa_list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">struct</span> <span class="token class-name">fib_info</span> <span class="token operator">*</span>fi <span class="token operator">=</span> fa<span class="token operator">-&gt;</span>fa_info<span class="token punctuation">;</span>
+        <span class="token keyword">struct</span> <span class="token class-name">fib_nh_common</span> <span class="token operator">*</span>nhc<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> nhsel<span class="token punctuation">,</span> err<span class="token punctuation">;</span>
+  
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>BITS_PER_LONG <span class="token operator">&gt;</span> KEYLENGTH<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span>fa<span class="token operator">-&gt;</span>fa_slen <span class="token operator">&lt;</span> KEYLENGTH<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&gt;=</span> <span class="token punctuation">(</span><span class="token number">1ul</span> <span class="token operator">&lt;&lt;</span> fa<span class="token operator">-&gt;</span>fa_slen<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>fa<span class="token operator">-&gt;</span>fa_dscp <span class="token operator">&amp;&amp;</span>
+            <span class="token function">inet_dscp_to_dsfield</span><span class="token punctuation">(</span>fa<span class="token operator">-&gt;</span>fa_dscp<span class="token punctuation">)</span> <span class="token operator">!=</span> flp<span class="token operator">-&gt;</span>flowi4_tos<span class="token punctuation">)</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token comment">/* Paired with WRITE_ONCE() in fib_release_info() */</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">READ_ONCE</span><span class="token punctuation">(</span>fi<span class="token operator">-&gt;</span>fib_dead<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>fa<span class="token operator">-&gt;</span>fa_info<span class="token operator">-&gt;</span>fib_scope <span class="token operator">&lt;</span> flp<span class="token operator">-&gt;</span>flowi4_scope<span class="token punctuation">)</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token function">fib_alias_accessed</span><span class="token punctuation">(</span>fa<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        err <span class="token operator">=</span> fib_props<span class="token punctuation">[</span>fa<span class="token operator">-&gt;</span>fa_type<span class="token punctuation">]</span><span class="token punctuation">.</span>error<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">unlikely</span><span class="token punctuation">(</span>err <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+out_reject<span class="token operator">:</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_IP_FIB_TRIE_STATS</span></span>
+            <span class="token function">this_cpu_inc</span><span class="token punctuation">(</span>stats<span class="token operator">-&gt;</span>semantic_match_passed<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+            <span class="token function">trace_fib_table_lookup</span><span class="token punctuation">(</span>tb<span class="token operator">-&gt;</span>tb_id<span class="token punctuation">,</span> flp<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> err<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>fi<span class="token operator">-&gt;</span>fib_flags <span class="token operator">&amp;</span> RTNH_F_DEAD<span class="token punctuation">)</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+  
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">unlikely</span><span class="token punctuation">(</span>fi<span class="token operator">-&gt;</span>nh<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">nexthop_is_blackhole</span><span class="token punctuation">(</span>fi<span class="token operator">-&gt;</span>nh<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                err <span class="token operator">=</span> fib_props<span class="token punctuation">[</span>RTN_BLACKHOLE<span class="token punctuation">]</span><span class="token punctuation">.</span>error<span class="token punctuation">;</span>
+                <span class="token keyword">goto</span> out_reject<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+  
+            nhc <span class="token operator">=</span> <span class="token function">nexthop_get_nhc_lookup</span><span class="token punctuation">(</span>fi<span class="token operator">-&gt;</span>nh<span class="token punctuation">,</span> fib_flags<span class="token punctuation">,</span> flp<span class="token punctuation">,</span>
+                             <span class="token operator">&amp;</span>nhsel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nhc<span class="token punctuation">)</span>
+                <span class="token keyword">goto</span> set_result<span class="token punctuation">;</span>
+            <span class="token keyword">goto</span> miss<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+  
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>nhsel <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> nhsel <span class="token operator">&lt;</span> <span class="token function">fib_info_num_path</span><span class="token punctuation">(</span>fi<span class="token punctuation">)</span><span class="token punctuation">;</span> nhsel<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            nhc <span class="token operator">=</span> <span class="token function">fib_info_nhc</span><span class="token punctuation">(</span>fi<span class="token punctuation">,</span> nhsel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">fib_lookup_good_nhc</span><span class="token punctuation">(</span>nhc<span class="token punctuation">,</span> fib_flags<span class="token punctuation">,</span> flp<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">continue</span><span class="token punctuation">;</span>
+set_result<span class="token operator">:</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>fib_flags <span class="token operator">&amp;</span> FIB_LOOKUP_NOREF<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token function">refcount_inc</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>fi<span class="token operator">-&gt;</span>fib_clntref<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+            res<span class="token operator">-&gt;</span>prefix <span class="token operator">=</span> <span class="token function">htonl</span><span class="token punctuation">(</span>n<span class="token operator">-&gt;</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            res<span class="token operator">-&gt;</span>prefixlen <span class="token operator">=</span> KEYLENGTH <span class="token operator">-</span> fa<span class="token operator">-&gt;</span>fa_slen<span class="token punctuation">;</span>
+            res<span class="token operator">-&gt;</span>nh_sel <span class="token operator">=</span> nhsel<span class="token punctuation">;</span>
+            res<span class="token operator">-&gt;</span>nhc <span class="token operator">=</span> nhc<span class="token punctuation">;</span>
+            res<span class="token operator">-&gt;</span>type <span class="token operator">=</span> fa<span class="token operator">-&gt;</span>fa_type<span class="token punctuation">;</span>
+            res<span class="token operator">-&gt;</span>scope <span class="token operator">=</span> fi<span class="token operator">-&gt;</span>fib_scope<span class="token punctuation">;</span>
+            res<span class="token operator">-&gt;</span>fi <span class="token operator">=</span> fi<span class="token punctuation">;</span>
+            res<span class="token operator">-&gt;</span>table <span class="token operator">=</span> tb<span class="token punctuation">;</span>
+            res<span class="token operator">-&gt;</span>fa_head <span class="token operator">=</span> <span class="token operator">&amp;</span>n<span class="token operator">-&gt;</span>leaf<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_IP_FIB_TRIE_STATS</span></span>
+            <span class="token function">this_cpu_inc</span><span class="token punctuation">(</span>stats<span class="token operator">-&gt;</span>semantic_match_passed<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+            <span class="token function">trace_fib_table_lookup</span><span class="token punctuation">(</span>tb<span class="token operator">-&gt;</span>tb_id<span class="token punctuation">,</span> flp<span class="token punctuation">,</span> nhc<span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+            <span class="token keyword">return</span> err<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+miss<span class="token operator">:</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_IP_FIB_TRIE_STATS</span></span>
+    <span class="token function">this_cpu_inc</span><span class="token punctuation">(</span>stats<span class="token operator">-&gt;</span>semantic_match_miss<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+    <span class="token keyword">goto</span> backtrace<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-blockquote"><blockquote dir="auto">
+<p>여러가지 새로 보이는 구조체가 많아서 나중에 한번 정리해야 할 것이다.</p>
+</blockquote></div><div class="el-blockquote"><blockquote dir="auto">
+<p><code class="code-styler-inline">trie</code>자료구조를 통해 라우팅 테이블을 저장하고, 관리하고, 탐색하고있었다. 이 자료구조는 문자열을 저장하고 효율적으로 탐색하기 위해 고안된 자료구조로, 따로 공부해보아야 할 것이다.<br>
+해당 구조에 대한 도식은 sock 노트에 있다.</p>
+<p>우선 <code class="code-styler-inline">key</code>는 최종 목적지인 <code class="code-styler-inline">flp-&gt;daddr</code>이다. <code class="code-styler-inline">key_vector</code>타입으로는 <code class="code-styler-inline">*n</code>과 <code class="code-styler-inline">*pn</code>이 있는데, 이는 각각 자식노드와 부모노드를 가르키기 위한 포인터이다.<br>
+가장 먼저 <code class="code-styler-inline">for</code>문을 들어가기 전에 <code class="code-styler-inline">n = get_child_rcu(pn, cindex)</code>를 통해 첫번째 자식 노드를 가져오게 된다. 왜냐면 위에서 <code class="code-styler-inline">cindex = 0</code>으로 초기화 하였기 때문이다.</p>
+</blockquote></div><div class="el-pre"><pre class="language-c" tabindex="0"><code data-line="0" class="language-c is-loaded"><span class="token comment">/* To understand this stuff, an understanding of keys and all their bits is
+ * necessary. Every node in the trie has a key associated with it, but not
+ * all of the bits in that key are significant.
+ *
+ * Consider a node 'n' and its parent 'tp'.
+ *
+ * If n is a leaf, every bit in its key is significant. Its presence is
+ * necessitated by path compression, since during a tree traversal (when
+ * searching for a leaf - unless we are doing an insertion) we will completely
+ * ignore all skipped bits we encounter. Thus we need to verify, at the end of
+ * a potentially successful search, that we have indeed been walking the
+ * correct key path.
+ *
+ * Note that we can never "miss" the correct key in the tree if present by
+ * following the wrong path. Path compression ensures that segments of the key
+ * that are the same for all keys with a given prefix are skipped, but the
+ * skipped part *is* identical for each node in the subtrie below the skipped
+ * bit! trie_insert() in this implementation takes care of that.
+ *
+ * if n is an internal node - a 'tnode' here, the various parts of its key
+ * have many different meanings.
+ *
+ * Example:
+ * _________________________________________________________________
+ * | i | i | i | i | i | i | i | N | N | N | S | S | S | S | S | C |
+ * -----------------------------------------------------------------
+ *  31  30  29  28  27  26  25  24  23  22  21  20  19  18  17  16
+ *
+ * _________________________________________________________________
+ * | C | C | C | u | u | u | u | u | u | u | u | u | u | u | u | u |
+ * -----------------------------------------------------------------
+ *  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
+ *
+ * tp-&gt;pos = 22
+ * tp-&gt;bits = 3
+ * n-&gt;pos = 13
+ * n-&gt;bits = 4
+ *
+ * First, let's just ignore the bits that come before the parent tp, that is
+ * the bits from (tp-&gt;pos + tp-&gt;bits) to 31. They are *known* but at this
+ * point we do not use them for anything.
+ *
+ * The bits from (tp-&gt;pos) to (tp-&gt;pos + tp-&gt;bits - 1) - "N", above - are the
+ * index into the parent's child array. That is, they will be used to find
+ * 'n' among tp's children.
+ *
+ * The bits from (n-&gt;pos + n-&gt;bits) to (tp-&gt;pos - 1) - "S" - are skipped bits
+ * for the node n.
+ *
+ * All the bits we have seen so far are significant to the node n. The rest
+ * of the bits are really not needed or indeed known in n-&gt;key
+ *
+ * The bits from (n-&gt;pos) to (n-&gt;pos + n-&gt;bits - 1) - "C" - are the index into
+ * n's child array, and will of course be different for each child.
+ *
+ * The rest of the bits, from 0 to (n-&gt;pos -1) - "u" - are completely unknown
+ * at this point.
+ */</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto"><a rel="noopener nofollow" class="external-link" href="https://vincent.bernat.ch/en/blog/2017-ipv4-route-lookup-linux" target="_blank">https://vincent.bernat.ch/en/blog/2017-ipv4-route-lookup-linux</a><br>
+fib path compressed trie - routing search와 관련하여 아주 명확하게 설명이 들어있는 참고 자료이다.</p></div><div class="el-h5 heading-wrapper"><h5 data-heading="LPC-trie" dir="auto" class="heading" id="LPC-trie"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>LPC-trie</h5><div class="heading-children"><div class="el-hr"><hr></div><div class="el-p"><p dir="auto">--요약--</p></div><div class="el-blockquote"><blockquote dir="auto">
+<p>보통의 trie 자료구조 같다면 각 자리마다 노드로 나뉘게 될 것이다. 그러나 라우팅 테이블의 경우 각 자리 비트를 기준으로 해야할 것이기 때문에 이는 상당한 메모리 낭비와 많은 노드를 사용하게 한다. 거기에다가 필요없는 비트 비교연산이 많이 있을 것이다.<br>
+따라서 <em>path compression</em>을 사용하게 된다. 이는 각 노드마다 하나의 child를 가져야 함이 삭제되었다. (라우팅 엔트리가 있는 경우는 제외하고) 그리고 각 노드들은 이제 얼마나 많은 비트를 스킵하였는지 알려주는 새로운 변수를 가지게 된다. 이러한 trie 자료구조는 <code class="code-styler-inline">Patricia trie</code> 혹은 <code class="code-styler-inline">radix tree</code>로 알려져 있다.<br>
+<span alt="Pasted image 20240904095723 1.png" src="Pasted image 20240904095723 1.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240904095723 1.png" src="lib/media/pasted-image-20240904095723-1.png"></span><br>
+또한, <em>level compression</em> 또한 사용하고 있는데,  trie 구조에서 노드가 많은 부분을 찾아내어 그 child 노드를 0과 1로 나뉘는게 아니라 다루는 비트를 2개 이상으로 함으로써, n개의 비트를 다룰 때, 2^n 개의 자식 노드들이 존재하도록 하는 방법이다.<br>
+<span alt="Pasted image 20240904100752 1.png" src="Pasted image 20240904100752 1.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240904100752 1.png" src="lib/media/pasted-image-20240904100752-1.png"></span><br>
+이러한 trie를 LC-trie 혹은 LPC-trie라고 부르고, radix tree 보다 더 높은 탐색 성능을 제공한다.</p>
+<p>휴리스틱한 부분은 해당 노드가 얼마나 많은 비트를 다루어야 할지 결정하는 것이다. 리눅스에서는 비어있지 않은 자식 노드가 전체 자식 노드의 50%보다 많을 경우 해당 노드가 추가적인 비트를 다루게 된다. 반면 그 비율이 25% 이하라면 해당 노드는 본인이 책임지는 비트에 대한 책임을 잃게 된다. 이러한 값은 튜닝할 수 없다.(아마 유저 레벨에서 config하는 것을 말하는 것으로 보인다.)</p>
+<p><span alt="Pasted image 20240904101222 1.png" src="Pasted image 20240904101222 1.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240904101222 1.png" src="lib/media/pasted-image-20240904101222-1.png"></span><br>
+리눅스에서는 위와 같이 구현되고 있다.<br>
+<a rel="noopener nofollow" class="external-link" href="https://vincent.bernat.ch/en/blog/2017-ipv4-route-lookup-linux" target="_blank">https://vincent.bernat.ch/en/blog/2017-ipv4-route-lookup-linux</a><br>
+위의 링크는 리눅스 커널 버전 별로 <code class="code-styler-inline">fib_lookup()</code> 함수의 성능 벤치마크를 정리한 사이트이다.</p>
+<p><a rel="noopener nofollow" class="external-link" href="https://docs.kernel.org/networking/fib_trie.html" target="_blank">https://docs.kernel.org/networking/fib_trie.html</a><br>
+<a rel="noopener nofollow" class="external-link" href="https://nscpolteksby.ac.id/ebook/files/Ebook/Computer%20Engineering/Linux%20Kernel%20Networking%20-%20Implementation%20(2014)/chapter%205%20The%20IPv4%20Routing%20Subsystem.pdf" target="_blank">https://nscpolteksby.ac.id/ebook/files/Ebook/Computer%20Engineering/Linux%20Kernel%20Networking%20-%20Implementation%20(2014)/chapter%205%20The%20IPv4%20Routing%20Subsystem.pdf</a><br>
+추가 참고자료 사이트</p>
+</blockquote></div></div></div><div class="el-h5 heading-wrapper"><h5 data-heading="LPC-trie 끝" dir="auto" class="heading" id="LPC-trie_끝"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>LPC-trie 끝</h5><div class="heading-children"><div class="el-blockquote"><blockquote dir="auto">
+<p>이어서 함수를 보자면, <code class="code-styler-inline">get_cindex(key, n)</code>을 호출하고 있다. 이 함수는 <code class="code-styler-inline">#define</code>으로 <code class="code-styler-inline">/net/ipv4/fib_trie.c</code>에 정의되어 있다. 단순하게 <code class="code-styler-inline">((key)^(n)-&gt;key) &gt;&gt; (n)-&gt;pos</code>를 하게 된다. 이는 현재 라우팅을 해야 할 <code class="code-styler-inline">key</code>값과 본인 노드의 키 값인 <code class="code-styler-inline">n-&gt;key</code>를 우선 XOR 연산을 하게 되고, 이후 <code class="code-styler-inline">pos</code>만큼 left shift 하게 된다. 그렇다면 상위 비트에 남은 값은 스킵한 비트들과 자식 노드들의 array에 대한 index 값을 가지는 비트들이 남게 된다. 이 때 이 둘을 구분하는 마스크의 역할을 하는 변수는 해당 노드의 <code class="code-styler-inline">bits</code>라는 멤버 변수이다.</p>
+<p>그 후 만약 <code class="code-styler-inline">index &gt;= (1ul &lt;&lt; n-&gt;bits)</code>라면 <code class="code-styler-inline">break</code>이 걸리게 되는데, 이 때 index는 앞서 <code class="code-styler-inline">get_cindex()</code>함수를 통해서 얻은 값이다. 만약 위의 조건이 만족한다면, 이는 스킵한 비트들 중에서 mismatch가 일어났다는 뜻이므로, 이는 해당 노드에서 탐색을 실패했다는 의미이다. 따라서 <code class="code-styler-inline">break</code>으로 빠지게 되는 것이다. 따라서 바로 아래의 새로운 <code class="code-styler-inline">for</code>무한 루프에 빠지게 된다.</p>
+<p>만약 해당 노드가 LEAF라면 이 때는 <code class="code-styler-inline">goto found;</code>를 통해 <code class="code-styler-inline">found:</code>라벨로 향하게 된다.</p>
+<p>만약 <code class="code-styler-inline">n-&gt;slen</code> 이 <code class="code-styler-inline">n-&gt;pos</code>보다 크다면, 해당 노드를 parent로써 기억하게 한다. 이렇게 하는 이유는 <code class="code-styler-inline">slen</code>이 <code class="code-styler-inline">pos</code>보다 크다는 것은 더 비교할 비트들이 남아있다는 뜻이기 때문이다. <code class="code-styler-inline">slen</code>에 대하여 찾아보니 일단은 subnet mask의 길이를 저장하고 있는 것으로 보였다. 따라서 그저 <code class="code-styler-inline">key</code>값으로 저장된 라우팅 테이블에서 어디까지가 네트워크 주소를 표현하고 있는지 알 수 있다.</p>
+<p>그리고 해당 index를 가지고 자식 노드를 불러오고, 만약 자식 노드가 없다면 이 때는 백트랙킹을 통해 상위 부모 노드로 가게 된다.</p>
+<p>또 다른 <code class="code-styler-inline">for</code> 무한루프가 시작되고 있다. 여기는 위의 루프에서 앞서 스킵했던 비트 중에 일치하지 않는 부분이 있어서 시작되는 부분이다. 혹은 중간에 <code class="code-styler-inline">backtrace</code>라는 라벨이 있는데, 이는 자식 노드가 없을 경우에 이 라벨로 오게 된다.<br>
+<code class="code-styler-inline">**cptr</code>로 <code class="code-styler-inline">n-&gt;tnode</code>를 가져오고 있다. 이는 현재 노드의 다음 포인터가 어디에 저장되어 있는지 기록하는 포인터이다.</p>
+<p>그 다음으로 나오는 <code class="code-styler-inline">if</code>문은 해당 노드가 prefix mismatch가 있거나, 노드의 <code class="code-styler-inline">slen</code>과 <code class="code-styler-inline">pos</code>가 같다면 <code class="code-styler-inline">backtrace</code> 라벨로 가게된다.<br>
+이 테스트는 해당 노드의 그 어떠한 비트도 <code class="code-styler-inline">key</code>와 다르지 않다는 것과, 해당<code class="code-styler-inline">key</code>의 prefix가 그 prefix의 비트 영역에 있음을 보증한다. 만약 <code class="code-styler-inline">n-&gt;slen</code>과 <code class="code-styler-inline">n-&gt;pos</code>의 길이가 같다면, 해당 노드에 대해서는 더이상 조사할 자식 노드가 없을 것이다. 왜냐면 더이상 하위 라우팅 테이블이 해당 <code class="code-styler-inline">key</code>에 대해서 의미가 없기 때문이다.</p>
+<p>만약 해당 노드가 LEAF라면 for루프를 멈추게 된다.<br>
+<code class="code-styler-inline">*cptr</code>을 가져왔을 때 이 것이 <code class="code-styler-inline">NULL</code> 이 아니면 이 아래의 while문을 계속하여 반복하게 되는데,<br>
+우선 <code class="code-styler-inline">cindex</code>가 0이 아닐때까지 while을 반복하게 된다. 만약 <code class="code-styler-inline">cindex</code>가 0이라면 해당 노드에서는 더 이상 유효한 노드가 없기 때문이다.<br>
+<code class="code-styler-inline">pkey</code>값으로 부모노드의 키 값을 저장하게 되고, 만약 <code class="code-styler-inline">pn</code>이 TRIE 노드가 아니라면 더 이상 할 수 있는 것이 없으므로 에러를 리턴하게 된다.<br>
+이후 <code class="code-styler-inline">node_parent_rcu()</code>함수를 통해 해당 노드의 부모노드를 가져오게 된다. 또한 <code class="code-styler-inline">cindex</code> 값을 <code class="code-styler-inline">get_index()</code>함수로 업데이트하게 된다.<br>
+이에 의해 <code class="code-styler-inline">cindex</code>값이 0이 아니게 된다면 해당 while문을 탈출하여 다음으로 넘어가게 되는데, <code class="code-styler-inline">cindex &amp;= cindex - 1</code>을 통해 1인 비트중 LSB를 제거하게 된다. (ex. 10010100 =&gt; 10010000)<br>
+이 <code class="code-styler-inline">cindex</code>값을 바탕으로 <code class="code-styler-inline">cptr = &amp;pn-&gt;tnode[cindex]</code>를 하여 해당 자식노드를 새로운 자식 포인터로 가져오게 된다.</p>
+<p>이 아래로는 <code class="code-styler-inline">found:</code>라벨이다.<br>
+우선 인덱스 값을 설정하게 되는데, <code class="code-styler-inline">key ^ n-&gt;key</code>값을 가져오게 된다.<br>
+또한 hlist를 도는 for문이 나오게 된다.<br>
+이 아래로는 해당 노드의 <code class="code-styler-inline">leaf</code>를 가지고 실행되므로 우선 위의 로직을 이해하기 위해 잠시 멈추었다.</p>
+<p>함수 이해가 안되서 Net Filter 부분부터 다시 보기로 하였다. 나중에 다시 올 것이다.</p>
+</blockquote></div><div class="el-blockquote"><blockquote dir="auto">
+</blockquote></div><div class="mod-footer mod-ui"></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="encyclopedia-of-networksystem/function/net-ipv4/fib_table_lookup().html#fib_table_lookup()"><div class="tree-item-contents heading-link" heading-name="fib_table_lookup()"><span class="tree-item-title">fib_table_lookup()</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="5"><a class="tree-link" href="encyclopedia-of-networksystem/function/net-ipv4/fib_table_lookup().html#LPC-trie"><div class="tree-item-contents heading-link" heading-name="LPC-trie"><span class="tree-item-title">LPC-trie</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="encyclopedia-of-networksystem/function/net-ipv4/fib_table_lookup().html#LPC-trie_끝"><div class="tree-item-contents heading-link" heading-name="LPC-trie 끝"><span class="tree-item-title">LPC-trie 끝</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

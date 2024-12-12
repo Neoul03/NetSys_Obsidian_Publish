@@ -1,0 +1,269 @@
+<!DOCTYPE html> <html><head>
+		<title>tcp_recvmsg_locked()</title>
+		<base href="../../../">
+		<meta id="root-path" root-path="../../../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="NetSys_Obsidian - tcp_recvmsg_locked()">
+		<meta property="og:title" content="tcp_recvmsg_locked()">
+		<meta property="og:description" content="NetSys_Obsidian - tcp_recvmsg_locked()">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="encyclopedia-of-networksystem/function/net-ipv4/tcp_recvmsg_locked().html">
+		<meta property="og:image" content="undefined">
+		<meta property="og:site_name" content="NetSys_Obsidian">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/other-plugins.css"></noscript><link rel="stylesheet" href="lib/styles/theme.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/supported-plugins.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript><link rel="preload" href="lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/snippets.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon ctp-latte ctp-mocha ctp-accent-light-sapphire ctp-accent-rosewater anuppuccin-accent-toggle anp-callout-color-toggle anp-custom-checkboxes anp-speech-bubble anp-codeblock-numbers anp-h1-red anp-h2-peach anp-h3-green anp-h4-teal anp-h5-lavender anp-h6-mauve anp-bold-red anp-italic-green anp-highlight-yellow anp-colorful-frame anp-file-icons anp-collapse-folders anp-full-rainbow-color-toggle anp-background-image-toggle rainbow-repeat-11 rainbow-color-1-mauve rainbow-color-2-flamingo rainbow-color-3-rosewater rainbow-color-4-red rainbow-color-5-peach rainbow-color-6-yellow rainbow-color-7-green rainbow-color-8-teal rainbow-color-9-sky rainbow-color-10-blue rainbow-color-11-lavender ctp-atom-light ctp-material-mint-dark code-styler code-styler-style-inline code-styler-gutter-highlight mk-readable-line mk-folder-lines mk-spaces-enabled mk-inline-context-enabled mk-flow-seamless"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles"></style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="tcp_recvmsg_locked()"><p dir="auto">tcp_recvmsg_locked()</p></h1><div class="el-pre"><pre class="language-c" tabindex="0"><code data-line="0" class="language-c is-loaded"><span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">tcp_recvmsg_locked</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">sock</span> <span class="token operator">*</span>sk<span class="token punctuation">,</span> <span class="token keyword">struct</span> <span class="token class-name">msghdr</span> <span class="token operator">*</span>msg<span class="token punctuation">,</span> <span class="token class-name">size_t</span> len<span class="token punctuation">,</span>
+			      <span class="token keyword">int</span> flags<span class="token punctuation">,</span> <span class="token keyword">struct</span> <span class="token class-name">scm_timestamping_internal</span> <span class="token operator">*</span>tss<span class="token punctuation">,</span>
+			      <span class="token keyword">int</span> <span class="token operator">*</span>cmsg_flags<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">struct</span> <span class="token class-name">tcp_sock</span> <span class="token operator">*</span>tp <span class="token operator">=</span> <span class="token function">tcp_sk</span><span class="token punctuation">(</span>sk<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">int</span> copied <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	u32 peek_seq<span class="token punctuation">;</span>
+	u32 <span class="token operator">*</span>seq<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">long</span> used<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> err<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> target<span class="token punctuation">;</span>		<span class="token comment">/* Read at least this many bytes */</span>
+	<span class="token keyword">long</span> timeo<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">sk_buff</span> <span class="token operator">*</span>skb<span class="token punctuation">,</span> <span class="token operator">*</span>last<span class="token punctuation">;</span>
+	u32 urg_hole <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+	err <span class="token operator">=</span> <span class="token operator">-</span>ENOTCONN<span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>sk<span class="token operator">-&gt;</span>sk_state <span class="token operator">==</span> TCP_LISTEN<span class="token punctuation">)</span>
+		<span class="token keyword">goto</span> out<span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>tp<span class="token operator">-&gt;</span>recvmsg_inq<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token operator">*</span>cmsg_flags <span class="token operator">=</span> TCP_CMSG_INQ<span class="token punctuation">;</span>
+		msg<span class="token operator">-&gt;</span>msg_get_inq <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	timeo <span class="token operator">=</span> <span class="token function">sock_rcvtimeo</span><span class="token punctuation">(</span>sk<span class="token punctuation">,</span> flags <span class="token operator">&amp;</span> MSG_DONTWAIT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/* Urgent data needs to be handled specially. */</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>flags <span class="token operator">&amp;</span> MSG_OOB<span class="token punctuation">)</span>
+		<span class="token keyword">goto</span> recv_urg<span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">unlikely</span><span class="token punctuation">(</span>tp<span class="token operator">-&gt;</span>repair<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		err <span class="token operator">=</span> <span class="token operator">-</span>EPERM<span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>flags <span class="token operator">&amp;</span> MSG_PEEK<span class="token punctuation">)</span><span class="token punctuation">)</span>
+			<span class="token keyword">goto</span> out<span class="token punctuation">;</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>tp<span class="token operator">-&gt;</span>repair_queue <span class="token operator">==</span> TCP_SEND_QUEUE<span class="token punctuation">)</span>
+			<span class="token keyword">goto</span> recv_sndq<span class="token punctuation">;</span>
+
+		err <span class="token operator">=</span> <span class="token operator">-</span>EINVAL<span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>tp<span class="token operator">-&gt;</span>repair_queue <span class="token operator">==</span> TCP_NO_QUEUE<span class="token punctuation">)</span>
+			<span class="token keyword">goto</span> out<span class="token punctuation">;</span>
+
+		<span class="token comment">/* 'common' recv queue MSG_PEEK-ing */</span>
+	<span class="token punctuation">}</span>
+
+	seq <span class="token operator">=</span> <span class="token operator">&amp;</span>tp<span class="token operator">-&gt;</span>copied_seq<span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>flags <span class="token operator">&amp;</span> MSG_PEEK<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		peek_seq <span class="token operator">=</span> tp<span class="token operator">-&gt;</span>copied_seq<span class="token punctuation">;</span>
+		seq <span class="token operator">=</span> <span class="token operator">&amp;</span>peek_seq<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	target <span class="token operator">=</span> <span class="token function">sock_rcvlowat</span><span class="token punctuation">(</span>sk<span class="token punctuation">,</span> flags <span class="token operator">&amp;</span> MSG_WAITALL<span class="token punctuation">,</span> len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">do</span> <span class="token punctuation">{</span>
+		u32 offset<span class="token punctuation">;</span>
+
+		<span class="token comment">/* Are we at urgent data? Stop if we have read anything or have SIGURG pending. */</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">unlikely</span><span class="token punctuation">(</span>tp<span class="token operator">-&gt;</span>urg_data<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> tp<span class="token operator">-&gt;</span>urg_seq <span class="token operator">==</span> <span class="token operator">*</span>seq<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>copied<span class="token punctuation">)</span>
+				<span class="token keyword">break</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">signal_pending</span><span class="token punctuation">(</span>current<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				copied <span class="token operator">=</span> timeo <span class="token operator">?</span> <span class="token function">sock_intr_errno</span><span class="token punctuation">(</span>timeo<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token operator">-</span>EAGAIN<span class="token punctuation">;</span>
+				<span class="token keyword">break</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">/* Next get a buffer. */</span>
+
+		last <span class="token operator">=</span> <span class="token function">skb_peek_tail</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>sk<span class="token operator">-&gt;</span>sk_receive_queue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">skb_queue_walk</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>sk<span class="token operator">-&gt;</span>sk_receive_queue<span class="token punctuation">,</span> skb<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			last <span class="token operator">=</span> skb<span class="token punctuation">;</span>
+			<span class="token comment">/* Now that we have two receive queues this
+			 * shouldn't happen.
+			 */</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">WARN</span><span class="token punctuation">(</span><span class="token function">before</span><span class="token punctuation">(</span><span class="token operator">*</span>seq<span class="token punctuation">,</span> <span class="token function">TCP_SKB_CB</span><span class="token punctuation">(</span>skb<span class="token punctuation">)</span><span class="token operator">-&gt;</span>seq<span class="token punctuation">)</span><span class="token punctuation">,</span>
+				 <span class="token string">"TCP recvmsg seq # bug: copied %X, seq %X, rcvnxt %X, fl %X\n"</span><span class="token punctuation">,</span>
+				 <span class="token operator">*</span>seq<span class="token punctuation">,</span> <span class="token function">TCP_SKB_CB</span><span class="token punctuation">(</span>skb<span class="token punctuation">)</span><span class="token operator">-&gt;</span>seq<span class="token punctuation">,</span> tp<span class="token operator">-&gt;</span>rcv_nxt<span class="token punctuation">,</span>
+				 flags<span class="token punctuation">)</span><span class="token punctuation">)</span>
+				<span class="token keyword">break</span><span class="token punctuation">;</span>
+
+			offset <span class="token operator">=</span> <span class="token operator">*</span>seq <span class="token operator">-</span> <span class="token function">TCP_SKB_CB</span><span class="token punctuation">(</span>skb<span class="token punctuation">)</span><span class="token operator">-&gt;</span>seq<span class="token punctuation">;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">unlikely</span><span class="token punctuation">(</span><span class="token function">TCP_SKB_CB</span><span class="token punctuation">(</span>skb<span class="token punctuation">)</span><span class="token operator">-&gt;</span>tcp_flags <span class="token operator">&amp;</span> TCPHDR_SYN<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token function">pr_err_once</span><span class="token punctuation">(</span><span class="token string">"%s: found a SYN, please report !\n"</span><span class="token punctuation">,</span> <span class="token constant">__func__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				offset<span class="token operator">--</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>offset <span class="token operator">&lt;</span> skb<span class="token operator">-&gt;</span>len<span class="token punctuation">)</span>
+				<span class="token keyword">goto</span> found_ok_skb<span class="token punctuation">;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">TCP_SKB_CB</span><span class="token punctuation">(</span>skb<span class="token punctuation">)</span><span class="token operator">-&gt;</span>tcp_flags <span class="token operator">&amp;</span> TCPHDR_FIN<span class="token punctuation">)</span>
+				<span class="token keyword">goto</span> found_fin_ok<span class="token punctuation">;</span>
+			<span class="token function">WARN</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>flags <span class="token operator">&amp;</span> MSG_PEEK<span class="token punctuation">)</span><span class="token punctuation">,</span>
+			     <span class="token string">"TCP recvmsg seq # bug 2: copied %X, seq %X, rcvnxt %X, fl %X\n"</span><span class="token punctuation">,</span>
+			     <span class="token operator">*</span>seq<span class="token punctuation">,</span> <span class="token function">TCP_SKB_CB</span><span class="token punctuation">(</span>skb<span class="token punctuation">)</span><span class="token operator">-&gt;</span>seq<span class="token punctuation">,</span> tp<span class="token operator">-&gt;</span>rcv_nxt<span class="token punctuation">,</span> flags<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">/* Well, if we have backlog, try to process it now yet. */</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>copied <span class="token operator">&gt;=</span> target <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token function">READ_ONCE</span><span class="token punctuation">(</span>sk<span class="token operator">-&gt;</span>sk_backlog<span class="token punctuation">.</span>tail<span class="token punctuation">)</span><span class="token punctuation">)</span>
+			<span class="token keyword">break</span><span class="token punctuation">;</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>copied<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>timeo <span class="token operator">||</span>
+			    sk<span class="token operator">-&gt;</span>sk_err <span class="token operator">||</span>
+			    sk<span class="token operator">-&gt;</span>sk_state <span class="token operator">==</span> TCP_CLOSE <span class="token operator">||</span>
+			    <span class="token punctuation">(</span>sk<span class="token operator">-&gt;</span>sk_shutdown <span class="token operator">&amp;</span> RCV_SHUTDOWN<span class="token punctuation">)</span> <span class="token operator">||</span>
+			    <span class="token function">signal_pending</span><span class="token punctuation">(</span>current<span class="token punctuation">)</span><span class="token punctuation">)</span>
+				<span class="token keyword">break</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">sock_flag</span><span class="token punctuation">(</span>sk<span class="token punctuation">,</span> SOCK_DONE<span class="token punctuation">)</span><span class="token punctuation">)</span>
+				<span class="token keyword">break</span><span class="token punctuation">;</span>
+
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>sk<span class="token operator">-&gt;</span>sk_err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				copied <span class="token operator">=</span> <span class="token function">sock_error</span><span class="token punctuation">(</span>sk<span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword">break</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>sk<span class="token operator">-&gt;</span>sk_shutdown <span class="token operator">&amp;</span> RCV_SHUTDOWN<span class="token punctuation">)</span>
+				<span class="token keyword">break</span><span class="token punctuation">;</span>
+
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>sk<span class="token operator">-&gt;</span>sk_state <span class="token operator">==</span> TCP_CLOSE<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token comment">/* This occurs when user tries to read
+				 * from never connected socket.
+				 */</span>
+				copied <span class="token operator">=</span> <span class="token operator">-</span>ENOTCONN<span class="token punctuation">;</span>
+				<span class="token keyword">break</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+
+			<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>timeo<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				copied <span class="token operator">=</span> <span class="token operator">-</span>EAGAIN<span class="token punctuation">;</span>
+				<span class="token keyword">break</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+
+			<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">signal_pending</span><span class="token punctuation">(</span>current<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				copied <span class="token operator">=</span> <span class="token function">sock_intr_errno</span><span class="token punctuation">(</span>timeo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword">break</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>copied <span class="token operator">&gt;=</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token comment">/* Do not sleep, just process backlog. */</span>
+			<span class="token function">__sk_flush_backlog</span><span class="token punctuation">(</span>sk<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+			<span class="token function">tcp_cleanup_rbuf</span><span class="token punctuation">(</span>sk<span class="token punctuation">,</span> copied<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			err <span class="token operator">=</span> <span class="token function">sk_wait_data</span><span class="token punctuation">(</span>sk<span class="token punctuation">,</span> <span class="token operator">&amp;</span>timeo<span class="token punctuation">,</span> last<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>err <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				err <span class="token operator">=</span> copied <span class="token operator">?</span> <span class="token operator">:</span> err<span class="token punctuation">;</span>
+				<span class="token keyword">goto</span> out<span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>flags <span class="token operator">&amp;</span> MSG_PEEK<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+		    <span class="token punctuation">(</span>peek_seq <span class="token operator">-</span> copied <span class="token operator">-</span> urg_hole <span class="token operator">!=</span> tp<span class="token operator">-&gt;</span>copied_seq<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token function">net_dbg_ratelimited</span><span class="token punctuation">(</span><span class="token string">"TCP(%s:%d): Application bug, race in MSG_PEEK\n"</span><span class="token punctuation">,</span>
+					    current<span class="token operator">-&gt;</span>comm<span class="token punctuation">,</span>
+					    <span class="token function">task_pid_nr</span><span class="token punctuation">(</span>current<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			peek_seq <span class="token operator">=</span> tp<span class="token operator">-&gt;</span>copied_seq<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">continue</span><span class="token punctuation">;</span>
+
+found_ok_skb<span class="token operator">:</span>
+		<span class="token comment">/* Ok so how much can we use? */</span>
+		used <span class="token operator">=</span> skb<span class="token operator">-&gt;</span>len <span class="token operator">-</span> offset<span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>len <span class="token operator">&lt;</span> used<span class="token punctuation">)</span>
+			used <span class="token operator">=</span> len<span class="token punctuation">;</span>
+
+		<span class="token comment">/* Do we have urgent data here? */</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">unlikely</span><span class="token punctuation">(</span>tp<span class="token operator">-&gt;</span>urg_data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			u32 urg_offset <span class="token operator">=</span> tp<span class="token operator">-&gt;</span>urg_seq <span class="token operator">-</span> <span class="token operator">*</span>seq<span class="token punctuation">;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>urg_offset <span class="token operator">&lt;</span> used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>urg_offset<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">sock_flag</span><span class="token punctuation">(</span>sk<span class="token punctuation">,</span> SOCK_URGINLINE<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+						<span class="token function">WRITE_ONCE</span><span class="token punctuation">(</span><span class="token operator">*</span>seq<span class="token punctuation">,</span> <span class="token operator">*</span>seq <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+						urg_hole<span class="token operator">++</span><span class="token punctuation">;</span>
+						offset<span class="token operator">++</span><span class="token punctuation">;</span>
+						used<span class="token operator">--</span><span class="token punctuation">;</span>
+						<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>used<span class="token punctuation">)</span>
+							<span class="token keyword">goto</span> skip_copy<span class="token punctuation">;</span>
+					<span class="token punctuation">}</span>
+				<span class="token punctuation">}</span> <span class="token keyword">else</span>
+					used <span class="token operator">=</span> urg_offset<span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>flags <span class="token operator">&amp;</span> MSG_TRUNC<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			err <span class="token operator">=</span> <span class="token function">skb_copy_datagram_msg</span><span class="token punctuation">(</span>skb<span class="token punctuation">,</span> offset<span class="token punctuation">,</span> msg<span class="token punctuation">,</span> used<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token comment">/* Exception. Bailout! */</span>
+				<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>copied<span class="token punctuation">)</span>
+					copied <span class="token operator">=</span> <span class="token operator">-</span>EFAULT<span class="token punctuation">;</span>
+				<span class="token keyword">break</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token function">WRITE_ONCE</span><span class="token punctuation">(</span><span class="token operator">*</span>seq<span class="token punctuation">,</span> <span class="token operator">*</span>seq <span class="token operator">+</span> used<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		copied <span class="token operator">+=</span> used<span class="token punctuation">;</span>
+		len <span class="token operator">-=</span> used<span class="token punctuation">;</span>
+
+		<span class="token function">tcp_rcv_space_adjust</span><span class="token punctuation">(</span>sk<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+skip_copy<span class="token operator">:</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">unlikely</span><span class="token punctuation">(</span>tp<span class="token operator">-&gt;</span>urg_data<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">after</span><span class="token punctuation">(</span>tp<span class="token operator">-&gt;</span>copied_seq<span class="token punctuation">,</span> tp<span class="token operator">-&gt;</span>urg_seq<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token function">WRITE_ONCE</span><span class="token punctuation">(</span>tp<span class="token operator">-&gt;</span>urg_data<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token function">tcp_fast_path_check</span><span class="token punctuation">(</span>sk<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">TCP_SKB_CB</span><span class="token punctuation">(</span>skb<span class="token punctuation">)</span><span class="token operator">-&gt;</span>has_rxtstamp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token function">tcp_update_recv_tstamps</span><span class="token punctuation">(</span>skb<span class="token punctuation">,</span> tss<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token operator">*</span>cmsg_flags <span class="token operator">|=</span> TCP_CMSG_TS<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>used <span class="token operator">+</span> offset <span class="token operator">&lt;</span> skb<span class="token operator">-&gt;</span>len<span class="token punctuation">)</span>
+			<span class="token keyword">continue</span><span class="token punctuation">;</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">TCP_SKB_CB</span><span class="token punctuation">(</span>skb<span class="token punctuation">)</span><span class="token operator">-&gt;</span>tcp_flags <span class="token operator">&amp;</span> TCPHDR_FIN<span class="token punctuation">)</span>
+			<span class="token keyword">goto</span> found_fin_ok<span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>flags <span class="token operator">&amp;</span> MSG_PEEK<span class="token punctuation">)</span><span class="token punctuation">)</span>
+			<span class="token function">tcp_eat_recv_skb</span><span class="token punctuation">(</span>sk<span class="token punctuation">,</span> skb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">continue</span><span class="token punctuation">;</span>
+
+found_fin_ok<span class="token operator">:</span>
+		<span class="token comment">/* Process the FIN. */</span>
+		<span class="token function">WRITE_ONCE</span><span class="token punctuation">(</span><span class="token operator">*</span>seq<span class="token punctuation">,</span> <span class="token operator">*</span>seq <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>flags <span class="token operator">&amp;</span> MSG_PEEK<span class="token punctuation">)</span><span class="token punctuation">)</span>
+			<span class="token function">tcp_eat_recv_skb</span><span class="token punctuation">(</span>sk<span class="token punctuation">,</span> skb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">break</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>len <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/* According to UNIX98, msg_name/msg_namelen are ignored
+	 * on connected socket. I was just happy when found this 8) --ANK
+	 */</span>
+
+	<span class="token comment">/* Clean up data we have read: This will do ACK frames. */</span>
+	<span class="token function">tcp_cleanup_rbuf</span><span class="token punctuation">(</span>sk<span class="token punctuation">,</span> copied<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> copied<span class="token punctuation">;</span>
+
+out<span class="token operator">:</span>
+	<span class="token keyword">return</span> err<span class="token punctuation">;</span>
+
+recv_urg<span class="token operator">:</span>
+	err <span class="token operator">=</span> <span class="token function">tcp_recv_urg</span><span class="token punctuation">(</span>sk<span class="token punctuation">,</span> msg<span class="token punctuation">,</span> len<span class="token punctuation">,</span> flags<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">goto</span> out<span class="token punctuation">;</span>
+
+recv_sndq<span class="token operator">:</span>
+	err <span class="token operator">=</span> <span class="token function">tcp_peek_sndq</span><span class="token punctuation">(</span>sk<span class="token punctuation">,</span> msg<span class="token punctuation">,</span> len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">goto</span> out<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-blockquote"><blockquote dir="auto">
+<p>timestamp와 urgent data 등을 처리하고 난 뒤, <code class="code-styler-inline">sock_rcvlowat()</code>함수를 통해 수신 받을 길이를 설정하게 된다. 최소한 이 길이 만큼은 읽어야  한 번의 수신 루틴이 끝나게 된다.</p>
+<p>그 다음은 do - while 문으로 len보다 많은 길이를 받을 때까지 계속 복사를 하게 되는데, 우선은 <code class="code-styler-inline">skb_peek_tail</code>을 통해 수신 큐의 가장 마지막 패킷을 찾은 다음에, <code class="code-styler-inline">skb_queue_walk()</code>함수를 통해 해당 수신 큐를 처음부터 반복하게 된다. 그 다음 각종 오류들을 탐색하며 만약 오류가 발생했을 시에 이를 경고하고, <code class="code-styler-inline">last</code>에는 해당 <code class="code-styler-inline">skb</code>가 저장될 것이다. 아니라면 중간에 오프셋을 확인하여 정상적인 skb를 가지고 <code class="code-styler-inline">goto found_ok_skb</code>를 통해 해당 skb를 처리하는 루틴으로 넘어가게 된다.</p>
+<p>그 후 만약 수신 큐에서 모두 복사가 완료되어 <code class="code-styler-inline">copied &gt;= target</code>이라면 백로그를 처리하지 않고 <code class="code-styler-inline">break</code>가 된다. 그 외에도 <code class="code-styler-inline">sk-&gt;sk_shutdown</code>을 <code class="code-styler-inline">RCV_SHUTDOWN</code>과 비트 &amp; 연산을 하여 종료 조건을 확인한다.</p>
+<p>이후 다시 <code class="code-styler-inline">copied &gt;= target</code>이라면 <code class="code-styler-inline">__sk_flush_backlog()</code>함수를 호출하여 백로그를 처리하게 된다. 만약 위의 조건을 만족하지 않는다면 <code class="code-styler-inline">tcp_cleanup_rbuf()</code>함수를 호출하여 수신 큐를 정리하고, <code class="code-styler-inline">sk_wait_data()</code>함수를 시행하게 된다.</p>
+<p><code class="code-styler-inline">found_ok_skb:</code><br>
+사용할 수 있는 길이를 게산하고, urg_data인 경우 먼저 처리를 해주며, 메인 루틴은 <code class="code-styler-inline">skb_copy_datagram_msg()</code>를 통해 이루어진다. 이렇게 user space로 copy가 이루어지고 난 뒤에는 tcp 소켓의 수신 큐가 적절한 길이를 가질 수 있게 <code class="code-styler-inline">tcp_rcv_space_adjust()</code>함수가 호출되게 된다.<br>
+그렇게 처음 인자로 받은 <code class="code-styler-inline">len</code>에서 복사한 길이 만큼 계속 빼게 되고, do -while 문은 이 길이가 0보다 작아졌을 때 종료되게 된다.</p>
+<p>마지막으로 한번 더 <code class="code-styler-inline">tcp_cleanup_rbuf()</code>를 호출하고 난 뒤 함수가 <code class="code-styler-inline">copied</code>를 반환하며 종료된다.</p>
+</blockquote></div><div class="el-p"><p dir="auto"><a data-href="__sk_flush_backlog()" href="encyclopedia-of-networksystem/function/net-core/__sk_flush_backlog().html" class="internal-link" target="_self" rel="noopener nofollow">__sk_flush_backlog()</a><br>
+<a data-href="sk_wait_data()" href="encyclopedia-of-networksystem/function/net-core/sk_wait_data().html" class="internal-link" target="_self" rel="noopener nofollow">sk_wait_data()</a><br>
+<a data-href="skb_copy_datagram_msg()" href="encyclopedia-of-networksystem/function/include-linux/skb_copy_datagram_msg().html" class="internal-link" target="_self" rel="noopener nofollow">skb_copy_datagram_msg()</a></p></div><div class="mod-footer mod-ui"></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="encyclopedia-of-networksystem/function/net-ipv4/tcp_recvmsg_locked().html#tcp_recvmsg_locked()"><div class="tree-item-contents heading-link" heading-name="tcp_recvmsg_locked()"><span class="tree-item-title">tcp_recvmsg_locked()</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

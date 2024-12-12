@@ -1,0 +1,2134 @@
+{
+  "vaultName": "NetSys_Obsidian",
+  "lastExport": 1733999206321,
+  "pluginVersion": "1.8.01",
+  "validBodyClasses": "publish css-settings-manager theme-light show-inline-title show-ribbon ctp-latte ctp-mocha ctp-accent-light-sapphire ctp-accent-rosewater anuppuccin-accent-toggle anp-callout-color-toggle anp-custom-checkboxes anp-speech-bubble anp-codeblock-numbers anp-h1-red anp-h2-peach anp-h3-green anp-h4-teal anp-h5-lavender anp-h6-mauve anp-bold-red anp-italic-green anp-highlight-yellow anp-colorful-frame anp-file-icons anp-collapse-folders anp-full-rainbow-color-toggle anp-background-image-toggle rainbow-repeat-11 rainbow-color-1-mauve rainbow-color-2-flamingo rainbow-color-3-rosewater rainbow-color-4-red rainbow-color-5-peach rainbow-color-6-yellow rainbow-color-7-green rainbow-color-8-teal rainbow-color-9-sky rainbow-color-10-blue rainbow-color-11-lavender ctp-atom-light ctp-material-mint-dark code-styler code-styler-style-inline code-styler-gutter-highlight mk-readable-line mk-folder-lines mk-spaces-enabled mk-inline-context-enabled mk-flow-seamless",
+  "useCustomHeadContent": false,
+  "useCustomFavicon": false,
+  "files": [
+    "Encyclopedia of NetworkSystem/Function/drivers-base/__devres_alloc_node().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-base/alloc_dr().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-base/devm_kmalloc().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/__ice_q_vector_set_napi_queues().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/__ice_xmit_xdp_ring().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_add_xdp_frag().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_alloc_irq().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_alloc_rx_bufs().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_alloc_vsis().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_allocate_pf().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_build_skb().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_clean_rx_irq().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_clean_tx_irq().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_construct_skb().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_enable_interrupt().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_finalize_xdp_rx().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_get_irq_res().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_get_rx_buf().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_dev().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_devlink().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_feature_support().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_interrupt_scheme().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_link().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_pf_sw().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_pf().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_wakeup().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_irq_dynamic_ena().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_load().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_msix_clean_rings().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_napi_add().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_napi_enable_all().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_napi_poll().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_net_dim().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_open_internal().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_open().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_pf_vsi_setup().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_probe().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_process_skb_fields().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_put_rx_buf().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_receive_skb().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_req_irq_msix_misc().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_request_fw().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_ring_is_xdp().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_ring_uses_build_skb().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_run_xdp().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_send_version().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_set_cpu_rx_rmap().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_set_rx_bufs_act().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_setup_rx_ring().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_setup_tx_ring().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_up_complete().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_update_rx_ring_stats().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_verify_cacheline_size().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_def().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_q_vector().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_q_vectors().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_ring_stats().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_rings().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_stat_arrays().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_cfg_def().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_cfg_lan().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_cfg_rxq().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_cfg_rxqs().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_cfg().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_ctrl_all_rx_rings().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_ena_irq().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_get_qs().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_init().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_map_rings_to_vectors().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_open().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_req_irq_msix().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_setup_rx_rings().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_setup_tx_rings().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_setup().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_start_all_rx_rings().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_xmit_zc().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-pci/pci_clear_master().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-pci/pci_save_state().md",
+    "Encyclopedia of NetworkSystem/Function/drivers-pci/pci_set_master().md",
+    "Encyclopedia of NetworkSystem/Function/fs/ep_events_available().md",
+    "Encyclopedia of NetworkSystem/Function/fs/ep_item_poll().md",
+    "Encyclopedia of NetworkSystem/Function/fs/ep_send_events().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/__skb_put().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/devm_kcalloc().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/devm_kmalloc_array().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/devm_request_irq().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/devres_alloc().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/dma_set_mask_and_coherent().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/dmam_alloc_coherent().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/irqd_set_activated().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/kmalloc_node_track_caller().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/kmalloc_node().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/kzalloc().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/list_add_tail().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/list_del_init() .md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/napi_complete() .md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/napi_prefer_busy_poll() .md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/napi_schedule().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/netif_elide_gro().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/netif_napi_add().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/netif_tx_start_all_queues().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/NF_HOOK().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/nf_hook()_.md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/skb_copy_datagram_msg().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/skb_propagate_pfmemalloc().md",
+    "Encyclopedia of NetworkSystem/Function/include-linux/skb_record_rx_queue().md",
+    "Encyclopedia of NetworkSystem/Function/include-net/dst_input().md",
+    "Encyclopedia of NetworkSystem/Function/include-net/fib_lookup().md",
+    "Encyclopedia of NetworkSystem/Function/include-net/gro_normal_list().md",
+    "Encyclopedia of NetworkSystem/Function/include-net/gro_normal_one().md",
+    "Encyclopedia of NetworkSystem/Function/include-net/include-net.md",
+    "Encyclopedia of NetworkSystem/Function/include-net/xdp_prepare_buff().md",
+    "Encyclopedia of NetworkSystem/Function/kernel/__do_softirq().md",
+    "Encyclopedia of NetworkSystem/Function/kernel/__raise_softirq_irqoff().md",
+    "Encyclopedia of NetworkSystem/Function/kernel/handle_softirqs().md",
+    "Encyclopedia of NetworkSystem/Function/kernel/kernel.md",
+    "Encyclopedia of NetworkSystem/Function/kernel-dma/dma_alloc_attrs().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-dma/dma_alloc_direct().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-dma/dmam_alloc_attrs().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/__irq_domain_activate_irq().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/__irq_set_trigger().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/__setup_irq().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/chip_bus_lock().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/devm_request_threaded_irq().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/irq_activate().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/irq_domain_activate_irq().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/irq_startup().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/irq_thread().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/irq_to_desc().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/irqd_set().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/request_threaded_irq().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/setup_irq_thread().md",
+    "Encyclopedia of NetworkSystem/Function/kernel-locking/mutex_lock().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/img/Pasted image 20240904104737.png",
+    "Encyclopedia of NetworkSystem/Function/net-core/____napi_schedule().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/__alloc_skb().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/__napi_alloc_skb().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/__napi_build_skb().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/__napi_poll().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/__napi_schedule().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/__netif_receive_skb_core().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/__netif_receive_skb_list_core().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/__netif_receive_skb_list().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/__release_sock().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/__sk_flush_backlog().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/__skb_datagram_iter().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/`__netif_receive_skb_list().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/deliver_skb().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/dev_add_pack().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/dev_gro_receive().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/do_xdp_generic().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/enqueue_to_backlog().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/get_rps_cpu().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/gro_list_prepare().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_build_skb().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_complete_done().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_gro_complete().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_gro_receive().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_poll().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_schedule_prep().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_schedule_rps().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_skb_finish().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/net_dev_init().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/net_rps_action_and_irq_enable().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/net_rx_action().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/netif_napi_add_weight().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/netif_receive_skb_internal().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/netif_receive_skb_list_internal().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/netif_receive_skb_list().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/netif_receive_skb().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/process_backlog().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/release_sock().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/set_rps_cpu().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/sk_wait_data().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/skb_copy_datagram_iter().md",
+    "Encyclopedia of NetworkSystem/Function/net-core/skb_gro_receive().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/img/Pasted image 20240901180451.png",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/`__inet_lookup_skb().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/`_inet_lookup_established().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/fib_table_lookup().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/inet_gro_complete().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/inet_gro_receive().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_defrag().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_find().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_frag_queue() incomplete.md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_local_deliver_finish().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_local_deliver().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_protocol_deliver_rcu().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_rcv_core().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_rcv_finish_core().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_rcv_finish().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_rcv().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_route_input_noref().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_route_input_rcu().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_route_input_slow().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/l3mdev_ip_rcv().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/sk_add_backlog().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/skb_condense().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/skb_try_coalesce().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/sock_def_readable().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/sock_owned_by_user().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_ack().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_add_backlog().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_check_req().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_cong_control().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_data_queue_ofo().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_data_queue().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_data_ready().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_epollin_ready().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_filter().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_gro_complete().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_gro_receive().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_queue_rcv().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_rcv_established().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_rcv_state_process().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_recvmsg_locked().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_recvmsg().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_try_coalesce().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_v4_cookie_check().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_v4_do_rcv().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_v4_early_demux().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_v4_rcv().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_v4_send_reset().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp4_gro_complete().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp4_gro_receive().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv4-netfilter/ipt_do_table().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv6/ipv6_gro_complete().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv6/ipv6_gro_receive().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv6/tcp6_gro_complete().md",
+    "Encyclopedia of NetworkSystem/Function/net-ipv6/tcp6_gro_receive().md",
+    "Encyclopedia of NetworkSystem/Function/net-netfilter/nf_hook_entry_hookfn().md",
+    "Encyclopedia of NetworkSystem/Function/net-netfilter/nf_hook_slow().md",
+    "Encyclopedia of NetworkSystem/Function/net-sched/netif_carrier_on().md",
+    "Encyclopedia of NetworkSystem/Function/Function.md",
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_32b_rx_flex_desc.md",
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_32byte_rx_desc.md",
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_hw.md",
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_pf.md",
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_q_vector.md",
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_ring_container.md",
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_rx_ring.md",
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_tx_ring.md",
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_vsi.md",
+    "Encyclopedia of NetworkSystem/Struct/include-linux/device.md",
+    "Encyclopedia of NetworkSystem/Struct/include-linux/gro_result.md",
+    "Encyclopedia of NetworkSystem/Struct/include-linux/msi_map.md",
+    "Encyclopedia of NetworkSystem/Struct/include-linux/napi_struct.md",
+    "Encyclopedia of NetworkSystem/Struct/include-linux/net_device.md",
+    "Encyclopedia of NetworkSystem/Struct/include-linux/packet_offload.md",
+    "Encyclopedia of NetworkSystem/Struct/include-linux/pci_dev.md",
+    "Encyclopedia of NetworkSystem/Struct/include-linux/sk_buff.md",
+    "Encyclopedia of NetworkSystem/Struct/include-linux/softnet_data.md",
+    "Encyclopedia of NetworkSystem/Struct/include-net/napi_gro_cb.md",
+    "Encyclopedia of NetworkSystem/Struct/include-net/netdev_rx_queue.md",
+    "Encyclopedia of NetworkSystem/Struct/include-net/rps_dev_flow_table.md",
+    "Encyclopedia of NetworkSystem/Struct/include-net/rps_map.md",
+    "Encyclopedia of NetworkSystem/Struct/include-net/sock.md",
+    "Encyclopedia of NetworkSystem/Struct/net-core/net_hotdata.md",
+    "Encyclopedia of NetworkSystem/Struct/net-core/net-core.md",
+    "Encyclopedia of NetworkSystem/README.md",
+    "Excalidraw/RPS-IPI 관계도.md",
+    "Excalidraw/sock.md",
+    "Excalidraw/주요 개념 구조도.md",
+    "Excalidraw/함수 콜 스택.png",
+    "Excalidraw/함수 콜 스택.md",
+    "Excalidraw/함수 콜 스택 chan.md",
+    "lib/media/pasted-image-20240811235306.png",
+    "lib/media/pasted-image-20240816113600.png",
+    "lib/media/pasted-image-20240904095723-1.png",
+    "lib/media/pasted-image-20240904100752-1.png",
+    "lib/media/pasted-image-20240904101222-1.png",
+    "lib/fonts/94f2f163d4b698242fef.otf",
+    "lib/fonts/72505e6a122c6acd5471.woff2",
+    "lib/fonts/2d5198822ab091ce4305.woff2",
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+    "lib/fonts/cb10ffd7684cd9836a05.woff2",
+    "lib/fonts/b5f0f109bc88052d4000.woff2",
+    "lib/fonts/cbe0ae49c52c920fd563.woff2",
+    "lib/fonts/535a6cf662596b3bd6a6.woff2",
+    "lib/fonts/70cc7ff27245e82ad414.ttf",
+    "lib/fonts/454577c22304619db035.ttf",
+    "lib/fonts/52ac8f3034507f1d9e53.ttf",
+    "lib/fonts/05b618077343fbbd92b7.ttf",
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+    "lib/media/874d8b8e340f75575caa.svg",
+    "lib/html/file-tree.html",
+    "lib/scripts/webpage.js",
+    "lib/media/favicon.png",
+    "lib/styles/obsidian.css",
+    "lib/styles/other-plugins.css",
+    "lib/styles/theme.css",
+    "lib/styles/global-variable-styles.css",
+    "lib/styles/supported-plugins.css",
+    "lib/styles/main-styles.css",
+    "lib/styles/snippets.css"
+  ],
+  "mainDependencies": [
+    "lib/fonts/94f2f163d4b698242fef.otf",
+    "lib/fonts/72505e6a122c6acd5471.woff2",
+    "lib/fonts/2d5198822ab091ce4305.woff2",
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+    "lib/fonts/cb10ffd7684cd9836a05.woff2",
+    "lib/fonts/b5f0f109bc88052d4000.woff2",
+    "lib/fonts/cbe0ae49c52c920fd563.woff2",
+    "lib/fonts/535a6cf662596b3bd6a6.woff2",
+    "lib/fonts/70cc7ff27245e82ad414.ttf",
+    "lib/fonts/454577c22304619db035.ttf",
+    "lib/fonts/52ac8f3034507f1d9e53.ttf",
+    "lib/fonts/05b618077343fbbd92b7.ttf",
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+    "lib/media/874d8b8e340f75575caa.svg",
+    "lib/html/file-tree.html",
+    "lib/scripts/webpage.js",
+    "lib/media/favicon.png",
+    "lib/styles/obsidian.css",
+    "lib/styles/other-plugins.css",
+    "lib/styles/theme.css",
+    "lib/styles/global-variable-styles.css",
+    "lib/styles/supported-plugins.css",
+    "lib/styles/main-styles.css",
+    "lib/styles/snippets.css"
+  ],
+  "fileInfo": {
+    "Encyclopedia of NetworkSystem/Function/drivers-base/__devres_alloc_node().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 983,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-base/__devres_alloc_node().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-base/alloc_dr().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 690,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-base/alloc_dr().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-base/devm_kmalloc().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1136,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-base/devm_kmalloc().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/__ice_q_vector_set_napi_queues().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1270,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/__ice_q_vector_set_napi_queues().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/__ice_xmit_xdp_ring().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3119,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/__ice_xmit_xdp_ring().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_add_xdp_frag().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1506,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_add_xdp_frag().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_alloc_irq().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2296,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_alloc_irq().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_alloc_rx_bufs().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2131,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_alloc_rx_bufs().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_alloc_vsis().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 946,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_alloc_vsis().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_allocate_pf().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 522,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_allocate_pf().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_build_skb().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2084,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_build_skb().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_clean_rx_irq().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 7815,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_clean_rx_irq().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_clean_tx_irq().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3520,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_clean_tx_irq().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_construct_skb().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2856,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_construct_skb().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_enable_interrupt().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1639,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_enable_interrupt().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_finalize_xdp_rx().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1160,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_finalize_xdp_rx().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_get_irq_res().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1321,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_get_irq_res().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_get_rx_buf().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1285,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_get_rx_buf().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_dev().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2943,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_init_dev().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_devlink().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 328,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_init_devlink().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_feature_support().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1071,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_init_feature_support().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_interrupt_scheme().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 642,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_init_interrupt_scheme().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_link().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1325,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_init_link().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_pf_sw().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1011,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_init_pf_sw().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_pf().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1237,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_init_pf().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init_wakeup().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 525,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_init_wakeup().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_init().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1406,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_init().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_irq_dynamic_ena().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 940,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_irq_dynamic_ena().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_load().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1425,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_load().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_msix_clean_rings().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 768,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_msix_clean_rings().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_napi_add().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 535,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_napi_add().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_napi_enable_all().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 560,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_napi_enable_all().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_napi_poll().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 7617,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_napi_poll().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_net_dim().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 923,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_net_dim().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_open_internal().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2065,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_open_internal().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_open().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1254,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_open().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_pf_vsi_setup().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 684,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_pf_vsi_setup().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_probe().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 11273,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_probe().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_process_skb_fields().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1229,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_process_skb_fields().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_put_rx_buf().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1317,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_put_rx_buf().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_receive_skb().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1143,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_receive_skb().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_req_irq_msix_misc().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2641,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_req_irq_msix_misc().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_request_fw().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1252,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_request_fw().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_ring_is_xdp().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 249,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_ring_is_xdp().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_ring_uses_build_skb().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 408,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_ring_uses_build_skb().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_run_xdp().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2287,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_run_xdp().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_send_version().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 554,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_send_version().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_set_cpu_rx_rmap().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 997,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_set_cpu_rx_rmap().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_set_rx_bufs_act().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2486,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_set_rx_bufs_act().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_setup_rx_ring().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2055,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_setup_rx_ring().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_setup_tx_ring().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1285,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_setup_tx_ring().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_up_complete().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1610,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_up_complete().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_update_rx_ring_stats().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 630,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_update_rx_ring_stats().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_verify_cacheline_size().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 706,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_verify_cacheline_size().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_def().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1398,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_def().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_q_vector().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 8327,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_q_vector().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_q_vectors().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 993,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_q_vectors().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_ring_stats().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1462,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_ring_stats().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_rings().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1560,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_rings().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_stat_arrays().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1226,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_stat_arrays().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_cfg_def().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 4390,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_cfg_def().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_cfg_lan().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 720,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_cfg_lan().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_cfg_rxq().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2702,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_cfg_rxq().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_cfg_rxqs().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 659,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_cfg_rxqs().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_cfg().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1055,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_cfg().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_ctrl_all_rx_rings().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 898,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_ctrl_all_rx_rings().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_ena_irq().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 552,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_ena_irq().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_get_qs().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1275,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_get_qs().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_init().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3518,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_init().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_map_rings_to_vectors().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1974,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_map_rings_to_vectors().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_open().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2068,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_open().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_req_irq_msix().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3386,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_req_irq_msix().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_setup_rx_rings().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1621,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_setup_rx_rings().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_setup_tx_rings().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1342,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_setup_tx_rings().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_setup().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1827,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_setup().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_vsi_start_all_rx_rings().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 612,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_start_all_rx_rings().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_xmit_zc().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1336,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_xmit_zc().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-pci/pci_clear_master().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 220,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-pci/pci_clear_master().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-pci/pci_save_state().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 4546,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-pci/pci_save_state().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/drivers-pci/pci_set_master().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 540,
+      "exportedPath": "encyclopedia-of-networksystem/function/drivers-pci/pci_set_master().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/fs/ep_events_available().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 389,
+      "exportedPath": "encyclopedia-of-networksystem/function/fs/ep_events_available().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/fs/ep_item_poll().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 685,
+      "exportedPath": "encyclopedia-of-networksystem/function/fs/ep_item_poll().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/fs/ep_send_events().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2433,
+      "exportedPath": "encyclopedia-of-networksystem/function/fs/ep_send_events().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/__skb_put().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 357,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/__skb_put().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/devm_kcalloc().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 497,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/devm_kcalloc().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/devm_kmalloc_array().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 552,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/devm_kmalloc_array().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/devm_request_irq().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 665,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/devm_request_irq().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/devres_alloc().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 569,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/devres_alloc().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/dma_set_mask_and_coherent().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 312,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/dma_set_mask_and_coherent().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/dmam_alloc_coherent().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 566,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/dmam_alloc_coherent().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/irqd_set_activated().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 214,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/irqd_set_activated().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/kmalloc_node_track_caller().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 527,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/kmalloc_node_track_caller().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/kmalloc_node().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 564,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/kmalloc_node().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/kzalloc().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 405,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/kzalloc().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/list_add_tail().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 610,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/list_add_tail().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/list_del_init() .md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 343,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/list_del_init()-.md/list_del_init()-.md.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/napi_complete() .md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 799,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/napi_complete()-.md/napi_complete()-.md.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/napi_prefer_busy_poll() .md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 371,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/napi_prefer_busy_poll()-.md/napi_prefer_busy_poll()-.md.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/napi_schedule().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2644,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/napi_schedule().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/netif_elide_gro().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1136,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/netif_elide_gro().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/netif_napi_add().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3745,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/netif_napi_add().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/netif_tx_start_all_queues().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 353,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/netif_tx_start_all_queues().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/NF_HOOK().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1932,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/nf_hook().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/nf_hook()_.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3702,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/nf_hook()_.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/skb_copy_datagram_msg().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 226,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/skb_copy_datagram_msg().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/skb_propagate_pfmemalloc().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 488,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/skb_propagate_pfmemalloc().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-linux/skb_record_rx_queue().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 319,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-linux/skb_record_rx_queue().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-net/dst_input().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1027,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-net/dst_input().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-net/fib_lookup().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1560,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-net/fib_lookup().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-net/gro_normal_list().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 908,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-net/gro_normal_list().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-net/gro_normal_one().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1391,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-net/gro_normal_one().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-net/include-net.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 0,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-net/include-net.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/include-net/xdp_prepare_buff().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 578,
+      "exportedPath": "encyclopedia-of-networksystem/function/include-net/xdp_prepare_buff().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel/__do_softirq().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 371,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel/__do_softirq().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel/__raise_softirq_irqoff().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1067,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel/__raise_softirq_irqoff().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel/handle_softirqs().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2261,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel/handle_softirqs().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel/kernel.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 0,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel/kernel.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-dma/dma_alloc_attrs().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1864,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-dma/dma_alloc_attrs().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-dma/dma_alloc_direct().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 640,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-dma/dma_alloc_direct().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-dma/dmam_alloc_attrs().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2055,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-dma/dmam_alloc_attrs().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/__irq_domain_activate_irq().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 713,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-irq/__irq_domain_activate_irq().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/__irq_set_trigger().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1514,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-irq/__irq_set_trigger().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/__setup_irq().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 14790,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-irq/__setup_irq().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/chip_bus_lock().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 404,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-irq/chip_bus_lock().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/devm_request_threaded_irq().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2248,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-irq/devm_request_threaded_irq().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/irq_activate().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 513,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-irq/irq_activate().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/irq_domain_activate_irq().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1187,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-irq/irq_domain_activate_irq().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/irq_startup().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 920,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-irq/irq_startup().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/irq_thread().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1514,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-irq/irq_thread().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/irq_to_desc().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 332,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-irq/irq_to_desc().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/irqd_set().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 215,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-irq/irqd_set().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/request_threaded_irq().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 4670,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-irq/request_threaded_irq().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-irq/setup_irq_thread().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1665,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-irq/setup_irq_thread().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/kernel-locking/mutex_lock().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1219,
+      "exportedPath": "encyclopedia-of-networksystem/function/kernel-locking/mutex_lock().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/img/Pasted image 20240904104737.png": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 80358,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/img/pasted-image-20240904104737.png",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/____napi_schedule().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2344,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/____napi_schedule().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/__alloc_skb().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3577,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/__alloc_skb().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/__napi_alloc_skb().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3537,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/__napi_alloc_skb().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/__napi_build_skb().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1026,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/__napi_build_skb().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/__napi_poll().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3253,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/__napi_poll().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/__napi_schedule().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 504,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/__napi_schedule().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/__netif_receive_skb_core().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 6441,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/__netif_receive_skb_core().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/__netif_receive_skb_list_core().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2057,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/__netif_receive_skb_list_core().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/__netif_receive_skb_list().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1726,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/__netif_receive_skb_list().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/__release_sock().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 702,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/__release_sock().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/__sk_flush_backlog().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 280,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/__sk_flush_backlog().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/__skb_datagram_iter().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2287,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/__skb_datagram_iter().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/`__netif_receive_skb_list().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 924,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/`__netif_receive_skb_list().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/deliver_skb().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1455,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/deliver_skb().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/dev_add_pack().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1253,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/dev_add_pack().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/dev_gro_receive().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 7935,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/dev_gro_receive().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/do_xdp_generic().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 0,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/do_xdp_generic().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/enqueue_to_backlog().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1759,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/enqueue_to_backlog().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/get_rps_cpu().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 7013,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/get_rps_cpu().html",
+      "dependencies": [
+        "lib/media/pasted-image-20240811235306.png"
+      ]
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/gro_list_prepare().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2296,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/gro_list_prepare().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_build_skb().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1305,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/napi_build_skb().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_complete_done().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2686,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/napi_complete_done().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_gro_complete().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2378,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/napi_gro_complete().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_gro_receive().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1284,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/napi_gro_receive().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_poll().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1299,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/napi_poll().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_schedule_prep().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 809,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/napi_schedule_prep().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_schedule_rps().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1565,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/napi_schedule_rps().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/napi_skb_finish().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 808,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/napi_skb_finish().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/net_dev_init().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3488,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/net_dev_init().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/net_rps_action_and_irq_enable().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 606,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/net_rps_action_and_irq_enable().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/net_rx_action().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 5120,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/net_rx_action().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/netif_napi_add_weight().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1378,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/netif_napi_add_weight().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/netif_receive_skb_internal().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 966,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/netif_receive_skb_internal().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/netif_receive_skb_list_internal().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2236,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/netif_receive_skb_list_internal().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/netif_receive_skb_list().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1654,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/netif_receive_skb_list().html",
+      "dependencies": [
+        "encyclopedia-of-networksystem/function/net-core/img/pasted-image-20240904104737.png"
+      ]
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/netif_receive_skb().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 678,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/netif_receive_skb().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/process_backlog().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 34,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/process_backlog().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/release_sock().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 374,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/release_sock().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/set_rps_cpu().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1734,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/set_rps_cpu().html",
+      "dependencies": [
+        "lib/media/pasted-image-20240816113600.png"
+      ]
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/sk_wait_data().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 813,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/sk_wait_data().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/skb_copy_datagram_iter().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 512,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/skb_copy_datagram_iter().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-core/skb_gro_receive().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 4039,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/skb_gro_receive().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/img/Pasted image 20240901180451.png": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 90143,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/img/pasted-image-20240901180451.png",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/`__inet_lookup_skb().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 878,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/`__inet_lookup_skb().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/`_inet_lookup_established().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1301,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/`_inet_lookup_established().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/fib_table_lookup().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 18300,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/fib_table_lookup().html",
+      "dependencies": [
+        "lib/media/pasted-image-20240904095723-1.png",
+        "lib/media/pasted-image-20240904100752-1.png",
+        "lib/media/pasted-image-20240904101222-1.png"
+      ]
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/inet_gro_complete().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1302,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/inet_gro_complete().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/inet_gro_receive().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 4253,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/inet_gro_receive().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_defrag().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1371,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/ip_defrag().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_find().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1235,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/ip_find().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_frag_queue() incomplete.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3178,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/ip_frag_queue()-incomplete.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_local_deliver_finish().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 523,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/ip_local_deliver_finish().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_local_deliver().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1163,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/ip_local_deliver().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_protocol_deliver_rcu().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1934,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/ip_protocol_deliver_rcu().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_rcv_core().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 8237,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/ip_rcv_core().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_rcv_finish_core().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 4086,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/ip_rcv_finish_core().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_rcv_finish().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 976,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/ip_rcv_finish().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_rcv().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 886,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/ip_rcv().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_route_input_noref().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 579,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/ip_route_input_noref().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_route_input_rcu().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 2462,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/ip_route_input_rcu().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/ip_route_input_slow().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 9441,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/ip_route_input_slow().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/l3mdev_ip_rcv().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1298,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/l3mdev_ip_rcv().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/sk_add_backlog().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1144,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/sk_add_backlog().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/skb_condense().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1038,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/skb_condense().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/skb_try_coalesce().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3410,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/skb_try_coalesce().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/sock_def_readable().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1717,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/sock_def_readable().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/sock_owned_by_user().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 916,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/sock_owned_by_user().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_ack().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 6015,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_ack().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_add_backlog().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 5544,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_add_backlog().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_check_req().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 0,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_check_req().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_cong_control().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 916,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_cong_control().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_data_queue_ofo().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 4422,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_data_queue_ofo().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_data_queue().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 4493,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_data_queue().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_data_ready().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1828,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_data_ready().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_epollin_ready().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 0,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_epollin_ready().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_filter().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 425,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_filter().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_gro_complete().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 740,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_gro_complete().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_gro_receive().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3467,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_gro_receive().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_queue_rcv().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1223,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_queue_rcv().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_rcv_established().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 11013,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_rcv_established().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_rcv_state_process().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 0,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_rcv_state_process().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_recvmsg_locked().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 7480,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_recvmsg_locked().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_recvmsg().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1219,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_recvmsg().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_try_coalesce().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1700,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_try_coalesce().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_v4_cookie_check().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3427,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_v4_cookie_check().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_v4_do_rcv().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 4070,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_v4_do_rcv().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_v4_early_demux().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1356,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_v4_early_demux().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_v4_rcv().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 14030,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_v4_rcv().html",
+      "dependencies": [
+        "encyclopedia-of-networksystem/function/net-ipv4/img/pasted-image-20240901180451.png"
+      ]
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp_v4_send_reset().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 0,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp_v4_send_reset().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp4_gro_complete().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 809,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp4_gro_complete().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4/tcp4_gro_receive().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 946,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/tcp4_gro_receive().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv4-netfilter/ipt_do_table().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 5339,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4-netfilter/ipt_do_table().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv6/ipv6_gro_complete().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1760,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv6/ipv6_gro_complete().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv6/ipv6_gro_receive().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 3045,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv6/ipv6_gro_receive().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv6/tcp6_gro_complete().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 637,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv6/tcp6_gro_complete().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-ipv6/tcp6_gro_receive().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 699,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv6/tcp6_gro_receive().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-netfilter/nf_hook_entry_hookfn().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 408,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-netfilter/nf_hook_entry_hookfn().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-netfilter/nf_hook_slow().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1997,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-netfilter/nf_hook_slow().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/net-sched/netif_carrier_on().md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 564,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-sched/netif_carrier_on().html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Function/Function.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 0,
+      "exportedPath": "encyclopedia-of-networksystem/function/function.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_32b_rx_flex_desc.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1182,
+      "exportedPath": "encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_32b_rx_flex_desc.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_32byte_rx_desc.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 924,
+      "exportedPath": "encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_32byte_rx_desc.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_hw.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 9772,
+      "exportedPath": "encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_hw.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_pf.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 9943,
+      "exportedPath": "encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_pf.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_q_vector.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1288,
+      "exportedPath": "encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_q_vector.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_ring_container.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1060,
+      "exportedPath": "encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_ring_container.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_rx_ring.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1863,
+      "exportedPath": "encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_rx_ring.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_tx_ring.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1605,
+      "exportedPath": "encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_tx_ring.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/drivers-net-ethernet-intel-ice/ice_vsi.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 4434,
+      "exportedPath": "encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_vsi.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/include-linux/device.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 7038,
+      "exportedPath": "encyclopedia-of-networksystem/struct/include-linux/device.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/include-linux/gro_result.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 214,
+      "exportedPath": "encyclopedia-of-networksystem/struct/include-linux/gro_result.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/include-linux/msi_map.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 539,
+      "exportedPath": "encyclopedia-of-networksystem/struct/include-linux/msi_map.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/include-linux/napi_struct.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1226,
+      "exportedPath": "encyclopedia-of-networksystem/struct/include-linux/napi_struct.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/include-linux/net_device.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 9427,
+      "exportedPath": "encyclopedia-of-networksystem/struct/include-linux/net_device.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/include-linux/packet_offload.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 252,
+      "exportedPath": "encyclopedia-of-networksystem/struct/include-linux/packet_offload.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/include-linux/pci_dev.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 13742,
+      "exportedPath": "encyclopedia-of-networksystem/struct/include-linux/pci_dev.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/include-linux/sk_buff.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 18638,
+      "exportedPath": "encyclopedia-of-networksystem/struct/include-linux/sk_buff.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/include-linux/softnet_data.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 5005,
+      "exportedPath": "encyclopedia-of-networksystem/struct/include-linux/softnet_data.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/include-net/napi_gro_cb.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 4261,
+      "exportedPath": "encyclopedia-of-networksystem/struct/include-net/napi_gro_cb.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/include-net/netdev_rx_queue.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 572,
+      "exportedPath": "encyclopedia-of-networksystem/struct/include-net/netdev_rx_queue.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/include-net/rps_dev_flow_table.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 225,
+      "exportedPath": "encyclopedia-of-networksystem/struct/include-net/rps_dev_flow_table.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/include-net/rps_map.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 225,
+      "exportedPath": "encyclopedia-of-networksystem/struct/include-net/rps_map.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/include-net/sock.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 5676,
+      "exportedPath": "encyclopedia-of-networksystem/struct/include-net/sock.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/net-core/net_hotdata.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 722,
+      "exportedPath": "encyclopedia-of-networksystem/struct/net-core/net_hotdata.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/Struct/net-core/net-core.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 0,
+      "exportedPath": "encyclopedia-of-networksystem/struct/net-core/net-core.html",
+      "dependencies": []
+    },
+    "Encyclopedia of NetworkSystem/README.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 318,
+      "exportedPath": "encyclopedia-of-networksystem/readme.html",
+      "dependencies": []
+    },
+    "Excalidraw/RPS-IPI 관계도.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 208847,
+      "exportedPath": "excalidraw/rps-ipi-관계도.html",
+      "dependencies": []
+    },
+    "Excalidraw/sock.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 141129,
+      "exportedPath": "excalidraw/sock.html",
+      "dependencies": []
+    },
+    "Excalidraw/주요 개념 구조도.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 176379,
+      "exportedPath": "excalidraw/주요-개념-구조도.html",
+      "dependencies": []
+    },
+    "Excalidraw/함수 콜 스택.png": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1945698,
+      "exportedPath": "excalidraw/함수-콜-스택.png",
+      "dependencies": []
+    },
+    "Excalidraw/함수 콜 스택.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 183637,
+      "exportedPath": "excalidraw/함수-콜-스택.html",
+      "dependencies": []
+    },
+    "Excalidraw/함수 콜 스택 chan.md": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 214395,
+      "exportedPath": "excalidraw/함수-콜-스택-chan.html",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20240811235306.png": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 14998,
+      "exportedPath": "lib/media/pasted-image-20240811235306.png",
+      "dependencies": []
+    },
+    "encyclopedia-of-networksystem/function/net-core/img/pasted-image-20240904104737.png": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 80358,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-core/img/pasted-image-20240904104737.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20240816113600.png": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 96704,
+      "exportedPath": "lib/media/pasted-image-20240816113600.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20240904095723-1.png": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 40751,
+      "exportedPath": "lib/media/pasted-image-20240904095723-1.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20240904100752-1.png": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 47517,
+      "exportedPath": "lib/media/pasted-image-20240904100752-1.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20240904101222-1.png": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 153854,
+      "exportedPath": "lib/media/pasted-image-20240904101222-1.png",
+      "dependencies": []
+    },
+    "encyclopedia-of-networksystem/function/net-ipv4/img/pasted-image-20240901180451.png": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 90143,
+      "exportedPath": "encyclopedia-of-networksystem/function/net-ipv4/img/pasted-image-20240901180451.png",
+      "dependencies": []
+    },
+    "lib/fonts/94f2f163d4b698242fef.otf": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 66800,
+      "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
+      "dependencies": []
+    },
+    "lib/fonts/72505e6a122c6acd5471.woff2": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 104232,
+      "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/2d5198822ab091ce4305.woff2": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 104332,
+      "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 98868,
+      "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/cb10ffd7684cd9836a05.woff2": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 106876,
+      "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/b5f0f109bc88052d4000.woff2": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 105804,
+      "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/cbe0ae49c52c920fd563.woff2": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 106108,
+      "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/535a6cf662596b3bd6a6.woff2": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 111708,
+      "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/70cc7ff27245e82ad414.ttf": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 192740,
+      "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/454577c22304619db035.ttf": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 161376,
+      "exportedPath": "lib/fonts/454577c22304619db035.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/52ac8f3034507f1d9e53.ttf": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 191568,
+      "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/05b618077343fbbd92b7.ttf": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 155288,
+      "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 7876,
+      "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+      "dependencies": []
+    },
+    "lib/media/874d8b8e340f75575caa.svg": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 317,
+      "exportedPath": "lib/media/874d8b8e340f75575caa.svg",
+      "dependencies": []
+    },
+    "lib/html/file-tree.html": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 119251,
+      "exportedPath": "lib/html/file-tree.html",
+      "dependencies": []
+    },
+    "lib/scripts/webpage.js": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 47290,
+      "exportedPath": "lib/scripts/webpage.js",
+      "dependencies": []
+    },
+    "lib/media/favicon.png": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 1105,
+      "exportedPath": "lib/media/favicon.png",
+      "dependencies": []
+    },
+    "lib/styles/obsidian.css": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 131118,
+      "exportedPath": "lib/styles/obsidian.css",
+      "dependencies": []
+    },
+    "lib/styles/other-plugins.css": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 186049,
+      "exportedPath": "lib/styles/other-plugins.css",
+      "dependencies": []
+    },
+    "lib/styles/theme.css": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 272230,
+      "exportedPath": "lib/styles/theme.css",
+      "dependencies": []
+    },
+    "lib/styles/global-variable-styles.css": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 253,
+      "exportedPath": "lib/styles/global-variable-styles.css",
+      "dependencies": []
+    },
+    "lib/styles/supported-plugins.css": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 61,
+      "exportedPath": "lib/styles/supported-plugins.css",
+      "dependencies": []
+    },
+    "lib/styles/main-styles.css": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 23130,
+      "exportedPath": "lib/styles/main-styles.css",
+      "dependencies": []
+    },
+    "lib/styles/snippets.css": {
+      "modifiedTime": 1733999206321,
+      "sourceSize": 321990,
+      "exportedPath": "lib/styles/snippets.css",
+      "dependencies": []
+    }
+  }
+}

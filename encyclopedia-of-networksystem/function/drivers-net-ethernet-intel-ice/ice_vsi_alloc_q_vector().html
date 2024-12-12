@@ -1,0 +1,220 @@
+<!DOCTYPE html> <html><head>
+		<title>ice_vsi_alloc_q_vector()</title>
+		<base href="../../../">
+		<meta id="root-path" root-path="../../../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="NetSys_Obsidian - ice_vsi_alloc_q_vector()">
+		<meta property="og:title" content="ice_vsi_alloc_q_vector()">
+		<meta property="og:description" content="NetSys_Obsidian - ice_vsi_alloc_q_vector()">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_q_vector().html">
+		<meta property="og:image" content="undefined">
+		<meta property="og:site_name" content="NetSys_Obsidian">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/other-plugins.css"></noscript><link rel="stylesheet" href="lib/styles/theme.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/supported-plugins.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript><link rel="preload" href="lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/snippets.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon ctp-latte ctp-mocha ctp-accent-light-sapphire ctp-accent-rosewater anuppuccin-accent-toggle anp-callout-color-toggle anp-custom-checkboxes anp-speech-bubble anp-codeblock-numbers anp-h1-red anp-h2-peach anp-h3-green anp-h4-teal anp-h5-lavender anp-h6-mauve anp-bold-red anp-italic-green anp-highlight-yellow anp-colorful-frame anp-file-icons anp-collapse-folders anp-full-rainbow-color-toggle anp-background-image-toggle rainbow-repeat-11 rainbow-color-1-mauve rainbow-color-2-flamingo rainbow-color-3-rosewater rainbow-color-4-red rainbow-color-5-peach rainbow-color-6-yellow rainbow-color-7-green rainbow-color-8-teal rainbow-color-9-sky rainbow-color-10-blue rainbow-color-11-lavender ctp-atom-light ctp-material-mint-dark code-styler code-styler-style-inline code-styler-gutter-highlight mk-readable-line mk-folder-lines mk-spaces-enabled mk-inline-context-enabled mk-flow-seamless"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles"></style><pre class="frontmatter language-yaml" tabindex="0" style="display: none;"><code class="language-yaml is-loaded"><span class="token key atrule">Parameter</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> ice_vsi
+  <span class="token punctuation">-</span> u16
+<span class="token key atrule">Return</span><span class="token punctuation">:</span> int
+<span class="token key atrule">Location</span><span class="token punctuation">:</span> /drivers/net/ethernet/intel/ice/ice_base.c</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="ice_vsi_alloc_q_vector()"><p dir="auto">ice_vsi_alloc_q_vector()</p></h1><div class="el-pre"><pre class="language-c" tabindex="0"><code data-line="0" class="language-c is-loaded"><span class="token comment">/**
+ * ice_vsi_alloc_q_vector - Allocate memory for a single interrupt vector
+ * @vsi: the VSI being configured
+ * @v_idx: index of the vector in the VSI struct
+ *
+ * We allocate one q_vector and set default value for ITR setting associated
+ * with this q_vector. If allocation fails we return -ENOMEM.
+ */</span>
+<span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">ice_vsi_alloc_q_vector</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">ice_vsi</span> <span class="token operator">*</span>vsi<span class="token punctuation">,</span> u16 v_idx<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_pf</span> <span class="token operator">*</span>pf <span class="token operator">=</span> vsi<span class="token operator">-&gt;</span>back<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_q_vector</span> <span class="token operator">*</span>q_vector<span class="token punctuation">;</span> <span class="token comment">// [[ice_q_vector]]</span>
+	<span class="token keyword">int</span> err<span class="token punctuation">;</span>
+
+	<span class="token comment">/* allocate q_vector */</span>
+	q_vector <span class="token operator">=</span> <span class="token function">kzalloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token operator">*</span>q_vector<span class="token punctuation">)</span><span class="token punctuation">,</span> GFP_KERNEL<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [[kzalloc()]]</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>q_vector<span class="token punctuation">)</span>
+		<span class="token keyword">return</span> <span class="token operator">-</span>ENOMEM<span class="token punctuation">;</span>
+
+	q_vector<span class="token operator">-&gt;</span>vsi <span class="token operator">=</span> vsi<span class="token punctuation">;</span>
+	q_vector<span class="token operator">-&gt;</span>v_idx <span class="token operator">=</span> v_idx<span class="token punctuation">;</span>
+	q_vector<span class="token operator">-&gt;</span>tx<span class="token punctuation">.</span>itr_setting <span class="token operator">=</span> ICE_DFLT_TX_ITR<span class="token punctuation">;</span>
+	q_vector<span class="token operator">-&gt;</span>rx<span class="token punctuation">.</span>itr_setting <span class="token operator">=</span> ICE_DFLT_RX_ITR<span class="token punctuation">;</span>
+	q_vector<span class="token operator">-&gt;</span>tx<span class="token punctuation">.</span>itr_mode <span class="token operator">=</span> ITR_DYNAMIC<span class="token punctuation">;</span>
+	q_vector<span class="token operator">-&gt;</span>rx<span class="token punctuation">.</span>itr_mode <span class="token operator">=</span> ITR_DYNAMIC<span class="token punctuation">;</span>
+	q_vector<span class="token operator">-&gt;</span>tx<span class="token punctuation">.</span>type <span class="token operator">=</span> ICE_TX_CONTAINER<span class="token punctuation">;</span>
+	q_vector<span class="token operator">-&gt;</span>rx<span class="token punctuation">.</span>type <span class="token operator">=</span> ICE_RX_CONTAINER<span class="token punctuation">;</span>
+	q_vector<span class="token operator">-&gt;</span>irq<span class="token punctuation">.</span>index <span class="token operator">=</span> <span class="token operator">-</span>ENOENT<span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>vsi<span class="token operator">-&gt;</span>type <span class="token operator">==</span> ICE_VSI_VF<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		q_vector<span class="token operator">-&gt;</span>reg_idx <span class="token operator">=</span> <span class="token function">ice_calc_vf_reg_idx</span><span class="token punctuation">(</span>vsi<span class="token operator">-&gt;</span>vf<span class="token punctuation">,</span> q_vector<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">goto</span> out<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>vsi<span class="token operator">-&gt;</span>type <span class="token operator">==</span> ICE_VSI_CTRL <span class="token operator">&amp;&amp;</span> vsi<span class="token operator">-&gt;</span>vf<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">struct</span> <span class="token class-name">ice_vsi</span> <span class="token operator">*</span>ctrl_vsi <span class="token operator">=</span> <span class="token function">ice_get_vf_ctrl_vsi</span><span class="token punctuation">(</span>pf<span class="token punctuation">,</span> vsi<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>ctrl_vsi<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">unlikely</span><span class="token punctuation">(</span><span class="token operator">!</span>ctrl_vsi<span class="token operator">-&gt;</span>q_vectors<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				err <span class="token operator">=</span> <span class="token operator">-</span>ENOENT<span class="token punctuation">;</span>
+				<span class="token keyword">goto</span> err_free_q_vector<span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+
+			q_vector<span class="token operator">-&gt;</span>irq <span class="token operator">=</span> ctrl_vsi<span class="token operator">-&gt;</span>q_vectors<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">-&gt;</span>irq<span class="token punctuation">;</span>
+			<span class="token keyword">goto</span> skip_alloc<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+	q_vector<span class="token operator">-&gt;</span>irq <span class="token operator">=</span> <span class="token function">ice_alloc_irq</span><span class="token punctuation">(</span>pf<span class="token punctuation">,</span> vsi<span class="token operator">-&gt;</span>irq_dyn_alloc<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [[ice_alloc_irq()]]</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>q_vector<span class="token operator">-&gt;</span>irq<span class="token punctuation">.</span>index <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		err <span class="token operator">=</span> <span class="token operator">-</span>ENOMEM<span class="token punctuation">;</span>
+		<span class="token keyword">goto</span> err_free_q_vector<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+skip_alloc<span class="token operator">:</span>
+	q_vector<span class="token operator">-&gt;</span>reg_idx <span class="token operator">=</span> q_vector<span class="token operator">-&gt;</span>irq<span class="token punctuation">.</span>index<span class="token punctuation">;</span>
+
+	<span class="token comment">/* only set affinity_mask if the CPU is online */</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">cpu_online</span><span class="token punctuation">(</span>v_idx<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		<span class="token function">cpumask_set_cpu</span><span class="token punctuation">(</span>v_idx<span class="token punctuation">,</span> <span class="token operator">&amp;</span>q_vector<span class="token operator">-&gt;</span>affinity_mask<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/* This will not be called in the driver load path because the netdev
+	 * will not be created yet. All other cases with register the NAPI
+	 * handler here (i.e. resume, reset/rebuild, etc.)
+	 */</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>vsi<span class="token operator">-&gt;</span>netdev<span class="token punctuation">)</span>
+		<span class="token function">netif_napi_add</span><span class="token punctuation">(</span>vsi<span class="token operator">-&gt;</span>netdev<span class="token punctuation">,</span> <span class="token operator">&amp;</span>q_vector<span class="token operator">-&gt;</span>napi<span class="token punctuation">,</span> ice_napi_poll<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [[netif_napi_add()]] [[ice_napi_poll()]]</span>
+		<span class="token comment">//ice driver에서 사용하는 ice_napi_poll이라는 함수의 포인터를 전달하여 napi를 추가하는데 해당 함수포인터를 매핑하는 역할을 함. </span>
+		<span class="token comment">//그런데 로드 될 때는 netdev가 없으므로 실행되지 않음. 따라서 앞에 if(vsi→netdev)가 붙게 됨.</span>
+
+out<span class="token operator">:</span>
+	<span class="token comment">/* tie q_vector and VSI together */</span>
+	vsi<span class="token operator">-&gt;</span>q_vectors<span class="token punctuation">[</span>v_idx<span class="token punctuation">]</span> <span class="token operator">=</span> q_vector<span class="token punctuation">;</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+err_free_q_vector<span class="token operator">:</span>
+	<span class="token function">kfree</span><span class="token punctuation">(</span>q_vector<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">return</span> err<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto"><a data-href="ice_q_vector" href="encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_q_vector.html" class="internal-link" target="_self" rel="noopener nofollow">ice_q_vector</a><br>
+<a data-href="kzalloc()" href="encyclopedia-of-networksystem/function/include-linux/kzalloc().html" class="internal-link" target="_self" rel="noopener nofollow">kzalloc()</a><br>
+<a data-href="ice_alloc_irq()" href="encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_alloc_irq().html" class="internal-link" target="_self" rel="noopener nofollow">ice_alloc_irq()</a><br>
+<a data-href="netif_napi_add()" href="encyclopedia-of-networksystem/function/include-linux/netif_napi_add().html" class="internal-link" target="_self" rel="noopener nofollow">netif_napi_add()</a>&nbsp;<br>
+<a data-href="ice_napi_poll()" href="encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_napi_poll().html" class="internal-link" target="_self" rel="noopener nofollow">ice_napi_poll()</a></p></div><div class="el-ol"><ol>
+<li data-line="0" dir="auto">ice_probe() → ice_init() → ice_vsi_init() → ice vsi alloc q vector()</li>
+<li data-line="1" dir="auto">q_vector을 위한 공간을 할당하는 함수이다<br>
+a. q_vector 내부에 vsi, napi_struct, rx_queue, tx_queue 있다<br>
+<a data-href="ice_q_vector" href="encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_q_vector.html" class="internal-link" target="_self" rel="noopener nofollow">ice_q_vector</a>
+<pre class="language-c" tabindex="0"><code data-line="4" class="language-c is-loaded">    <span class="token keyword">struct</span> <span class="token class-name">ice_q_vector</span> <span class="token punctuation">{</span>
+    	<span class="token keyword">struct</span> <span class="token class-name">ice_vsi</span> <span class="token operator">*</span>vsi<span class="token punctuation">;</span>
+    
+    	u16 v_idx<span class="token punctuation">;</span>			<span class="token comment">/* index in the vsi-%3Eq_vector array. */</span>
+    	u16 reg_idx<span class="token punctuation">;</span>
+    	u8 num_ring_rx<span class="token punctuation">;</span>			<span class="token comment">/* total number of Rx rings in vector */</span>
+    	u8 num_ring_tx<span class="token punctuation">;</span>			<span class="token comment">/* total number of Tx rings in vector */</span>
+    	u8 wb_on_itr<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>			<span class="token comment">/* if true, WB on ITR is enabled */</span>
+    	<span class="token comment">/* in usecs, need to use ice_intrl_to_usecs_reg() before writing this
+    	 * value to the device
+    	 */</span>
+    	u8 intrl<span class="token punctuation">;</span>
+    
+    	<span class="token keyword">struct</span> <span class="token class-name">napi_struct</span> napi<span class="token punctuation">;</span>
+    
+    	<span class="token keyword">struct</span> <span class="token class-name">ice_ring_container</span> rx<span class="token punctuation">;</span>
+    	<span class="token keyword">struct</span> <span class="token class-name">ice_ring_container</span> tx<span class="token punctuation">;</span>
+    
+    	<span class="token class-name">cpumask_t</span> affinity_mask<span class="token punctuation">;</span>
+    	<span class="token keyword">struct</span> <span class="token class-name">irq_affinity_notify</span> affinity_notify<span class="token punctuation">;</span>
+    
+    	<span class="token keyword">struct</span> <span class="token class-name">ice_channel</span> <span class="token operator">*</span>ch<span class="token punctuation">;</span>
+    
+    	<span class="token keyword">char</span> name<span class="token punctuation">[</span>ICE_INT_NAME_STR_LEN<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    
+    	u16 total_events<span class="token punctuation">;</span>	<span class="token comment">/* net_dim(): number of interrupts processed */</span>
+    	<span class="token keyword">struct</span> <span class="token class-name">msi_map</span> irq<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> ____cacheline_internodealigned_in_smp<span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre>
+</li>
+</ol></div><div class="el-pre"><pre><code data-line="0">       
+3. 이미 vsi에 q_vector가 존재하면 넘어간다
+4. q_vector = [[Encyclopedia of NetworkSystem/Function/include-linux/kzalloc().md|kzalloc]](sizeof(`*q_vector`), GFP_KERNEL)
+   a. q_vector를 kzalloc()을 통해 공간 할당한다
+   b. kzalloc() = kmalloc() + memset(), 연속된 공간 할당 + 0으로 초기화
+   c. GFP_KERNEL : get free page, kernel data struct, inode cache, DMAable mem 에 사용
+       i. GFP_NOWAIT (atomic context에서 allocation 할때 사용)
+       ii. GFP_NOWARN (Allocations which have a reasonable fallback should be using)
+       iii. GFP_ATOMIC….
+5. vf일 경우 따로 처리를 해준다
+   a. ice_alloc_irq 안함
+6. q_vector-&gt;irq = [[Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_alloc_irq().md|ice_alloc_irq]](pf, vsi-&gt;irq_dyn_alloc)
+   a. q_vector 마다 irq를 할당한다
+   [[ice_alloc_irq()]]
+   ```c title=ice_alloc_irq()
+       /**
+        * ice_alloc_irq - Allocate new interrupt vector
+        * @pf: board private structure
+        * @dyn_only: force dynamic allocation of the interrupt
+        *
+        * Allocate new interrupt vector for a given owner id.
+        * return struct msi_map with interrupt details and track
+        * allocated interrupt appropriately.
+        *
+        * This function reserves new irq entry from the irq_tracker.
+        * if according to the tracker information all interrupts that
+        * were allocated with ice_pci_alloc_irq_vectors are already used
+        * and dynamically allocated interrupts are supported then new
+        * interrupt will be allocated with pci_msix_alloc_irq_at.
+        *
+        * Some callers may only support dynamically allocated interrupts.
+        * This is indicated with dyn_only flag.
+        *
+        * On failure, return map with negative .index. The caller
+        * is expected to check returned map index.
+        *
+        */
+       struct msi_map ice_alloc_irq(struct ice_pf *pf, bool dyn_only)
+       {
+       	int sriov_base_vector = pf-&gt;sriov_base_vector;
+       	struct msi_map map = { .index = -ENOENT };
+       	struct device *dev = ice_pf_to_dev(pf);
+       	struct ice_irq_entry *entry;
+       
+       	**entry = ice_get_irq_res(pf, dyn_only);**
+       	if (!entry)
+       		return map;
+       
+       	/* fail if we're about to violate SRIOV vectors space */
+       	if (sriov_base_vector &amp;&amp; entry-&gt;index &gt;= sriov_base_vector)
+       		goto exit_free_res;
+       
+       	if (pci_msix_can_alloc_dyn(pf-&gt;pdev) &amp;&amp; entry-&gt;dynamic) {
+       		map = pci_msix_alloc_irq_at(pf-&gt;pdev, entry-&gt;index, NULL);
+       		if (map.index %3C 0)
+       			goto exit_free_res;
+       		dev_dbg(dev, "allocated new irq at index %d\n", map.index);
+       	} else {
+       		map.index = entry-&gt;index;
+       		map.virq = pci_irq_vector(pf-&gt;pdev, map.index);
+       	}
+       
+       	return map;
+       
+       exit_free_res:
+       	dev_err(dev, "Could not allocate irq at idx %d\n", entry-&gt;index);
+       	ice_free_irq_res(pf, entry-&gt;index);
+       	return map;
+       }
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-pre"><pre><code data-line="0">- msix (messeage signaled interrupt - x)
+        - 권장되는 interrrupt 방식, 특히 multi rx queue NIC에서
+        - 더 flexible 하다고 한다??
+        - rx queue가 그것만의 hw interrupt를 할당할 수 있다. 이는 특정 cpu에 의해 관리된다?
+        - This is because each RX queue can **have its own hardware interrupt assigned**, which can then be handled by a specific CPU (with&nbsp;`irqbalance`&nbsp;or by modifying&nbsp;`/proc/irq/IRQ_NUMBER/smp_affinity`) ???
+- interrupt vector 를 할당해준다
+    - interrupt vector는 interrupt handler 으로의 주소가 적혀있다
+    - Interrupt는 0에서 255까지 숫자와 연결되어 있고 interrupt vector와도 연결되어 있다.
+    - interrupt vector을 모아 놓은게 interrupt vector table
+    - interrupt이 발생할 경우, 이에 맞는 interrupt handler를 실행할 수 있다.
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-ol"><ol>
+<li data-line="0" dir="auto"><a data-tooltip-position="top" aria-label="Encyclopedia of NetworkSystem/Function/include-linux/netif_napi_add().md" data-href="Encyclopedia of NetworkSystem/Function/include-linux/netif_napi_add().md" href="encyclopedia-of-networksystem/function/include-linux/netif_napi_add().html" class="internal-link" target="_self" rel="noopener nofollow">netif_napi_add</a>(vsi-&gt;netdev, &amp;q_vector-&gt;napi, ice_napi_poll);<br>
+a. netdevice가 존재할 경우 실행<br>
+b. <a data-tooltip-position="top" aria-label="Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_napi_poll().md" data-href="Encyclopedia of NetworkSystem/Function/drivers-net-ethernet-intel-ice/ice_napi_poll().md" href="encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_napi_poll().html" class="internal-link" target="_self" rel="noopener nofollow">ice_napi_poll()</a> 을 polling function으로 사용<br>
+i. tx queue 초기화, budget 분배, rx queue 초기화</li>
+</ol></div><div class="mod-footer mod-ui"></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="encyclopedia-of-networksystem/function/drivers-net-ethernet-intel-ice/ice_vsi_alloc_q_vector().html#ice_vsi_alloc_q_vector()"><div class="tree-item-contents heading-link" heading-name="ice_vsi_alloc_q_vector()"><span class="tree-item-title">ice_vsi_alloc_q_vector()</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

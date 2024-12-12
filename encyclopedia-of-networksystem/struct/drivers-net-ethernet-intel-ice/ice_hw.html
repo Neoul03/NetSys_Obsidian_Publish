@@ -1,0 +1,261 @@
+<!DOCTYPE html> <html><head>
+		<title>ice_hw</title>
+		<base href="../../../">
+		<meta id="root-path" root-path="../../../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="NetSys_Obsidian - ice_hw">
+		<meta property="og:title" content="ice_hw">
+		<meta property="og:description" content="NetSys_Obsidian - ice_hw">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_hw.html">
+		<meta property="og:image" content="undefined">
+		<meta property="og:site_name" content="NetSys_Obsidian">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/other-plugins.css"></noscript><link rel="stylesheet" href="lib/styles/theme.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/supported-plugins.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript><link rel="preload" href="lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/snippets.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon ctp-latte ctp-mocha ctp-accent-light-sapphire ctp-accent-rosewater anuppuccin-accent-toggle anp-callout-color-toggle anp-custom-checkboxes anp-speech-bubble anp-codeblock-numbers anp-h1-red anp-h2-peach anp-h3-green anp-h4-teal anp-h5-lavender anp-h6-mauve anp-bold-red anp-italic-green anp-highlight-yellow anp-colorful-frame anp-file-icons anp-collapse-folders anp-full-rainbow-color-toggle anp-background-image-toggle rainbow-repeat-11 rainbow-color-1-mauve rainbow-color-2-flamingo rainbow-color-3-rosewater rainbow-color-4-red rainbow-color-5-peach rainbow-color-6-yellow rainbow-color-7-green rainbow-color-8-teal rainbow-color-9-sky rainbow-color-10-blue rainbow-color-11-lavender ctp-atom-light ctp-material-mint-dark code-styler code-styler-style-inline code-styler-gutter-highlight mk-readable-line mk-folder-lines mk-spaces-enabled mk-inline-context-enabled mk-flow-seamless"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles"></style><pre class="frontmatter language-yaml" tabindex="0" style="display: none;"><code class="language-yaml is-loaded"><span class="token key atrule">Location</span><span class="token punctuation">:</span> /drivers/net/ethernet/intel/ice/ice_type.h</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="<strong>주요 필드 설명</strong>"><p dir="auto"><strong>주요 필드 설명</strong></p></h1><div class="el-pre"><pre class="language-c" tabindex="0"><code data-line="0" class="language-c is-loaded"><span class="token comment">/* Port hardware description */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ice_hw</span> <span class="token punctuation">{</span>
+	u8 __iomem <span class="token operator">*</span>hw_addr<span class="token punctuation">;</span>
+	<span class="token keyword">void</span> <span class="token operator">*</span>back<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_aqc_layer_props</span> <span class="token operator">*</span>layer_info<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_port_info</span> <span class="token operator">*</span>port_info<span class="token punctuation">;</span>
+	<span class="token comment">/* PSM clock frequency for calculating RL profile params */</span>
+	u32 psm_clk_freq<span class="token punctuation">;</span>
+	u64 debug_mask<span class="token punctuation">;</span>		<span class="token comment">/* bitmap for debug mask */</span>
+	<span class="token keyword">enum</span> <span class="token class-name">ice_mac_type</span> mac_type<span class="token punctuation">;</span>
+
+	u16 fd_ctr_base<span class="token punctuation">;</span>	<span class="token comment">/* FD counter base index */</span>
+
+	<span class="token comment">/* pci info */</span>
+	u16 device_id<span class="token punctuation">;</span>
+	u16 vendor_id<span class="token punctuation">;</span>
+	u16 subsystem_device_id<span class="token punctuation">;</span>
+	u16 subsystem_vendor_id<span class="token punctuation">;</span>
+	u8 revision_id<span class="token punctuation">;</span>
+
+	u8 pf_id<span class="token punctuation">;</span>		<span class="token comment">/* device profile info */</span>
+	<span class="token keyword">enum</span> <span class="token class-name">ice_phy_model</span> phy_model<span class="token punctuation">;</span>
+
+	u16 max_burst_size<span class="token punctuation">;</span>	<span class="token comment">/* driver sets this value */</span>
+
+	<span class="token comment">/* Tx Scheduler values */</span>
+	u8 num_tx_sched_layers<span class="token punctuation">;</span>
+	u8 num_tx_sched_phys_layers<span class="token punctuation">;</span>
+	u8 flattened_layers<span class="token punctuation">;</span>
+	u8 max_cgds<span class="token punctuation">;</span>
+	u8 sw_entry_point_layer<span class="token punctuation">;</span>
+	u16 max_children<span class="token punctuation">[</span>ICE_AQC_TOPO_MAX_LEVEL_NUM<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">list_head</span> agg_list<span class="token punctuation">;</span>	<span class="token comment">/* lists all aggregator */</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">ice_vsi_ctx</span> <span class="token operator">*</span>vsi_ctx<span class="token punctuation">[</span>ICE_MAX_VSI<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	u8 evb_veb<span class="token punctuation">;</span>		<span class="token comment">/* true for VEB, false for VEPA */</span>
+	u8 reset_ongoing<span class="token punctuation">;</span>	<span class="token comment">/* true if HW is in reset, false otherwise */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_bus_info</span> bus<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_flash_info</span> flash<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_hw_dev_caps</span> dev_caps<span class="token punctuation">;</span>	<span class="token comment">/* device capabilities */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_hw_func_caps</span> func_caps<span class="token punctuation">;</span>	<span class="token comment">/* function capabilities */</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">ice_switch_info</span> <span class="token operator">*</span>switch_info<span class="token punctuation">;</span>	<span class="token comment">/* switch filter lists */</span>
+
+	<span class="token comment">/* Control Queue info */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_ctl_q_info</span> adminq<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_ctl_q_info</span> sbq<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_ctl_q_info</span> mailboxq<span class="token punctuation">;</span>
+
+	u8 api_branch<span class="token punctuation">;</span>		<span class="token comment">/* API branch version */</span>
+	u8 api_maj_ver<span class="token punctuation">;</span>		<span class="token comment">/* API major version */</span>
+	u8 api_min_ver<span class="token punctuation">;</span>		<span class="token comment">/* API minor version */</span>
+	u8 api_patch<span class="token punctuation">;</span>		<span class="token comment">/* API patch version */</span>
+	u8 fw_branch<span class="token punctuation">;</span>		<span class="token comment">/* firmware branch version */</span>
+	u8 fw_maj_ver<span class="token punctuation">;</span>		<span class="token comment">/* firmware major version */</span>
+	u8 fw_min_ver<span class="token punctuation">;</span>		<span class="token comment">/* firmware minor version */</span>
+	u8 fw_patch<span class="token punctuation">;</span>		<span class="token comment">/* firmware patch version */</span>
+	u32 fw_build<span class="token punctuation">;</span>		<span class="token comment">/* firmware build number */</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">ice_fwlog_cfg</span> fwlog_cfg<span class="token punctuation">;</span>
+	bool fwlog_supported<span class="token punctuation">;</span> <span class="token comment">/* does hardware support FW logging? */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_fwlog_ring</span> fwlog_ring<span class="token punctuation">;</span>
+
+<span class="token comment">/* Device max aggregate bandwidths corresponding to the GL_PWR_MODE_CTL
+ * register. Used for determining the ITR/INTRL granularity during
+ * initialization.
+ */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ICE_MAX_AGG_BW_200G</span>	<span class="token expression"><span class="token number">0x0</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ICE_MAX_AGG_BW_100G</span>	<span class="token expression"><span class="token number">0X1</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ICE_MAX_AGG_BW_50G</span>	<span class="token expression"><span class="token number">0x2</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ICE_MAX_AGG_BW_25G</span>	<span class="token expression"><span class="token number">0x3</span></span></span>
+	<span class="token comment">/* ITR granularity for different speeds */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ICE_ITR_GRAN_ABOVE_25</span>	<span class="token expression"><span class="token number">2</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ICE_ITR_GRAN_MAX_25</span>	<span class="token expression"><span class="token number">4</span></span></span>
+	<span class="token comment">/* ITR granularity in 1 us */</span>
+	u8 itr_gran<span class="token punctuation">;</span>
+	<span class="token comment">/* INTRL granularity for different speeds */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ICE_INTRL_GRAN_ABOVE_25</span>	<span class="token expression"><span class="token number">4</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ICE_INTRL_GRAN_MAX_25</span>	<span class="token expression"><span class="token number">8</span></span></span>
+	<span class="token comment">/* INTRL granularity in 1 us */</span>
+	u8 intrl_gran<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ICE_MAX_QUAD</span>			<span class="token expression"><span class="token number">2</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ICE_QUADS_PER_PHY_E82X</span>		<span class="token expression"><span class="token number">2</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ICE_PORTS_PER_PHY_E82X</span>		<span class="token expression"><span class="token number">8</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ICE_PORTS_PER_QUAD</span>		<span class="token expression"><span class="token number">4</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ICE_PORTS_PER_PHY_E810</span>		<span class="token expression"><span class="token number">4</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ICE_NUM_EXTERNAL_PORTS</span>		<span class="token expression"><span class="token punctuation">(</span>ICE_MAX_QUAD <span class="token operator">*</span> ICE_PORTS_PER_QUAD<span class="token punctuation">)</span></span></span>
+
+	<span class="token comment">/* Active package version (currently active) */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_pkg_ver</span> active_pkg_ver<span class="token punctuation">;</span>
+	u32 pkg_seg_id<span class="token punctuation">;</span>
+	u32 pkg_sign_type<span class="token punctuation">;</span>
+	u32 active_track_id<span class="token punctuation">;</span>
+	u8 pkg_has_signing_seg<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+	u8 active_pkg_name<span class="token punctuation">[</span>ICE_PKG_NAME_SIZE<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	u8 active_pkg_in_nvm<span class="token punctuation">;</span>
+
+	<span class="token comment">/* Driver's package ver - (from the Ice Metadata section) */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_pkg_ver</span> pkg_ver<span class="token punctuation">;</span>
+	u8 pkg_name<span class="token punctuation">[</span>ICE_PKG_NAME_SIZE<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/* Driver's Ice segment format version and ID (from the Ice seg) */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_pkg_ver</span> ice_seg_fmt_ver<span class="token punctuation">;</span>
+	u8 ice_seg_id<span class="token punctuation">[</span>ICE_SEG_ID_SIZE<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/* Pointer to the ice segment */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_seg</span> <span class="token operator">*</span>seg<span class="token punctuation">;</span>
+
+	<span class="token comment">/* Pointer to allocated copy of pkg memory */</span>
+	u8 <span class="token operator">*</span>pkg_copy<span class="token punctuation">;</span>
+	u32 pkg_size<span class="token punctuation">;</span>
+
+	<span class="token comment">/* tunneling info */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">mutex</span> tnl_lock<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_tunnel_table</span> tnl<span class="token punctuation">;</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">udp_tunnel_nic_shared</span> udp_tunnel_shared<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">udp_tunnel_nic_info</span> udp_tunnel_nic<span class="token punctuation">;</span>
+
+	<span class="token comment">/* dvm boost update information */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_dvm_table</span> dvm_upd<span class="token punctuation">;</span>
+
+	<span class="token comment">/* HW block tables */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_blk_info</span> blk<span class="token punctuation">[</span>ICE_BLK_COUNT<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">mutex</span> fl_profs_locks<span class="token punctuation">[</span>ICE_BLK_COUNT<span class="token punctuation">]</span><span class="token punctuation">;</span>	<span class="token comment">/* lock fltr profiles */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">list_head</span> fl_profs<span class="token punctuation">[</span>ICE_BLK_COUNT<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/* Flow Director filter info */</span>
+	<span class="token keyword">int</span> fdir_active_fltr<span class="token punctuation">;</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">mutex</span> fdir_fltr_lock<span class="token punctuation">;</span>	<span class="token comment">/* protect Flow Director */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">list_head</span> fdir_list_head<span class="token punctuation">;</span>
+
+	<span class="token comment">/* Book-keeping of side-band filter count per flow-type.
+	 * This is used to detect and handle input set changes for
+	 * respective flow-type.
+	 */</span>
+	u16 fdir_fltr_cnt<span class="token punctuation">[</span>ICE_FLTR_PTYPE_MAX<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">ice_fd_hw_prof</span> <span class="token operator">*</span><span class="token operator">*</span>fdir_prof<span class="token punctuation">;</span>
+	<span class="token function">DECLARE_BITMAP</span><span class="token punctuation">(</span>fdir_perfect_fltr<span class="token punctuation">,</span> ICE_FLTR_PTYPE_MAX<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">mutex</span> rss_locks<span class="token punctuation">;</span>	<span class="token comment">/* protect RSS configuration */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">list_head</span> rss_list_head<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">ice_mbx_snapshot</span> mbx_snapshot<span class="token punctuation">;</span>
+	<span class="token function">DECLARE_BITMAP</span><span class="token punctuation">(</span>hw_ptype<span class="token punctuation">,</span> ICE_FLOW_PTYPE_MAX<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	u8 dvm_ena<span class="token punctuation">;</span>
+	u16 io_expander_handle<span class="token punctuation">;</span>
+	u8 cgu_part_number<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">struct ice_hw 구조체는 Intel Ethernet Controller (ICE) 드라이버에서 사용되는 데이터 구조체로, 하드웨어 상태와 설정을 관리하는 역할을 한다. 이 구조체는 다양한 하드웨어 리소스, 설정, 상태 정보를 포함하며, 드라이버가 장치를 초기화하고 제어하는 데 필요한 정보를 제공한다.</p></div><div class="el-h1 heading-wrapper"><div class="heading-children"><div class="el-h2 heading-wrapper"><h2 data-heading="1. **하드웨어 기본 정보**" dir="auto" class="heading" id="1._**하드웨어_기본_정보**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>1. <strong>하드웨어 기본 정보</strong></h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">u8 <code class="code-styler-inline">__iomem</code> *hw_addr: 메모리 매핑된 하드웨어 주소.</li>
+<li data-line="1" dir="auto">void <code class="code-styler-inline">*back</code>: 드라이버의 백엔드 데이터에 대한 포인터.</li>
+<li data-line="2" dir="auto">struct ice_aqc_layer_props *layer_info: AQC(Aquanta Clock) 레이어 속성 정보.</li>
+<li data-line="3" dir="auto">struct ice_port_info *port_info: 포트 정보.</li>
+<li data-line="4" dir="auto">u32 psm_clk_freq: RL 프로필 매개변수 계산을 위한 PSM 클록 주파수.</li>
+<li data-line="5" dir="auto">u64 debug_mask: 디버그 마스크 비트맵.</li>
+<li data-line="6" dir="auto">enum ice_mac_type mac_type: MAC 유형.</li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="2. **PCI 정보**" dir="auto" class="heading" id="2._**PCI_정보**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>2. <strong>PCI 정보</strong></h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">u16 device_id: 디바이스 ID.</li>
+<li data-line="1" dir="auto">u16 vendor_id: 벤더 ID.</li>
+<li data-line="2" dir="auto">u16 subsystem_device_id: 서브시스템 디바이스 ID.</li>
+<li data-line="3" dir="auto">u16 subsystem_vendor_id: 서브시스템 벤더 ID.</li>
+<li data-line="4" dir="auto">u8 revision_id: PCI 리비전 ID.</li>
+<li data-line="5" dir="auto">u8 pf_id: 디바이스 프로필 정보.</li>
+<li data-line="6" dir="auto">enum ice_phy_model phy_model: PHY 모델.</li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="3. **전송 스케줄러**" dir="auto" class="heading" id="3._**전송_스케줄러**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>3. <strong>전송 스케줄러</strong></h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">u8 num_tx_sched_layers: 전송 스케줄링 레이어 수.</li>
+<li data-line="1" dir="auto">u8 num_tx_sched_phys_layers: 전송 스케줄링 물리 레이어 수.</li>
+<li data-line="2" dir="auto">u8 flattened_layers: 평탄화된 레이어 수.</li>
+<li data-line="3" dir="auto">u8 max_cgds: 최대 CGD 수.</li>
+<li data-line="4" dir="auto">u8 sw_entry_point_layer: 소프트웨어 진입점 레이어.</li>
+<li data-line="5" dir="auto">u16 <code class="code-styler-inline">max_children[ICE_AQC_TOPO_MAX_LEVEL_NUM]</code>: 각 레벨의 최대 자식 노드 수.</li>
+<li data-line="6" dir="auto">struct list_head agg_list: 모든 애그리게이터 리스트.</li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="4. **VSI(Context) 및 스위치 정보**" dir="auto" class="heading" id="4._**VSI(Context)_및_스위치_정보**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>4. <strong>VSI(Context) 및 스위치 정보</strong></h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">struct ice_vsi_ctx <code class="code-styler-inline">*vsi_ctx[ICE_MAX_VSI]</code>: VSI(Context) 배열.</li>
+<li data-line="1" dir="auto">u8 evb_veb: VEB 또는 VEPA 플래그.</li>
+<li data-line="2" dir="auto">u8 reset_ongoing: 하드웨어 리셋 진행 여부.</li>
+<li data-line="3" dir="auto">struct ice_switch_info *switch_info: 스위치 필터 리스트 정보.</li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="5. **제어 큐 정보**" dir="auto" class="heading" id="5._**제어_큐_정보**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>5. <strong>제어 큐 정보</strong></h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">struct ice_ctl_q_info adminq: Admin 큐 정보.</li>
+<li data-line="1" dir="auto">struct ice_ctl_q_info sbq: SBQ 큐 정보.</li>
+<li data-line="2" dir="auto">struct ice_ctl_q_info mailboxq: 메일박스 큐 정보.</li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="6. **API 및 펌웨어 버전**" dir="auto" class="heading" id="6._**API_및_펌웨어_버전**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>6. <strong>API 및 펌웨어 버전</strong></h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">u8 api_branch: API 브랜치 버전.</li>
+<li data-line="1" dir="auto">u8 api_maj_ver: API 메이저 버전.</li>
+<li data-line="2" dir="auto">u8 api_min_ver: API 마이너 버전.</li>
+<li data-line="3" dir="auto">u8 api_patch: API 패치 버전.</li>
+<li data-line="4" dir="auto">u8 fw_branch: 펌웨어 브랜치 버전.</li>
+<li data-line="5" dir="auto">u8 fw_maj_ver: 펌웨어 메이저 버전.</li>
+<li data-line="6" dir="auto">u8 fw_min_ver: 펌웨어 마이너 버전.</li>
+<li data-line="7" dir="auto">u8 fw_patch: 펌웨어 패치 버전.</li>
+<li data-line="8" dir="auto">u32 fw_build: 펌웨어 빌드 번호.</li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="7. **패키지 및 세그먼트 정보**" dir="auto" class="heading" id="7._**패키지_및_세그먼트_정보**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>7. <strong>패키지 및 세그먼트 정보</strong></h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">struct ice_pkg_ver active_pkg_ver: 활성 패키지 버전.</li>
+<li data-line="1" dir="auto">u32 pkg_seg_id: 패키지 세그먼트 ID.</li>
+<li data-line="2" dir="auto">u32 pkg_sign_type: 패키지 서명 타입.</li>
+<li data-line="3" dir="auto">u8 <code class="code-styler-inline">active_pkg_name[ICE_PKG_NAME_SIZE]</code>: 활성 패키지 이름.</li>
+<li data-line="4" dir="auto">u8 active_pkg_in_nvm: NVM에 있는 활성 패키지 여부.</li>
+<li data-line="5" dir="auto">struct ice_pkg_ver pkg_ver: 드라이버 패키지 버전.</li>
+<li data-line="6" dir="auto">u8 <code class="code-styler-inline">pkg_name[ICE_PKG_NAME_SIZE]</code>: 드라이버 패키지 이름.</li>
+<li data-line="7" dir="auto">struct ice_pkg_ver ice_seg_fmt_ver: 드라이버 Ice 세그먼트 포맷 버전.</li>
+<li data-line="8" dir="auto">u8 <code class="code-styler-inline">ice_seg_id[ICE_SEG_ID_SIZE]</code>: Ice 세그먼트 ID.</li>
+<li data-line="9" dir="auto">struct ice_seg *seg: Ice 세그먼트에 대한 포인터.</li>
+<li data-line="10" dir="auto">u8 *pkg_copy: 할당된 패키지 메모리의 포인터.</li>
+<li data-line="11" dir="auto">u32 pkg_size: 패키지 크기.</li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="8. **터널링 및 플로우 디렉터 정보**" dir="auto" class="heading" id="8._**터널링_및_플로우_디렉터_정보**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>8. <strong>터널링 및 플로우 디렉터 정보</strong></h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">struct mutex tnl_lock: 터널링 정보 보호 뮤텍스.</li>
+<li data-line="1" dir="auto">struct ice_tunnel_table tnl: 터널 테이블.</li>
+<li data-line="2" dir="auto">struct udp_tunnel_nic_shared udp_tunnel_shared: 공유된 UDP 터널 정보.</li>
+<li data-line="3" dir="auto">struct udp_tunnel_nic_info udp_tunnel_nic: UDP 터널 NIC 정보.</li>
+<li data-line="4" dir="auto">struct ice_dvm_table dvm_upd: DVM 부스트 업데이트 정보.</li>
+<li data-line="5" dir="auto">struct <code class="code-styler-inline">ice_blk_info blk[ICE_BLK_COUNT]</code>: 하드웨어 블록 테이블.</li>
+<li data-line="6" dir="auto">struct mutex <code class="code-styler-inline">fl_profs_locks[ICE_BLK_COUNT]</code>: 필터 프로필 보호 뮤텍스.</li>
+<li data-line="7" dir="auto">struct list_head <code class="code-styler-inline">fl_profs[ICE_BLK_COUNT]</code>: 필터 프로필 리스트.</li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="9. **Flow Director 및 RSS**" dir="auto" class="heading" id="9._**Flow_Director_및_RSS**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>9. <strong>Flow Director 및 RSS</strong></h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">int fdir_active_fltr: 활성 Flow Director 필터.</li>
+<li data-line="1" dir="auto">struct mutex fdir_fltr_lock: Flow Director 보호 뮤텍스.</li>
+<li data-line="2" dir="auto">struct list_head fdir_list_head: Flow Director 리스트 헤드.</li>
+<li data-line="3" dir="auto">u16 <code class="code-styler-inline">fdir_fltr_cnt[ICE_FLTR_PTYPE_MAX]</code>: 플로우 타입별 필터 수.</li>
+<li data-line="4" dir="auto">struct ice_fd_hw_prof **fdir_prof: Flow Director 하드웨어 프로필.</li>
+<li data-line="5" dir="auto">DECLARE_BITMAP(fdir_perfect_fltr, ICE_FLTR_PTYPE_MAX): 완벽 필터 비트맵.</li>
+<li data-line="6" dir="auto">struct mutex rss_locks: RSS(Reduce Sequence Spoofing) 설정 보호 뮤텍스.</li>
+<li data-line="7" dir="auto">struct list_head rss_list_head: RSS 리스트 헤드.</li>
+<li data-line="8" dir="auto">struct ice_mbx_snapshot mbx_snapshot: 메일박스 스냅샷.</li>
+<li data-line="9" dir="auto">DECLARE_BITMAP(hw_ptype, ICE_FLOW_PTYPE_MAX): 하드웨어 플로우 타입 비트맵.</li>
+<li data-line="10" dir="auto">u8 dvm_ena: DVM 활성화 플래그.</li>
+<li data-line="11" dir="auto">u16 io_expander_handle: IO 익스팬더 핸들.</li>
+<li data-line="12" dir="auto">u8 cgu_part_number: CGU 부품 번호.</li>
+</ul></div></div></div></div></div><div class="el-h1 heading-wrapper"><h1 data-heading="**결론**" dir="auto" class="heading" id="**결론**"><strong>결론</strong></h1><div class="heading-children"><div class="el-p"><p dir="auto">struct ice_hw는 Intel Ethernet Controller(ICE) 드라이버에서 하드웨어 상태와 설정을 관리하는 중요한 구조체다. 이 구조체는 하드웨어 리소스, 설정, 상태 정보를 포함하며, 드라이버가 장치를 초기화하고 제어하는 데 필요한 다양한 정보를 제공한다. 이 구조체를 통해 드라이버는 하드웨어를 효율적으로 관리하고, 다양한 기능과 설정을 제어할 수 있다.</p></div><div class="mod-footer mod-ui"></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_hw.html#<strong>주요 필드 설명</strong>"><div class="tree-item-contents heading-link" heading-name="주요 필드 설명"><span class="tree-item-title">주요 필드 설명</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="2"><a class="tree-link" href="encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_hw.html#1._**하드웨어_기본_정보**"><div class="tree-item-contents heading-link" heading-name="1. **하드웨어 기본 정보**"><span class="tree-item-title">1. 
+하드웨어 기본 정보
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_hw.html#2._**PCI_정보**"><div class="tree-item-contents heading-link" heading-name="2. **PCI 정보**"><span class="tree-item-title">2. 
+PCI 정보
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_hw.html#3._**전송_스케줄러**"><div class="tree-item-contents heading-link" heading-name="3. **전송 스케줄러**"><span class="tree-item-title">3. 
+전송 스케줄러
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_hw.html#4._**VSI(Context)_및_스위치_정보**"><div class="tree-item-contents heading-link" heading-name="4. **VSI(Context) 및 스위치 정보**"><span class="tree-item-title">4. 
+VSI(Context) 및 스위치 정보
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_hw.html#5._**제어_큐_정보**"><div class="tree-item-contents heading-link" heading-name="5. **제어 큐 정보**"><span class="tree-item-title">5. 
+제어 큐 정보
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_hw.html#6._**API_및_펌웨어_버전**"><div class="tree-item-contents heading-link" heading-name="6. **API 및 펌웨어 버전**"><span class="tree-item-title">6. 
+API 및 펌웨어 버전
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_hw.html#7._**패키지_및_세그먼트_정보**"><div class="tree-item-contents heading-link" heading-name="7. **패키지 및 세그먼트 정보**"><span class="tree-item-title">7. 
+패키지 및 세그먼트 정보
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_hw.html#8._**터널링_및_플로우_디렉터_정보**"><div class="tree-item-contents heading-link" heading-name="8. **터널링 및 플로우 디렉터 정보**"><span class="tree-item-title">8. 
+터널링 및 플로우 디렉터 정보
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_hw.html#9._**Flow_Director_및_RSS**"><div class="tree-item-contents heading-link" heading-name="9. **Flow Director 및 RSS**"><span class="tree-item-title">9. 
+Flow Director 및 RSS
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item" data-depth="1"><a class="tree-link" href="encyclopedia-of-networksystem/struct/drivers-net-ethernet-intel-ice/ice_hw.html#**결론**"><div class="tree-item-contents heading-link" heading-name="**결론**"><span class="tree-item-title"><strong>결론</strong></span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html> <html><head>
+		<title>sk_buff</title>
+		<base href="../../../">
+		<meta id="root-path" root-path="../../../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="NetSys_Obsidian - sk_buff">
+		<meta property="og:title" content="sk_buff">
+		<meta property="og:description" content="NetSys_Obsidian - sk_buff">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="encyclopedia-of-networksystem/struct/include-linux/sk_buff.html">
+		<meta property="og:image" content="undefined">
+		<meta property="og:site_name" content="NetSys_Obsidian">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/other-plugins.css"></noscript><link rel="stylesheet" href="lib/styles/theme.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/supported-plugins.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript><link rel="preload" href="lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/snippets.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon ctp-latte ctp-mocha ctp-accent-light-sapphire ctp-accent-rosewater anuppuccin-accent-toggle anp-callout-color-toggle anp-custom-checkboxes anp-speech-bubble anp-codeblock-numbers anp-h1-red anp-h2-peach anp-h3-green anp-h4-teal anp-h5-lavender anp-h6-mauve anp-bold-red anp-italic-green anp-highlight-yellow anp-colorful-frame anp-file-icons anp-collapse-folders anp-full-rainbow-color-toggle anp-background-image-toggle rainbow-repeat-11 rainbow-color-1-mauve rainbow-color-2-flamingo rainbow-color-3-rosewater rainbow-color-4-red rainbow-color-5-peach rainbow-color-6-yellow rainbow-color-7-green rainbow-color-8-teal rainbow-color-9-sky rainbow-color-10-blue rainbow-color-11-lavender ctp-atom-light ctp-material-mint-dark code-styler code-styler-style-inline code-styler-gutter-highlight mk-readable-line mk-folder-lines mk-spaces-enabled mk-inline-context-enabled mk-flow-seamless"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles"></style><pre class="frontmatter language-yaml" tabindex="0" style="display: none;"><code class="language-yaml is-loaded"><span class="token key atrule">Location</span><span class="token punctuation">:</span> /include/linux/sk_buff.h
+<span class="token key atrule">sticker</span><span class="token punctuation">:</span> <span class="token string">""</span></code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="sk_buff"><p dir="auto">sk_buff</p></h1><div class="el-pre"><pre class="language-c" tabindex="0"><code data-line="0" class="language-c is-loaded"><span class="token comment">/**
+ * DOC: Basic sk_buff geometry
+ *
+ * struct sk_buff itself is a metadata structure and does not hold any packet
+ * data. All the data is held in associated buffers.
+ *
+ * &amp;sk_buff.head points to the main "head" buffer. The head buffer is divided
+ * into two parts:
+ *
+ *  - data buffer, containing headers and sometimes payload;
+ *    this is the part of the skb operated on by the common helpers
+ *    such as skb_put() or skb_pull();
+ *  - shared info (struct skb_shared_info) which holds an array of pointers
+ *    to read-only data in the (page, offset, length) format.
+ *
+ * Optionally &amp;skb_shared_info.frag_list may point to another skb.
+ *
+ * Basic diagram may look like this::
+ *
+ *                                  ---------------
+ *                                 | sk_buff       |
+ *                                  ---------------
+ *     ,---------------------------  + head
+ *    /          ,-----------------  + data
+ *   /          /      ,-----------  + tail
+ *  |          |      |            , + end
+ *  |          |      |           |
+ *  v          v      v           v
+ *   -----------------------------------------------
+ *  | headroom | data |  tailroom | skb_shared_info |
+ *   -----------------------------------------------
+ *                                 + [page frag]
+ *                                 + [page frag]
+ *                                 + [page frag]
+ *                                 + [page frag]       ---------
+ *                                 + frag_list    --&gt; | sk_buff |
+ *                                                     ---------
+ *
+ */</span>
+ 
+<span class="token comment">/**
+ *	struct sk_buff - socket buffer
+ *	@next: Next buffer in list
+ *	@prev: Previous buffer in list
+ *	@tstamp: Time we arrived/left
+ *	@skb_mstamp_ns: (aka @tstamp) earliest departure time; start point
+ *		for retransmit timer
+ *	@rbnode: RB tree node, alternative to next/prev for netem/tcp
+ *	@list: queue head
+ *	@ll_node: anchor in an llist (eg socket defer_list)
+ *	@sk: Socket we are owned by
+ *	@dev: Device we arrived on/are leaving by
+ *	@dev_scratch: (aka @dev) alternate use of @dev when @dev would be %NULL
+ *	@cb: Control buffer. Free for use by every layer. Put private vars here
+ *	@_skb_refdst: destination entry (with norefcount bit)
+ *	@len: Length of actual data
+ *	@data_len: Data length
+ *	@mac_len: Length of link layer header
+ *	@hdr_len: writable header length of cloned skb
+ *	@csum: Checksum (must include start/offset pair)
+ *	@csum_start: Offset from skb-&gt;head where checksumming should start
+ *	@csum_offset: Offset from csum_start where checksum should be stored
+ *	@priority: Packet queueing priority
+ *	@ignore_df: allow local fragmentation
+ *	@cloned: Head may be cloned (check refcnt to be sure)
+ *	@ip_summed: Driver fed us an IP checksum
+ *	@nohdr: Payload reference only, must not modify header
+ *	@pkt_type: Packet class
+ *	@fclone: skbuff clone status
+ *	@ipvs_property: skbuff is owned by ipvs
+ *	@inner_protocol_type: whether the inner protocol is
+ *		ENCAP_TYPE_ETHER or ENCAP_TYPE_IPPROTO
+ *	@remcsum_offload: remote checksum offload is enabled
+ *	@offload_fwd_mark: Packet was L2-forwarded in hardware
+ *	@offload_l3_fwd_mark: Packet was L3-forwarded in hardware
+ *	@tc_skip_classify: do not classify packet. set by IFB device
+ *	@tc_at_ingress: used within tc_classify to distinguish in/egress
+ *	@redirected: packet was redirected by packet classifier
+ *	@from_ingress: packet was redirected from the ingress path
+ *	@nf_skip_egress: packet shall skip nf egress - see netfilter_netdev.h
+ *	@peeked: this packet has been seen already, so stats have been
+ *		done for it, don't do them again
+ *	@nf_trace: netfilter packet trace flag
+ *	@protocol: Packet protocol from driver
+ *	@destructor: Destruct function
+ *	@tcp_tsorted_anchor: list structure for TCP (tp-&gt;tsorted_sent_queue)
+ *	@_sk_redir: socket redirection information for skmsg
+ *	@_nfct: Associated connection, if any (with nfctinfo bits)
+ *	@skb_iif: ifindex of device we arrived on
+ *	@tc_index: Traffic control index
+ *	@hash: the packet hash
+ *	@queue_mapping: Queue mapping for multiqueue devices
+ *	@head_frag: skb was allocated from page fragments,
+ *		not allocated by kmalloc() or vmalloc().
+ *	@pfmemalloc: skbuff was allocated from PFMEMALLOC reserves
+ *	@pp_recycle: mark the packet for recycling instead of freeing (implies
+ *		page_pool support on driver)
+ *	@active_extensions: active extensions (skb_ext_id types)
+ *	@ndisc_nodetype: router type (from link layer)
+ *	@ooo_okay: allow the mapping of a socket to a queue to be changed
+ *	@l4_hash: indicate hash is a canonical 4-tuple hash over transport
+ *		ports.
+ *	@sw_hash: indicates hash was computed in software stack
+ *	@wifi_acked_valid: wifi_acked was set
+ *	@wifi_acked: whether frame was acked on wifi or not
+ *	@no_fcs:  Request NIC to treat last 4 bytes as Ethernet FCS
+ *	@encapsulation: indicates the inner headers in the skbuff are valid
+ *	@encap_hdr_csum: software checksum is needed
+ *	@csum_valid: checksum is already valid
+ *	@csum_not_inet: use CRC32c to resolve CHECKSUM_PARTIAL
+ *	@csum_complete_sw: checksum was completed by software
+ *	@csum_level: indicates the number of consecutive checksums found in
+ *		the packet minus one that have been verified as
+ *		CHECKSUM_UNNECESSARY (max 3)
+ *	@dst_pending_confirm: need to confirm neighbour
+ *	@decrypted: Decrypted SKB
+ *	@slow_gro: state present at GRO time, slower prepare step required
+ *	@mono_delivery_time: When set, skb-&gt;tstamp has the
+ *		delivery_time in mono clock base (i.e. EDT).  Otherwise, the
+ *		skb-&gt;tstamp has the (rcv) timestamp at ingress and
+ *		delivery_time at egress.
+ *	@napi_id: id of the NAPI struct this skb came from
+ *	@sender_cpu: (aka @napi_id) source CPU in XPS
+ *	@alloc_cpu: CPU which did the skb allocation.
+ *	@secmark: security marking
+ *	@mark: Generic packet mark
+ *	@reserved_tailroom: (aka @mark) number of bytes of free space available
+ *		at the tail of an sk_buff
+ *	@vlan_all: vlan fields (proto &amp; tci)
+ *	@vlan_proto: vlan encapsulation protocol
+ *	@vlan_tci: vlan tag control information
+ *	@inner_protocol: Protocol (encapsulation)
+ *	@inner_ipproto: (aka @inner_protocol) stores ipproto when
+ *		skb-&gt;inner_protocol_type == ENCAP_TYPE_IPPROTO;
+ *	@inner_transport_header: Inner transport layer header (encapsulation)
+ *	@inner_network_header: Network layer header (encapsulation)
+ *	@inner_mac_header: Link layer header (encapsulation)
+ *	@transport_header: Transport layer header
+ *	@network_header: Network layer header
+ *	@mac_header: Link layer header
+ *	@kcov_handle: KCOV remote handle for remote coverage collection
+ *	@tail: Tail pointer
+ *	@end: End pointer
+ *	@head: Head of buffer
+ *	@data: Data head pointer
+ *	@truesize: Buffer size
+ *	@users: User count - see {datagram,tcp}.c
+ *	@extensions: allocated extensions, valid if active_extensions is nonzero
+ */</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-pre"><pre class="language-c" tabindex="0"><code data-line="0" class="language-c is-loaded"><span class="token keyword">struct</span> <span class="token class-name">sk_buff</span> <span class="token punctuation">{</span>
+	<span class="token keyword">union</span> <span class="token punctuation">{</span>
+		<span class="token keyword">struct</span> <span class="token punctuation">{</span>
+			<span class="token comment">/* These two members must be first to match sk_buff_head. */</span>
+			<span class="token keyword">struct</span> <span class="token class-name">sk_buff</span>		<span class="token operator">*</span>next<span class="token punctuation">;</span>
+			<span class="token keyword">struct</span> <span class="token class-name">sk_buff</span>		<span class="token operator">*</span>prev<span class="token punctuation">;</span>
+
+			<span class="token keyword">union</span> <span class="token punctuation">{</span>
+				<span class="token keyword">struct</span> <span class="token class-name">net_device</span>	<span class="token operator">*</span>dev<span class="token punctuation">;</span>
+				<span class="token comment">/* Some protocols might use this space to store information,
+				 * while device pointer would be NULL.
+				 * UDP receive path is one user.
+				 */</span>
+				<span class="token keyword">unsigned</span> <span class="token keyword">long</span>		dev_scratch<span class="token punctuation">;</span>
+			<span class="token punctuation">}</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">;</span>
+		<span class="token keyword">struct</span> <span class="token class-name">rb_node</span>		rbnode<span class="token punctuation">;</span> <span class="token comment">/* used in netem, ip4 defrag, and tcp stack */</span>
+		<span class="token keyword">struct</span> <span class="token class-name">list_head</span>	list<span class="token punctuation">;</span>
+		<span class="token keyword">struct</span> <span class="token class-name">llist_node</span>	ll_node<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">sock</span>		<span class="token operator">*</span>sk<span class="token punctuation">;</span>
+
+	<span class="token keyword">union</span> <span class="token punctuation">{</span>
+		<span class="token class-name">ktime_t</span>		tstamp<span class="token punctuation">;</span>
+		u64		skb_mstamp_ns<span class="token punctuation">;</span> <span class="token comment">/* earliest departure time */</span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
+	<span class="token comment">/*
+	 * This is the control buffer. It is free to use for every
+	 * layer. Please put your private variables there. If you
+	 * want to keep them across layers you have to do a skb_clone()
+	 * first. This is owned by whoever has the skb queued ATM.
+	 */</span>
+	<span class="token keyword">char</span>			cb<span class="token punctuation">[</span><span class="token number">48</span><span class="token punctuation">]</span> <span class="token function">__aligned</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">union</span> <span class="token punctuation">{</span>
+		<span class="token keyword">struct</span> <span class="token punctuation">{</span>
+			<span class="token keyword">unsigned</span> <span class="token keyword">long</span>	_skb_refdst<span class="token punctuation">;</span>
+			<span class="token keyword">void</span>		<span class="token punctuation">(</span><span class="token operator">*</span>destructor<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">sk_buff</span> <span class="token operator">*</span>skb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">;</span>
+		<span class="token keyword">struct</span> <span class="token class-name">list_head</span>	tcp_tsorted_anchor<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_NET_SOCK_MSG</span></span>
+		<span class="token keyword">unsigned</span> <span class="token keyword">long</span>		_sk_redir<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">defined</span><span class="token punctuation">(</span>CONFIG_NF_CONNTRACK<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token function">defined</span><span class="token punctuation">(</span>CONFIG_NF_CONNTRACK_MODULE<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">long</span>		 _nfct<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		len<span class="token punctuation">,</span>
+				data_len<span class="token punctuation">;</span>
+	__u16			mac_len<span class="token punctuation">,</span>
+				hdr_len<span class="token punctuation">;</span>
+
+	<span class="token comment">/* Following fields are _not_ copied in __copy_skb_header()
+	 * Note that queue_mapping is here mostly to fill a hole.
+	 */</span>
+	__u16			queue_mapping<span class="token punctuation">;</span>
+
+<span class="token comment">/* if you move cloned around you also must adapt those constants */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">__BIG_ENDIAN_BITFIELD</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">CLONED_MASK</span>	<span class="token expression"><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">7</span><span class="token punctuation">)</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">else</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">CLONED_MASK</span>	<span class="token expression"><span class="token number">1</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">CLONED_OFFSET</span>		<span class="token expression"><span class="token function">offsetof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">sk_buff</span><span class="token punctuation">,</span> __cloned_offset<span class="token punctuation">)</span></span></span>
+
+	<span class="token comment">/* private: */</span>
+	__u8			__cloned_offset<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token comment">/* public: */</span>
+	__u8			cloned<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+				nohdr<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+				fclone<span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span>
+				peeked<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+				head_frag<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+				pfmemalloc<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+				pp_recycle<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">/* page_pool recycle indicator */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_SKB_EXTENSIONS</span></span>
+	__u8			active_extensions<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+	<span class="token comment">/* Fields enclosed in headers group are copied
+	 * using a single memcpy() in __copy_skb_header()
+	 */</span>
+	<span class="token function">struct_group</span><span class="token punctuation">(</span>headers<span class="token punctuation">,</span>
+
+	<span class="token comment">/* private: */</span>
+	__u8			__pkt_type_offset<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token comment">/* public: */</span>
+	__u8			pkt_type<span class="token operator">:</span><span class="token number">3</span><span class="token punctuation">;</span> <span class="token comment">/* see PKT_TYPE_MAX */</span>
+	__u8			ignore_df<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+	__u8			dst_pending_confirm<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+	__u8			ip_summed<span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">;</span>
+	__u8			ooo_okay<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/* private: */</span>
+	__u8			__mono_tc_offset<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token comment">/* public: */</span>
+	__u8			mono_delivery_time<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>	<span class="token comment">/* See SKB_MONO_DELIVERY_TIME_MASK */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_NET_XGRESS</span></span>
+	__u8			tc_at_ingress<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>	<span class="token comment">/* See TC_AT_INGRESS_MASK */</span>
+	__u8			tc_skip_classify<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	__u8			remcsum_offload<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+	__u8			csum_complete_sw<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+	__u8			csum_level<span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">;</span>
+	__u8			inner_protocol_type<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+
+	__u8			l4_hash<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+	__u8			sw_hash<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_WIRELESS</span></span>
+	__u8			wifi_acked_valid<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+	__u8			wifi_acked<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	__u8			no_fcs<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token comment">/* Indicates the inner headers are valid in the skbuff. */</span>
+	__u8			encapsulation<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+	__u8			encap_hdr_csum<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+	__u8			csum_valid<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_IPV6_NDISC_NODETYPE</span></span>
+	__u8			ndisc_nodetype<span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_IP_VS<span class="token punctuation">)</span></span></span>
+	__u8			ipvs_property<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_NETFILTER_XT_TARGET_TRACE<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_NF_TABLES<span class="token punctuation">)</span></span></span>
+	__u8			nf_trace<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_NET_SWITCHDEV</span></span>
+	__u8			offload_fwd_mark<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+	__u8			offload_l3_fwd_mark<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	__u8			redirected<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_NET_REDIRECT</span></span>
+	__u8			from_ingress<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_NETFILTER_SKIP_EGRESS</span></span>
+	__u8			nf_skip_egress<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_TLS_DEVICE</span></span>
+	__u8			decrypted<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	__u8			slow_gro<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_IP_SCTP<span class="token punctuation">)</span></span></span>
+	__u8			csum_not_inet<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">defined</span><span class="token punctuation">(</span>CONFIG_NET_SCHED<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token function">defined</span><span class="token punctuation">(</span>CONFIG_NET_XGRESS<span class="token punctuation">)</span></span></span>
+	__u16			tc_index<span class="token punctuation">;</span>	<span class="token comment">/* traffic control index */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+	u16			alloc_cpu<span class="token punctuation">;</span>
+
+	<span class="token keyword">union</span> <span class="token punctuation">{</span>
+		__wsum		csum<span class="token punctuation">;</span>
+		<span class="token keyword">struct</span> <span class="token punctuation">{</span>
+			__u16	csum_start<span class="token punctuation">;</span>
+			__u16	csum_offset<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
+	__u32			priority<span class="token punctuation">;</span>
+	<span class="token keyword">int</span>			skb_iif<span class="token punctuation">;</span>
+	__u32			hash<span class="token punctuation">;</span>
+	<span class="token keyword">union</span> <span class="token punctuation">{</span>
+		u32		vlan_all<span class="token punctuation">;</span>
+		<span class="token keyword">struct</span> <span class="token punctuation">{</span>
+			__be16	vlan_proto<span class="token punctuation">;</span>
+			__u16	vlan_tci<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">defined</span><span class="token punctuation">(</span>CONFIG_NET_RX_BUSY_POLL<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token function">defined</span><span class="token punctuation">(</span>CONFIG_XPS<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">union</span> <span class="token punctuation">{</span>
+		<span class="token keyword">unsigned</span> <span class="token keyword">int</span>	napi_id<span class="token punctuation">;</span>
+		<span class="token keyword">unsigned</span> <span class="token keyword">int</span>	sender_cpu<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_NETWORK_SECMARK</span></span>
+	__u32		secmark<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+	<span class="token keyword">union</span> <span class="token punctuation">{</span>
+		__u32		mark<span class="token punctuation">;</span>
+		__u32		reserved_tailroom<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">union</span> <span class="token punctuation">{</span>
+		__be16		inner_protocol<span class="token punctuation">;</span>
+		__u8		inner_ipproto<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+	__u16			inner_transport_header<span class="token punctuation">;</span>
+	__u16			inner_network_header<span class="token punctuation">;</span>
+	__u16			inner_mac_header<span class="token punctuation">;</span>
+
+	__be16			protocol<span class="token punctuation">;</span>
+	__u16			transport_header<span class="token punctuation">;</span>
+	__u16			network_header<span class="token punctuation">;</span>
+	__u16			mac_header<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_KCOV</span></span>
+	u64			kcov_handle<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+	<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">/* end headers group */</span>
+
+	<span class="token comment">/* These elements must be at the end, see alloc_skb() for details.  */</span>
+	<span class="token class-name">sk_buff_data_t</span>		tail<span class="token punctuation">;</span>
+	<span class="token class-name">sk_buff_data_t</span>		end<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">char</span>		<span class="token operator">*</span>head<span class="token punctuation">,</span>
+				<span class="token operator">*</span>data<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		truesize<span class="token punctuation">;</span>
+	<span class="token class-name">refcount_t</span>		users<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_SKB_EXTENSIONS</span></span>
+	<span class="token comment">/* only usable after checking -&gt;active_extensions != 0 */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">skb_ext</span>		<span class="token operator">*</span>extensions<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto"><a rel="noopener nofollow" class="external-link" href="https://pr0gr4m.github.io/linux/kernel/sk_buff/" target="_blank">https://pr0gr4m.github.io/linux/kernel/sk_buff/</a></p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">unsigned char <code class="code-styler-inline">*data</code> : 데이터의 head 포인터</li>
+<li data-line="1" dir="auto">unsigned char <code class="code-styler-inline">*head</code> : 버퍼의 head 포인터</li>
+<li data-line="2" dir="auto">sk_buff_data_t tail : 데이터의 tail 포인터</li>
+<li data-line="3" dir="auto">sk_buff_data_t end : 버퍼의 end 포인터로 tail이 end를 초과할 수 없다.</li>
+<li data-line="4" dir="auto">struct net_device <code class="code-styler-inline">*dev</code> : sk_buff와 연관된 네트워크 인터페이스 장치를 나타내는 net_device 객체이다.</li>
+<li data-line="5" dir="auto">sturct sock <code class="code-styler-inline">*sk</code> : sk_buff를 소유한 socket이다. 포워딩되는 패킷의 sk는 NULL이다.</li>
+<li data-line="6" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>ktime_t tstamp : 패킷의 도착 타임스탬프. 다음과 같은 헬퍼 함수가 있다.
+<ul>
+<li data-line="7" dir="auto"><code class="code-styler-inline">ktime_t skb_get_ktime(const struct sk_buff *skb)</code>&nbsp;: skb의 tstamp를 반환한다.</li>
+<li data-line="8" dir="auto"><code class="code-styler-inline">void skb_get_timestamp(const struct sk_buff *skb, struct __kernel_old_timeval *stamp)</code>&nbsp;: skb로부터 timestamp를 구하는 legacy 함수이다.</li>
+<li data-line="9" dir="auto"><code class="code-styler-inline">void skb_get_new_timestamp(const struct sk_buff *skb, struct __kernel_sock_timeval *stamp)</code>&nbsp;: struct timespec64 구조체에 skb의 timestamp를 저장한다.</li>
+<li data-line="10" dir="auto"><code class="code-styler-inline">void skb_get_new_timestampns(const struct sk_buff *skb, struct __kernel_sock_timeval *stamp)</code>&nbsp;: skb_get_new_timestamp의 nanosecond 버전</li>
+<li data-line="11" dir="auto"><code class="code-styler-inline">void __net_timestamp(struct sk_buff *skb)</code>&nbsp;: skb 구조체에 ktime_get_real() 함수의 반환 값으로 tstamp를 설정한다.</li>
+</ul>
+</li>
+<li data-line="12" dir="auto">char cb[48] : 여러 계층에서 자유롭게 사용할 수 있는 control buffer이다. 외부에 공개하지 않을 정보를 저장하는데 사용한다.</li>
+<li data-line="13" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>unsigned long _skb_refdst : 목적지 항목(dst_entry)의 주소이다. dst_entry 구조체는 특정 목적지에 대한 라우팅 항목을 나타내며, 각 송수신 패킷은 라우팅 테이블에서 탐색을 수행한다. 다음과 같은 헬퍼 함수가 있다.
+<ul>
+<li data-line="14" dir="auto"><code class="code-styler-inline">void skb_dst_set(struct sk_buff *skb, struct dst_entry *dst)</code>&nbsp;: skb에 dst를 설정한다. 이 때 참조를 dst에서 취하고 dst_release() 함수를 통해 release 한다고 가정한다.</li>
+<li data-line="15" dir="auto"><code class="code-styler-inline">void skb_dst_set_noref(struct sk_buff *skb, struct dst_entry *dst)</code>&nbsp;: skb에 dst를 설정한다. 이 때 dst에서 참조를 취하지 않는다고 가정한다. refdst_drop 함수에서 dst에 대해 dst_release() 함수를 호출하지 않을 것이다.</li>
+</ul>
+</li>
+<li data-line="16" dir="auto">void <code class="code-styler-inline">(*destructor)</code> <code class="code-styler-inline">(struct sk_buff *skb)</code> : kfree_skb() 함수를 호출하여 skb 객체를 해제할 때 호출되는 콜백 함수</li>
+<li data-line="17" dir="auto">unsigned int len : 패킷 바이트의 전체 길이</li>
+<li data-line="18" dir="auto">unsigned int data_len : 데이터의 길이</li>
+<li data-line="19" dir="auto"><code class="code-styler-inline">__u16</code> mac_len : MAC 헤더의 길이</li>
+<li data-line="20" dir="auto"><code class="code-styler-inline">__u16</code> hdr_len : clone된 skb의 writable한 헤더 길이</li>
+<li data-line="21" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><code class="code-styler-inline">__u8</code> pkt_type:3 : 패킷의 클래스다. 이더넷의 경우 헤더의 목적지 MAC 주소에 의해 좌우되며, 주로 eth_type_trans() 함수로 결정한다.
+<ul>
+<li data-line="22" dir="auto">본인 호스트 : PACKET_HOST</li>
+<li data-line="23" dir="auto">브로드캐스트 : PACKET_BROADCAST</li>
+<li data-line="24" dir="auto">멀티캐스트 : PACKET_MULTICAST</li>
+<li data-line="25" dir="auto">다른 호스트 : PACKET_OTHERHOST</li>
+<li data-line="26" dir="auto">루프백 : PAKCET_LOOPBACK</li>
+</ul>
+</li>
+<li data-line="27" dir="auto"><code class="code-styler-inline">__wsum</code> csum : 체크섬</li>
+<li data-line="28" dir="auto"><code class="code-styler-inline">__u32</code> priority : 패킷의 큐 우선순위.</li>
+<li data-line="29" dir="auto"><code class="code-styler-inline">__u8</code> cloned:1 : 패킷이 clone 함수로 복제되면 해당 필드는 cloned 객체와 원본 객체 모두 1로 설정된다. 데이터 영역은 복제본과 원본 객체가 공유한다.</li>
+<li data-line="30" dir="auto"><code class="code-styler-inline">__u8</code> peeked:1 : 이미 확인되어 통계 작업이 이루어졌는지에 대한 플래그. 설정되었다면 통계 작업을 다시 수행하지 않는다.</li>
+<li data-line="31" dir="auto"><code class="code-styler-inline">__be16</code> protocol : 드라이버에 의해 설정된 패킷의 protocol. 이더넷이라면 eth_type_trans() 함수에 의해 rx 경로에서 ETH_P_IP로 초기화된다.</li>
+<li data-line="32" dir="auto"><code class="code-styler-inline">__u32</code> hash : 패킷의 hash로 IP 헤더의 출발지, 목적지 주소와 전송 헤더의 포트에 따라 계산된다. SMP로 작동 시 동일 flow의 패킷이 같은 CPU에서 처리되는 것을 보장하는 데 사용하여 캐시 미스를 줄인다.`</li>
+<li data-line="33" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><code class="code-styler-inline">__u32</code> mark : skb를 객체 식별을 위한 mark이다. 예를 들어 iptables 명령으로 다음과 같이 설정할 수 있다.
+<ul>
+<li data-line="34" dir="auto"><code class="code-styler-inline">iptables -A PREROUTING -t mangle -i eth1 -j MARK --set-mark 0x1234</code>&nbsp;: 탐색을 수행하기 전 eth1의 수신 트래픽을 대상으로 모든 skb 객체의 mark 필드에 0x1234를 할당한다.</li>
+</ul>
+</li>
+<li data-line="35" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><code class="code-styler-inline">__u16</code> transport_header : transport layer (L4) 헤더이다. 헬퍼 함수는 다음과 같다.
+<ul>
+<li data-line="36" dir="auto"><code class="code-styler-inline">unsigned char *skb_transport_header(const struct sk_buff *skb)</code>&nbsp;: skb의 transport header를 반환한다.</li>
+<li data-line="37" dir="auto"><code class="code-styler-inline">bool skb_transport_header_was_set(const struct sk_buff *skb)</code>&nbsp;: skb의 transport header가 세팅되어 있다면 1을 반환한다.</li>
+</ul>
+</li>
+<li data-line="38" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><code class="code-styler-inline">__u16</code> network_header : network layer (L3) 헤더이다. 헬퍼 함수는 다음과 같다.
+<ul>
+<li data-line="39" dir="auto"><code class="code-styler-inline">unsigned char *skb_network_header(const struct sk_buff *skb)</code>&nbsp;: skb의 network header를 반환한다.</li>
+<li data-line="40" dir="auto"><code class="code-styler-inline">void skb_reset_network_header(struct sk_buff *skb)</code>&nbsp;: skb의 network header를 다시 계산한다.</li>
+<li data-line="41" dir="auto"><code class="code-styler-inline">void skb_set_network_header(strut sk_buff *skb, const int offset)</code>&nbsp;: skb의 network header를 offset을 이용하여 세팅한다.</li>
+</ul>
+</li>
+<li data-line="42" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><code class="code-styler-inline">__u16</code> mac_header : datalink layer (L2) 헤더이다. 헬퍼 함수는 다음과 같다.
+<ul>
+<li data-line="43" dir="auto"><code class="code-styler-inline">unsigned char *skb_mac_header(const struct sk_buff *skb)</code>&nbsp;: skb의 datalink header를 반환한다.</li>
+<li data-line="44" dir="auto"><code class="code-styler-inline">int skb_mac_header_was_set(const struct sk_buff *skb)</code>&nbsp;: skb의 datalink header가 세팅되어 있다면 1을 반환한다.</li>
+<li data-line="45" dir="auto"><code class="code-styler-inline">int skb_mac_offset(const struct sk_buff *skb)</code>&nbsp;: skb의 datalink header의 offset을 반환한다.</li>
+<li data-line="46" dir="auto"><code class="code-styler-inline">u32 skb_mac_header_len(const struct sk_buff *skb)</code>&nbsp;: skb의 datalink header의 길이를 반환한다.</li>
+</ul>
+</li>
+<li data-line="47" dir="auto">unsigned int truesize : skb에 할당된 전체 메모리 크기</li>
+<li data-line="48" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>refcount_t users : 해당 skb 객체의 참조 카운터이다. 1로 초기화되며, skb_get() 함수로 증가하고, kfree_skb() 함수나 consume_skb() 함수로 감소한다. 값이 0에 도달하면 skb 객체가 해제된다. 헬퍼 함수는 다음과 같다.
+<ul>
+<li data-line="49" dir="auto"><code class="code-styler-inline">struct sk_buff *skb_get(struct sk_buff *skb)</code>&nbsp;: 참조 카운터를 1 증가시킨다.</li>
+<li data-line="50" dir="auto"><code class="code-styler-inline">int skb_shared(const struct sk_buff *skb)</code>&nbsp;: 참조 카운터가 1이 아니면 true를 반환한다.</li>
+<li data-line="51" dir="auto"><code class="code-styler-inline">sk_buff *skb_share_check(struct sk_buff *skb, gfp_t pri)</code>&nbsp;: 버퍼가 공유되지 않으면 원래 버퍼가 반환된다. 버퍼가 공유되면 버퍼는 복제되고, 이 전 복사본은 참조를 폐기하여 새로운 복제본은 단일 참조로 반환된다. 인터럽트 컨텍스트나 스핀락에서 호출되면 pri 매개변수는 GFP_ATOMIC이어야 한다.</li>
+<li data-line="52" dir="auto"><code class="code-styler-inline">void consume_skb(struct sk_buff *skb)</code>&nbsp;: kfree_skb 함수를 호출한다.</li>
+<li data-line="53" dir="auto"><code class="code-styler-inline">bool skb_unref(struct sk_buff *skb)</code>&nbsp;: skb의 레퍼런스 카운터를 1 감소하고, 감소한 카운터가 0이라면 true를 아니라면 false를 반환한다.</li>
+<li data-line="54" dir="auto"><code class="code-styler-inline">void kfree_skb(struct sk_buff *skb)</code>&nbsp;: skb_unref를 호출하여 레퍼런스 카운터를 감소시키고, 카운터가 0이라면 skb 객체를 해제한다.</li>
+</ul>
+</li>
+</ul></div><div class="mod-footer mod-ui"></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="encyclopedia-of-networksystem/struct/include-linux/sk_buff.html#sk_buff"><div class="tree-item-contents heading-link" heading-name="sk_buff"><span class="tree-item-title">sk_buff</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

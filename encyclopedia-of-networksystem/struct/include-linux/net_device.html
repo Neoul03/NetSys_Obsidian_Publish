@@ -1,0 +1,385 @@
+<!DOCTYPE html> <html><head>
+		<title>net_device</title>
+		<base href="../../../">
+		<meta id="root-path" root-path="../../../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="NetSys_Obsidian - net_device">
+		<meta property="og:title" content="net_device">
+		<meta property="og:description" content="NetSys_Obsidian - net_device">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="encyclopedia-of-networksystem/struct/include-linux/net_device.html">
+		<meta property="og:image" content="undefined">
+		<meta property="og:site_name" content="NetSys_Obsidian">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/other-plugins.css"></noscript><link rel="stylesheet" href="lib/styles/theme.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/supported-plugins.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript><link rel="preload" href="lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/snippets.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon ctp-latte ctp-mocha ctp-accent-light-sapphire ctp-accent-rosewater anuppuccin-accent-toggle anp-callout-color-toggle anp-custom-checkboxes anp-speech-bubble anp-codeblock-numbers anp-h1-red anp-h2-peach anp-h3-green anp-h4-teal anp-h5-lavender anp-h6-mauve anp-bold-red anp-italic-green anp-highlight-yellow anp-colorful-frame anp-file-icons anp-collapse-folders anp-full-rainbow-color-toggle anp-background-image-toggle rainbow-repeat-11 rainbow-color-1-mauve rainbow-color-2-flamingo rainbow-color-3-rosewater rainbow-color-4-red rainbow-color-5-peach rainbow-color-6-yellow rainbow-color-7-green rainbow-color-8-teal rainbow-color-9-sky rainbow-color-10-blue rainbow-color-11-lavender ctp-atom-light ctp-material-mint-dark code-styler code-styler-style-inline code-styler-gutter-highlight mk-readable-line mk-folder-lines mk-spaces-enabled mk-inline-context-enabled mk-flow-seamless"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles"></style><pre class="frontmatter language-yaml" tabindex="0" style="display: none;"><code class="language-yaml is-loaded"><span class="token key atrule">Location</span><span class="token punctuation">:</span> /include/linux/netdevice.h
+<span class="token key atrule">sticker</span><span class="token punctuation">:</span> <span class="token string">""</span></code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="net_device"><p dir="auto">net_device</p></h1><div class="el-pre"><pre class="language-c" tabindex="0"><code data-line="0" class="language-c is-loaded"><span class="token keyword">struct</span> <span class="token class-name">net_device</span> <span class="token punctuation">{</span>
+	<span class="token comment">/* Cacheline organization can be found documented in
+	 * Documentation/networking/net_cachelines/net_device.rst.
+	 * Please update the document when adding new fields.
+	 */</span>
+
+	<span class="token comment">/* TX read-mostly hotpath */</span>
+	<span class="token function">__cacheline_group_begin</span><span class="token punctuation">(</span>net_device_read_tx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">long</span> <span class="token keyword">long</span>	priv_flags<span class="token punctuation">;</span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">net_device_ops</span> <span class="token operator">*</span>netdev_ops<span class="token punctuation">;</span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">header_ops</span> <span class="token operator">*</span>header_ops<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">netdev_queue</span>	<span class="token operator">*</span>_tx<span class="token punctuation">;</span>
+	<span class="token class-name">netdev_features_t</span>	gso_partial_features<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		real_num_tx_queues<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		gso_max_size<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		gso_ipv4_max_size<span class="token punctuation">;</span>
+	u16			gso_max_segs<span class="token punctuation">;</span>
+	s16			num_tc<span class="token punctuation">;</span>
+	<span class="token comment">/* Note : dev-&gt;mtu is often read without holding a lock.
+	 * Writers usually hold RTNL.
+	 * It is recommended to use READ_ONCE() to annotate the reads,
+	 * and to use WRITE_ONCE() to annotate the writes.
+	 */</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		mtu<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">short</span>		needed_headroom<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">netdev_tc_txq</span>	tc_to_txq<span class="token punctuation">[</span>TC_MAX_QUEUE<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_XPS</span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">xps_dev_maps</span> __rcu <span class="token operator">*</span>xps_maps<span class="token punctuation">[</span>XPS_MAPS_MAX<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_NETFILTER_EGRESS</span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">nf_hook_entries</span> __rcu <span class="token operator">*</span>nf_hooks_egress<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_NET_XGRESS</span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">bpf_mprog_entry</span> __rcu <span class="token operator">*</span>tcx_egress<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	<span class="token function">__cacheline_group_end</span><span class="token punctuation">(</span>net_device_read_tx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/* TXRX read-mostly hotpath */</span>
+	<span class="token function">__cacheline_group_begin</span><span class="token punctuation">(</span>net_device_read_txrx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">union</span> <span class="token punctuation">{</span>
+		<span class="token keyword">struct</span> <span class="token class-name">pcpu_lstats</span> __percpu		<span class="token operator">*</span>lstats<span class="token punctuation">;</span>
+		<span class="token keyword">struct</span> <span class="token class-name">pcpu_sw_netstats</span> __percpu	<span class="token operator">*</span>tstats<span class="token punctuation">;</span>
+		<span class="token keyword">struct</span> <span class="token class-name">pcpu_dstats</span> __percpu		<span class="token operator">*</span>dstats<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">long</span>		state<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		flags<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">short</span>		hard_header_len<span class="token punctuation">;</span>
+	<span class="token class-name">netdev_features_t</span>	features<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">inet6_dev</span> __rcu	<span class="token operator">*</span>ip6_ptr<span class="token punctuation">;</span>
+	<span class="token function">__cacheline_group_end</span><span class="token punctuation">(</span>net_device_read_txrx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/* RX read-mostly hotpath */</span>
+	<span class="token function">__cacheline_group_begin</span><span class="token punctuation">(</span>net_device_read_rx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">bpf_prog</span> __rcu	<span class="token operator">*</span>xdp_prog<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">list_head</span>	ptype_specific<span class="token punctuation">;</span>
+	<span class="token keyword">int</span>			ifindex<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		real_num_rx_queues<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">netdev_rx_queue</span>	<span class="token operator">*</span>_rx<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">long</span>		gro_flush_timeout<span class="token punctuation">;</span>
+	<span class="token keyword">int</span>			napi_defer_hard_irqs<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		gro_max_size<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		gro_ipv4_max_size<span class="token punctuation">;</span>
+	<span class="token class-name">rx_handler_func_t</span> __rcu	<span class="token operator">*</span>rx_handler<span class="token punctuation">;</span>
+	<span class="token keyword">void</span> __rcu		<span class="token operator">*</span>rx_handler_data<span class="token punctuation">;</span>
+	<span class="token class-name">possible_net_t</span>			nd_net<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_NETPOLL</span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">netpoll_info</span> __rcu	<span class="token operator">*</span>npinfo<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_NET_XGRESS</span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">bpf_mprog_entry</span> __rcu <span class="token operator">*</span>tcx_ingress<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	<span class="token function">__cacheline_group_end</span><span class="token punctuation">(</span>net_device_read_rx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">char</span>			name<span class="token punctuation">[</span>IFNAMSIZ<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">netdev_name_node</span>	<span class="token operator">*</span>name_node<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">dev_ifalias</span>	__rcu <span class="token operator">*</span>ifalias<span class="token punctuation">;</span>
+	<span class="token comment">/*
+	 *	I/O specific fields
+	 *	FIXME: Merge these and struct ifmap into one
+	 */</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">long</span>		mem_end<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">long</span>		mem_start<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">long</span>		base_addr<span class="token punctuation">;</span>
+
+	<span class="token comment">/*
+	 *	Some hardware also needs these fields (state,dev_list,
+	 *	napi_list,unreg_list,close_list) but they are not
+	 *	part of the usual set specified in Space.c.
+	 */</span>
+
+
+	<span class="token keyword">struct</span> <span class="token class-name">list_head</span>	dev_list<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">list_head</span>	napi_list<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">list_head</span>	unreg_list<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">list_head</span>	close_list<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">list_head</span>	ptype_all<span class="token punctuation">;</span>
+
+	<span class="token keyword">struct</span> <span class="token punctuation">{</span>
+		<span class="token keyword">struct</span> <span class="token class-name">list_head</span> upper<span class="token punctuation">;</span>
+		<span class="token keyword">struct</span> <span class="token class-name">list_head</span> lower<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span> adj_list<span class="token punctuation">;</span>
+
+	<span class="token comment">/* Read-mostly cache-line for fast-path access */</span>
+	<span class="token class-name">xdp_features_t</span>		xdp_features<span class="token punctuation">;</span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">xdp_metadata_ops</span> <span class="token operator">*</span>xdp_metadata_ops<span class="token punctuation">;</span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">xsk_tx_metadata_ops</span> <span class="token operator">*</span>xsk_tx_metadata_ops<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">short</span>		gflags<span class="token punctuation">;</span>
+
+	<span class="token keyword">unsigned</span> <span class="token keyword">short</span>		needed_tailroom<span class="token punctuation">;</span>
+
+	<span class="token class-name">netdev_features_t</span>	hw_features<span class="token punctuation">;</span>
+	<span class="token class-name">netdev_features_t</span>	wanted_features<span class="token punctuation">;</span>
+	<span class="token class-name">netdev_features_t</span>	vlan_features<span class="token punctuation">;</span>
+	<span class="token class-name">netdev_features_t</span>	hw_enc_features<span class="token punctuation">;</span>
+	<span class="token class-name">netdev_features_t</span>	mpls_features<span class="token punctuation">;</span>
+
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		min_mtu<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		max_mtu<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">short</span>		type<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">char</span>		min_header_len<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">char</span>		name_assign_type<span class="token punctuation">;</span>
+
+	<span class="token keyword">int</span>			group<span class="token punctuation">;</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">net_device_stats</span>	stats<span class="token punctuation">;</span> <span class="token comment">/* not used by modern drivers */</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">net_device_core_stats</span> __percpu <span class="token operator">*</span>core_stats<span class="token punctuation">;</span>
+
+	<span class="token comment">/* Stats to monitor link on/off, flapping */</span>
+	<span class="token class-name">atomic_t</span>		carrier_up_count<span class="token punctuation">;</span>
+	<span class="token class-name">atomic_t</span>		carrier_down_count<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_WIRELESS_EXT</span></span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">iw_handler_def</span> <span class="token operator">*</span>wireless_handlers<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">iw_public_data</span>	<span class="token operator">*</span>wireless_data<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">ethtool_ops</span> <span class="token operator">*</span>ethtool_ops<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_NET_L3_MASTER_DEV</span></span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">l3mdev_ops</span>	<span class="token operator">*</span>l3mdev_ops<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_IPV6<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">ndisc_ops</span> <span class="token operator">*</span>ndisc_ops<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_XFRM_OFFLOAD</span></span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">xfrmdev_ops</span> <span class="token operator">*</span>xfrmdev_ops<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_TLS_DEVICE<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">tlsdev_ops</span> <span class="token operator">*</span>tlsdev_ops<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		operstate<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">char</span>		link_mode<span class="token punctuation">;</span>
+
+	<span class="token keyword">unsigned</span> <span class="token keyword">char</span>		if_port<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">char</span>		dma<span class="token punctuation">;</span>
+
+	<span class="token comment">/* Interface address info. */</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">char</span>		perm_addr<span class="token punctuation">[</span>MAX_ADDR_LEN<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">char</span>		addr_assign_type<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">char</span>		addr_len<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">char</span>		upper_level<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">char</span>		lower_level<span class="token punctuation">;</span>
+
+	<span class="token keyword">unsigned</span> <span class="token keyword">short</span>		neigh_priv_len<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">short</span>          dev_id<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">short</span>          dev_port<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">short</span>		padded<span class="token punctuation">;</span>
+
+	<span class="token class-name">spinlock_t</span>		addr_list_lock<span class="token punctuation">;</span>
+	<span class="token keyword">int</span>			irq<span class="token punctuation">;</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">netdev_hw_addr_list</span>	uc<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">netdev_hw_addr_list</span>	mc<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">netdev_hw_addr_list</span>	dev_addrs<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_SYSFS</span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">kset</span>		<span class="token operator">*</span>queues_kset<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_LOCKDEP</span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">list_head</span>	unlink_list<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		promiscuity<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		allmulti<span class="token punctuation">;</span>
+	bool			uc_promisc<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_LOCKDEP</span></span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">char</span>		nested_level<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+
+	<span class="token comment">/* Protocol-specific pointers */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">in_device</span> __rcu	<span class="token operator">*</span>ip_ptr<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_VLAN_8021Q<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">vlan_info</span> __rcu	<span class="token operator">*</span>vlan_info<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_NET_DSA<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">dsa_port</span>		<span class="token operator">*</span>dsa_ptr<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_TIPC<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">tipc_bearer</span> __rcu <span class="token operator">*</span>tipc_ptr<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_ATALK<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">void</span> 			<span class="token operator">*</span>atalk_ptr<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_AX25<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">void</span>			<span class="token operator">*</span>ax25_ptr<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_CFG80211<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">wireless_dev</span>	<span class="token operator">*</span>ieee80211_ptr<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_IEEE802154<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_6LOWPAN<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">wpan_dev</span>		<span class="token operator">*</span>ieee802154_ptr<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_MPLS_ROUTING<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">mpls_dev</span> __rcu	<span class="token operator">*</span>mpls_ptr<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_MCTP<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">mctp_dev</span> __rcu	<span class="token operator">*</span>mctp_ptr<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+<span class="token comment">/*
+ * Cache lines mostly used on receive path (including eth_type_trans())
+ */</span>
+	<span class="token comment">/* Interface address info used in eth_type_trans() */</span>
+	<span class="token keyword">const</span> <span class="token keyword">unsigned</span> <span class="token keyword">char</span>	<span class="token operator">*</span>dev_addr<span class="token punctuation">;</span>
+
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		num_rx_queues<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">GRO_LEGACY_MAX_SIZE</span>	<span class="token expression"><span class="token number">65536u</span></span></span>
+<span class="token comment">/* TCP minimal MSS is 8 (TCP_MIN_GSO_SIZE),
+ * and shinfo-&gt;gso_segs is a 16bit field.
+ */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">GRO_MAX_SIZE</span>		<span class="token expression"><span class="token punctuation">(</span><span class="token number">8</span> <span class="token operator">*</span> <span class="token number">65535u</span><span class="token punctuation">)</span></span></span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		xdp_zc_max_segs<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">netdev_queue</span> __rcu <span class="token operator">*</span>ingress_queue<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_NETFILTER_INGRESS</span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">nf_hook_entries</span> __rcu <span class="token operator">*</span>nf_hooks_ingress<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+	<span class="token keyword">unsigned</span> <span class="token keyword">char</span>		broadcast<span class="token punctuation">[</span>MAX_ADDR_LEN<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_RFS_ACCEL</span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">cpu_rmap</span>		<span class="token operator">*</span>rx_cpu_rmap<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">hlist_node</span>	index_hlist<span class="token punctuation">;</span>
+
+<span class="token comment">/*
+ * Cache lines mostly used on transmit path
+ */</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		num_tx_queues<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">Qdisc</span> __rcu	<span class="token operator">*</span>qdisc<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		tx_queue_len<span class="token punctuation">;</span>
+	<span class="token class-name">spinlock_t</span>		tx_global_lock<span class="token punctuation">;</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">xdp_dev_bulk_queue</span> __percpu <span class="token operator">*</span>xdp_bulkq<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_NET_SCHED</span></span>
+	<span class="token function">DECLARE_HASHTABLE</span>	<span class="token punctuation">(</span>qdisc_hash<span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	<span class="token comment">/* These may be needed for future network-power-down code. */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">timer_list</span>	watchdog_timer<span class="token punctuation">;</span>
+	<span class="token keyword">int</span>			watchdog_timeo<span class="token punctuation">;</span>
+
+	u32                     proto_down_reason<span class="token punctuation">;</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">list_head</span>	todo_list<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_PCPU_DEV_REFCNT</span></span>
+	<span class="token keyword">int</span> __percpu		<span class="token operator">*</span>pcpu_refcnt<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">else</span></span>
+	<span class="token class-name">refcount_t</span>		dev_refcnt<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">ref_tracker_dir</span>	refcnt_tracker<span class="token punctuation">;</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">list_head</span>	link_watch_list<span class="token punctuation">;</span>
+
+	u8 reg_state<span class="token punctuation">;</span>
+
+	bool dismantle<span class="token punctuation">;</span>
+
+	<span class="token keyword">enum</span> <span class="token punctuation">{</span>
+		RTNL_LINK_INITIALIZED<span class="token punctuation">,</span>
+		RTNL_LINK_INITIALIZING<span class="token punctuation">,</span>
+	<span class="token punctuation">}</span> rtnl_link_state<span class="token operator">:</span><span class="token number">16</span><span class="token punctuation">;</span>
+
+	bool needs_free_netdev<span class="token punctuation">;</span>
+	<span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token operator">*</span>priv_destructor<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">net_device</span> <span class="token operator">*</span>dev<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/* mid-layer private */</span>
+	<span class="token keyword">void</span>				<span class="token operator">*</span>ml_priv<span class="token punctuation">;</span>
+	<span class="token keyword">enum</span> <span class="token class-name">netdev_ml_priv_type</span>	ml_priv_type<span class="token punctuation">;</span>
+
+	<span class="token keyword">enum</span> <span class="token class-name">netdev_stat_type</span>		pcpu_stat_type<span class="token operator">:</span><span class="token number">8</span><span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_GARP<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">garp_port</span> __rcu	<span class="token operator">*</span>garp_port<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_MRP<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">mrp_port</span> __rcu	<span class="token operator">*</span>mrp_port<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_NET_DROP_MONITOR<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">dm_hw_stat_delta</span> __rcu <span class="token operator">*</span>dm_private<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">device</span>		dev<span class="token punctuation">;</span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">attribute_group</span> <span class="token operator">*</span>sysfs_groups<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">attribute_group</span> <span class="token operator">*</span>sysfs_rx_queue_group<span class="token punctuation">;</span>
+
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">rtnl_link_ops</span> <span class="token operator">*</span>rtnl_link_ops<span class="token punctuation">;</span>
+
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">netdev_stat_ops</span> <span class="token operator">*</span>stat_ops<span class="token punctuation">;</span>
+
+	<span class="token comment">/* for setting kernel sock attribute on TCP connection setup */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">GSO_MAX_SEGS</span>		<span class="token expression"><span class="token number">65535u</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">GSO_LEGACY_MAX_SIZE</span>	<span class="token expression"><span class="token number">65536u</span></span></span>
+<span class="token comment">/* TCP minimal MSS is 8 (TCP_MIN_GSO_SIZE),
+ * and shinfo-&gt;gso_segs is a 16bit field.
+ */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">GSO_MAX_SIZE</span>		<span class="token expression"><span class="token punctuation">(</span><span class="token number">8</span> <span class="token operator">*</span> GSO_MAX_SEGS<span class="token punctuation">)</span></span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">TSO_LEGACY_MAX_SIZE</span>	<span class="token expression"><span class="token number">65536</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">TSO_MAX_SIZE</span>		<span class="token expression">UINT_MAX</span></span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		tso_max_size<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">TSO_MAX_SEGS</span>		<span class="token expression">U16_MAX</span></span>
+	u16			tso_max_segs<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_DCB</span></span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">dcbnl_rtnl_ops</span> <span class="token operator">*</span>dcbnl_ops<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	u8			prio_tc_map<span class="token punctuation">[</span>TC_BITMASK <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_FCOE<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span>		fcoe_ddp_xid<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_CGROUP_NET_PRIO<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">netprio_map</span> __rcu <span class="token operator">*</span>priomap<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">phy_device</span>	<span class="token operator">*</span>phydev<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">sfp_bus</span>		<span class="token operator">*</span>sfp_bus<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">lock_class_key</span>	<span class="token operator">*</span>qdisc_tx_busylock<span class="token punctuation">;</span>
+	bool			proto_down<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span>		wol_enabled<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span>		threaded<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">list_head</span>	net_notifier_list<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_MACSEC<span class="token punctuation">)</span></span></span>
+	<span class="token comment">/* MACsec management functions */</span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">macsec_ops</span> <span class="token operator">*</span>macsec_ops<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">udp_tunnel_nic_info</span>	<span class="token operator">*</span>udp_tunnel_nic_info<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">udp_tunnel_nic</span>	<span class="token operator">*</span>udp_tunnel_nic<span class="token punctuation">;</span>
+
+	<span class="token comment">/* protected by rtnl_lock */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">bpf_xdp_entity</span>	xdp_state<span class="token punctuation">[</span>__MAX_XDP_MODE<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	u8 dev_addr_shadow<span class="token punctuation">[</span>MAX_ADDR_LEN<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	netdevice_tracker	linkwatch_dev_tracker<span class="token punctuation">;</span>
+	netdevice_tracker	watchdog_dev_tracker<span class="token punctuation">;</span>
+	netdevice_tracker	dev_registered_tracker<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">rtnl_hw_stats64</span>	<span class="token operator">*</span>offload_xstats_l3<span class="token punctuation">;</span>
+
+	<span class="token keyword">struct</span> <span class="token class-name">devlink_port</span>	<span class="token operator">*</span>devlink_port<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_DPLL<span class="token punctuation">)</span></span></span>
+	<span class="token keyword">struct</span> <span class="token class-name">dpll_pin</span>	__rcu	<span class="token operator">*</span>dpll_pin<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">IS_ENABLED</span><span class="token punctuation">(</span>CONFIG_PAGE_POOL<span class="token punctuation">)</span></span></span>
+	<span class="token comment">/** @page_pools: page pools created for this netdevice */</span>
+	<span class="token keyword">struct</span> <span class="token class-name">hlist_head</span>	page_pools<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="mod-footer mod-ui"></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="encyclopedia-of-networksystem/struct/include-linux/net_device.html#net_device"><div class="tree-item-contents heading-link" heading-name="net_device"><span class="tree-item-title">net_device</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

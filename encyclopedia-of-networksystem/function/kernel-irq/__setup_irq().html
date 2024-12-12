@@ -1,0 +1,412 @@
+<!DOCTYPE html> <html><head>
+		<title>__setup_irq()</title>
+		<base href="../../../">
+		<meta id="root-path" root-path="../../../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="NetSys_Obsidian - __setup_irq()">
+		<meta property="og:title" content="__setup_irq()">
+		<meta property="og:description" content="NetSys_Obsidian - __setup_irq()">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="encyclopedia-of-networksystem/function/kernel-irq/__setup_irq().html">
+		<meta property="og:image" content="undefined">
+		<meta property="og:site_name" content="NetSys_Obsidian">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/other-plugins.css"></noscript><link rel="stylesheet" href="lib/styles/theme.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/supported-plugins.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript><link rel="preload" href="lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/snippets.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon ctp-latte ctp-mocha ctp-accent-light-sapphire ctp-accent-rosewater anuppuccin-accent-toggle anp-callout-color-toggle anp-custom-checkboxes anp-speech-bubble anp-codeblock-numbers anp-h1-red anp-h2-peach anp-h3-green anp-h4-teal anp-h5-lavender anp-h6-mauve anp-bold-red anp-italic-green anp-highlight-yellow anp-colorful-frame anp-file-icons anp-collapse-folders anp-full-rainbow-color-toggle anp-background-image-toggle rainbow-repeat-11 rainbow-color-1-mauve rainbow-color-2-flamingo rainbow-color-3-rosewater rainbow-color-4-red rainbow-color-5-peach rainbow-color-6-yellow rainbow-color-7-green rainbow-color-8-teal rainbow-color-9-sky rainbow-color-10-blue rainbow-color-11-lavender ctp-atom-light ctp-material-mint-dark code-styler code-styler-style-inline code-styler-gutter-highlight mk-readable-line mk-folder-lines mk-spaces-enabled mk-inline-context-enabled mk-flow-seamless"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles"></style><pre class="frontmatter language-yaml" tabindex="0" style="display: none;"><code class="language-yaml is-loaded"><span class="token key atrule">Parameter</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> int
+  <span class="token punctuation">-</span> irq_desc
+  <span class="token punctuation">-</span> irqaction
+<span class="token key atrule">Return</span><span class="token punctuation">:</span> int
+<span class="token key atrule">Location</span><span class="token punctuation">:</span> /kernel/irq/manage.c</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="__setup_irq()"><p dir="auto">__setup_irq()</p></h1><div class="el-pre"><pre class="language-c" tabindex="0"><code data-line="0" class="language-c is-loaded"><span class="token comment">/*
+ * Internal function to register an irqaction - typically used to
+ * allocate special interrupts that are part of the architecture.
+ *
+ * Locking rules:
+ *
+ * desc-&gt;request_mutex	Provides serialization against a concurrent free_irq()
+ *   chip_bus_lock	Provides serialization for slow bus operations
+ *     desc-&gt;lock	Provides serialization against hard interrupts
+ *
+ * chip_bus_lock and desc-&gt;lock are sufficient for all other management and
+ * interrupt related functions. desc-&gt;request_mutex solely serializes
+ * request/free_irq().
+ */</span>
+ <span class="token keyword">static</span> <span class="token keyword">int</span>
+<span class="token function">__setup_irq</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">int</span> irq<span class="token punctuation">,</span> <span class="token keyword">struct</span> <span class="token class-name">irq_desc</span> <span class="token operator">*</span>desc<span class="token punctuation">,</span> <span class="token keyword">struct</span> <span class="token class-name">irqaction</span> <span class="token operator">*</span>new<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">struct</span> <span class="token class-name">irqaction</span> <span class="token operator">*</span>old<span class="token punctuation">,</span> <span class="token operator">*</span><span class="token operator">*</span>old_ptr<span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">long</span> flags<span class="token punctuation">,</span> thread_mask <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token keyword">int</span> ret<span class="token punctuation">,</span> nested<span class="token punctuation">,</span> shared <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>desc<span class="token punctuation">)</span>
+		<span class="token keyword">return</span> <span class="token operator">-</span>EINVAL<span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>desc<span class="token operator">-&gt;</span>irq_data<span class="token punctuation">.</span>chip <span class="token operator">==</span> <span class="token operator">&amp;</span>no_irq_chip<span class="token punctuation">)</span>
+		<span class="token keyword">return</span> <span class="token operator">-</span>ENOSYS<span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">try_module_get</span><span class="token punctuation">(</span>desc<span class="token operator">-&gt;</span>owner<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		<span class="token keyword">return</span> <span class="token operator">-</span>ENODEV<span class="token punctuation">;</span>
+
+	new<span class="token operator">-&gt;</span>irq <span class="token operator">=</span> irq<span class="token punctuation">;</span>
+
+	<span class="token comment">/*
+	 * If the trigger type is not specified by the caller,
+	 * then use the default for this interrupt.
+	 */</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_TRIGGER_MASK<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		new<span class="token operator">-&gt;</span>flags <span class="token operator">|=</span> <span class="token function">irqd_get_trigger_type</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>irq_data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/*
+	 * Check whether the interrupt nests into another interrupt
+	 * thread.
+	 */</span>
+	nested <span class="token operator">=</span> <span class="token function">irq_settings_is_nested_thread</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>nested<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>new<span class="token operator">-&gt;</span>thread_fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			ret <span class="token operator">=</span> <span class="token operator">-</span>EINVAL<span class="token punctuation">;</span>
+			<span class="token keyword">goto</span> out_mput<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token comment">/*
+		 * Replace the primary handler which was provided from
+		 * the driver for non nested interrupt handling by the
+		 * dummy function which warns when called.
+		 */</span>
+		new<span class="token operator">-&gt;</span>handler <span class="token operator">=</span> irq_nested_primary_handler<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">irq_settings_can_thread</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			ret <span class="token operator">=</span> <span class="token function">irq_setup_forced_threading</span><span class="token punctuation">(</span>new<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>ret<span class="token punctuation">)</span>
+				<span class="token keyword">goto</span> out_mput<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token comment">/*
+	 * Create a handler thread when a thread function is supplied
+	 * and the interrupt does not nest into another interrupt
+	 * thread.
+	 */</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>thread_fn <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>nested<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		ret <span class="token operator">=</span> <span class="token function">setup_irq_thread</span><span class="token punctuation">(</span>new<span class="token punctuation">,</span> irq<span class="token punctuation">,</span> false<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [[Encyclopedia of NetworkSystem/Function/kernel-irq/setup_irq_thread().md|setup_irq_thread()]]</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>ret<span class="token punctuation">)</span>
+			<span class="token keyword">goto</span> out_mput<span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>secondary<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			ret <span class="token operator">=</span> <span class="token function">setup_irq_thread</span><span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>secondary<span class="token punctuation">,</span> irq<span class="token punctuation">,</span> true<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [[Encyclopedia of NetworkSystem/Function/kernel-irq/setup_irq_thread().md|setup_irq_thread()]]</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>ret<span class="token punctuation">)</span>
+				<span class="token keyword">goto</span> out_thread<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">/*
+	 * Drivers are often written to work w/o knowledge about the
+	 * underlying irq chip implementation, so a request for a
+	 * threaded irq without a primary hard irq context handler
+	 * requires the ONESHOT flag to be set. Some irq chips like
+	 * MSI based interrupts are per se one shot safe. Check the
+	 * chip flags, so we can avoid the unmask dance at the end of
+	 * the threaded handler for those.
+	 */</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>desc<span class="token operator">-&gt;</span>irq_data<span class="token punctuation">.</span>chip<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQCHIP_ONESHOT_SAFE<span class="token punctuation">)</span>
+		new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;=</span> <span class="token operator">~</span>IRQF_ONESHOT<span class="token punctuation">;</span>
+
+	<span class="token comment">/*
+	 * Protects against a concurrent __free_irq() call which might wait
+	 * for synchronize_hardirq() to complete without holding the optional
+	 * chip bus lock and desc-&gt;lock. Also protects against handing out
+	 * a recycled oneshot thread_mask bit while it's still in use by
+	 * its previous owner.
+	 */</span>
+	<span class="token function">mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>request_mutex<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [[Encyclopedia of NetworkSystem/Function/kernel-locking/mutex_lock().md|mutex_lock()]]</span>
+
+	<span class="token comment">/*
+	 * Acquire bus lock as the irq_request_resources() callback below
+	 * might rely on the serialization or the magic power management
+	 * functions which are abusing the irq_bus_lock() callback,
+	 */</span>
+	<span class="token function">chip_bus_lock</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [[Encyclopedia of NetworkSystem/Function/kernel-irq/chip_bus_lock().md|chip_bus_lock()]]</span>
+
+	<span class="token comment">/* First installed action requests resources. */</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>desc<span class="token operator">-&gt;</span>action<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		ret <span class="token operator">=</span> <span class="token function">irq_request_resources</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>ret<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token function">pr_err</span><span class="token punctuation">(</span><span class="token string">"Failed to request resources for %s (irq %d) on irqchip %s\n"</span><span class="token punctuation">,</span>
+			       new<span class="token operator">-&gt;</span>name<span class="token punctuation">,</span> irq<span class="token punctuation">,</span> desc<span class="token operator">-&gt;</span>irq_data<span class="token punctuation">.</span>chip<span class="token operator">-&gt;</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">goto</span> out_bus_unlock<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token comment">// 만약 desc→action이 없다면 irq_request_resources()로 자원을 요청한다.</span>
+	<span class="token comment">// old 포인터를 통해 만약 해당하는 irq에 actioin이 있다면 이를 공유 할 수 있는지 확인하고, </span>
+	<span class="token comment">// 위배하였다면 관련된 처리를 한다.</span>
+
+	<span class="token comment">/*
+	 * The following block of code has to be executed atomically
+	 * protected against a concurrent interrupt and any of the other
+	 * management calls which are not serialized via
+	 * desc-&gt;request_mutex or the optional bus lock.
+	 */</span>
+	<span class="token function">raw_spin_lock_irqsave</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>lock<span class="token punctuation">,</span> flags<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	old_ptr <span class="token operator">=</span> <span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>action<span class="token punctuation">;</span>
+	old <span class="token operator">=</span> <span class="token operator">*</span>old_ptr<span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>old<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">/*
+		 * Can't share interrupts unless both agree to and are
+		 * the same type (level, edge, polarity). So both flag
+		 * fields must have IRQF_SHARED set and the bits which
+		 * set the trigger type must match. Also all must
+		 * agree on ONESHOT.
+		 * Interrupt lines used for NMIs cannot be shared.
+		 */</span>
+		<span class="token keyword">unsigned</span> <span class="token keyword">int</span> oldtype<span class="token punctuation">;</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>desc<span class="token operator">-&gt;</span>istate <span class="token operator">&amp;</span> IRQS_NMI<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token function">pr_err</span><span class="token punctuation">(</span><span class="token string">"Invalid attempt to share NMI for %s (irq %d) on irqchip %s.\n"</span><span class="token punctuation">,</span>
+				new<span class="token operator">-&gt;</span>name<span class="token punctuation">,</span> irq<span class="token punctuation">,</span> desc<span class="token operator">-&gt;</span>irq_data<span class="token punctuation">.</span>chip<span class="token operator">-&gt;</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			ret <span class="token operator">=</span> <span class="token operator">-</span>EINVAL<span class="token punctuation">;</span>
+			<span class="token keyword">goto</span> out_unlock<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">/*
+		 * If nobody did set the configuration before, inherit
+		 * the one provided by the requester.
+		 */</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">irqd_trigger_type_was_set</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>irq_data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			oldtype <span class="token operator">=</span> <span class="token function">irqd_get_trigger_type</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>irq_data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+			oldtype <span class="token operator">=</span> new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_TRIGGER_MASK<span class="token punctuation">;</span>
+			<span class="token function">irqd_set_trigger_type</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>irq_data<span class="token punctuation">,</span> oldtype<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span><span class="token punctuation">(</span>old<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> new<span class="token operator">-&gt;</span>flags<span class="token punctuation">)</span> <span class="token operator">&amp;</span> IRQF_SHARED<span class="token punctuation">)</span> <span class="token operator">||</span>
+		    <span class="token punctuation">(</span>oldtype <span class="token operator">!=</span> <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_TRIGGER_MASK<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+			<span class="token keyword">goto</span> mismatch<span class="token punctuation">;</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>old<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_ONESHOT<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+		    <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_COND_ONESHOT<span class="token punctuation">)</span><span class="token punctuation">)</span>
+			new<span class="token operator">-&gt;</span>flags <span class="token operator">|=</span> IRQF_ONESHOT<span class="token punctuation">;</span>
+		<span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>old<span class="token operator">-&gt;</span>flags <span class="token operator">^</span> new<span class="token operator">-&gt;</span>flags<span class="token punctuation">)</span> <span class="token operator">&amp;</span> IRQF_ONESHOT<span class="token punctuation">)</span>
+			<span class="token keyword">goto</span> mismatch<span class="token punctuation">;</span>
+
+		<span class="token comment">/* All handlers must agree on per-cpuness */</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>old<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_PERCPU<span class="token punctuation">)</span> <span class="token operator">!=</span>
+		    <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_PERCPU<span class="token punctuation">)</span><span class="token punctuation">)</span>
+			<span class="token keyword">goto</span> mismatch<span class="token punctuation">;</span>
+
+		<span class="token comment">/* add new interrupt at end of irq queue */</span>
+		<span class="token keyword">do</span> <span class="token punctuation">{</span>
+			<span class="token comment">/*
+			 * Or all existing action-&gt;thread_mask bits,
+			 * so we can find the next zero bit for this
+			 * new action.
+			 */</span>
+			thread_mask <span class="token operator">|=</span> old<span class="token operator">-&gt;</span>thread_mask<span class="token punctuation">;</span>
+			old_ptr <span class="token operator">=</span> <span class="token operator">&amp;</span>old<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+			old <span class="token operator">=</span> <span class="token operator">*</span>old_ptr<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>old<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		shared <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">/*
+	 * Setup the thread mask for this irqaction for ONESHOT. For
+	 * !ONESHOT irqs the thread mask is 0 so we can avoid a
+	 * conditional in irq_wake_thread().
+	 */</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_ONESHOT<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">/*
+		 * Unlikely to have 32 resp 64 irqs sharing one line,
+		 * but who knows.
+		 */</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>thread_mask <span class="token operator">==</span> <span class="token operator">~</span><span class="token number">0UL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			ret <span class="token operator">=</span> <span class="token operator">-</span>EBUSY<span class="token punctuation">;</span>
+			<span class="token keyword">goto</span> out_unlock<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token comment">/*
+		 * The thread_mask for the action is or'ed to
+		 * desc-&gt;thread_active to indicate that the
+		 * IRQF_ONESHOT thread handler has been woken, but not
+		 * yet finished. The bit is cleared when a thread
+		 * completes. When all threads of a shared interrupt
+		 * line have completed desc-&gt;threads_active becomes
+		 * zero and the interrupt line is unmasked. See
+		 * handle.c:irq_wake_thread() for further information.
+		 *
+		 * If no thread is woken by primary (hard irq context)
+		 * interrupt handlers, then desc-&gt;threads_active is
+		 * also checked for zero to unmask the irq line in the
+		 * affected hard irq flow handlers
+		 * (handle_[fasteoi|level]_irq).
+		 *
+		 * The new action gets the first zero bit of
+		 * thread_mask assigned. See the loop above which or's
+		 * all existing action-&gt;thread_mask bits.
+		 */</span>
+		new<span class="token operator">-&gt;</span>thread_mask <span class="token operator">=</span> <span class="token number">1UL</span> <span class="token operator">&lt;&lt;</span> <span class="token function">ffz</span><span class="token punctuation">(</span>thread_mask<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>handler <span class="token operator">==</span> irq_default_primary_handler <span class="token operator">&amp;&amp;</span>
+		   <span class="token operator">!</span><span class="token punctuation">(</span>desc<span class="token operator">-&gt;</span>irq_data<span class="token punctuation">.</span>chip<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQCHIP_ONESHOT_SAFE<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">/*
+		 * The interrupt was requested with handler = NULL, so
+		 * we use the default primary handler for it. But it
+		 * does not have the oneshot flag set. In combination
+		 * with level interrupts this is deadly, because the
+		 * default primary handler just wakes the thread, then
+		 * the irq lines is reenabled, but the device still
+		 * has the level irq asserted. Rinse and repeat....
+		 *
+		 * While this works for edge type interrupts, we play
+		 * it safe and reject unconditionally because we can't
+		 * say for sure which type this interrupt really
+		 * has. The type flags are unreliable as the
+		 * underlying chip implementation can override them.
+		 */</span>
+		<span class="token function">pr_err</span><span class="token punctuation">(</span><span class="token string">"Threaded irq requested with handler=NULL and !ONESHOT for %s (irq %d)\n"</span><span class="token punctuation">,</span>
+		       new<span class="token operator">-&gt;</span>name<span class="token punctuation">,</span> irq<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		ret <span class="token operator">=</span> <span class="token operator">-</span>EINVAL<span class="token punctuation">;</span>
+		<span class="token keyword">goto</span> out_unlock<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	 	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>shared<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">/* Setup the type (level, edge polarity) if configured: */</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_TRIGGER_MASK<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			ret <span class="token operator">=</span> <span class="token function">__irq_set_trigger</span><span class="token punctuation">(</span>desc<span class="token punctuation">,</span>
+						new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_TRIGGER_MASK<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [[Encyclopedia of NetworkSystem/Function/kernel-irq/__irq_set_trigger().md|__irq_set_trigger()]]</span>
+
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>ret<span class="token punctuation">)</span>
+				<span class="token keyword">goto</span> out_unlock<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">/*
+		 * Activate the interrupt. That activation must happen
+		 * independently of IRQ_NOAUTOEN. request_irq() can fail
+		 * and the callers are supposed to handle
+		 * that. enable_irq() of an interrupt requested with
+		 * IRQ_NOAUTOEN is not supposed to fail. The activation
+		 * keeps it in shutdown mode, it merily associates
+		 * resources if necessary and if that's not possible it
+		 * fails. Interrupts which are in managed shutdown mode
+		 * will simply ignore that activation request.
+		 */</span>
+		ret <span class="token operator">=</span> <span class="token function">irq_activate</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [[Encyclopedia of NetworkSystem/Function/kernel-irq/irq_activate().md|irq_activate()]]</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>ret<span class="token punctuation">)</span>
+			<span class="token keyword">goto</span> out_unlock<span class="token punctuation">;</span>
+
+		desc<span class="token operator">-&gt;</span>istate <span class="token operator">&amp;=</span> <span class="token operator">~</span><span class="token punctuation">(</span>IRQS_AUTODETECT <span class="token operator">|</span> IRQS_SPURIOUS_DISABLED <span class="token operator">|</span> \
+				  IRQS_ONESHOT <span class="token operator">|</span> IRQS_WAITING<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">irqd_clear</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>irq_data<span class="token punctuation">,</span> IRQD_IRQ_INPROGRESS<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_PERCPU<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token function">irqd_set</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>irq_data<span class="token punctuation">,</span> IRQD_PER_CPU<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token function">irq_settings_set_per_cpu</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_NO_DEBUG<span class="token punctuation">)</span>
+				<span class="token function">irq_settings_set_no_debug</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>noirqdebug<span class="token punctuation">)</span>
+			<span class="token function">irq_settings_set_no_debug</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_ONESHOT<span class="token punctuation">)</span>
+			desc<span class="token operator">-&gt;</span>istate <span class="token operator">|=</span> IRQS_ONESHOT<span class="token punctuation">;</span>
+
+		<span class="token comment">/* Exclude IRQ from balancing if requested */</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_NOBALANCING<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token function">irq_settings_set_no_balancing</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token function">irqd_set</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>irq_data<span class="token punctuation">,</span> IRQD_NO_BALANCING<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [[Encyclopedia of NetworkSystem/Function/kernel-irq/irqd_set().md|irqd_set()]]</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_NO_AUTOEN<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+		    <span class="token function">irq_settings_can_autoenable</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token function">irq_startup</span><span class="token punctuation">(</span>desc<span class="token punctuation">,</span> IRQ_RESEND<span class="token punctuation">,</span> IRQ_START_COND<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [[Encyclopedia of NetworkSystem/Function/kernel-irq/irq_startup().md|irq_startup()]]</span>
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+			<span class="token comment">/*
+			 * Shared interrupts do not go well with disabling
+			 * auto enable. The sharing interrupt might request
+			 * it while it's still disabled and then wait for
+			 * interrupts forever.
+			 */</span>
+			<span class="token function">WARN_ON_ONCE</span><span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_SHARED<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token comment">/* Undo nested disables: */</span>
+			desc<span class="token operator">-&gt;</span>depth <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_TRIGGER_MASK<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">unsigned</span> <span class="token keyword">int</span> nmsk <span class="token operator">=</span> new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_TRIGGER_MASK<span class="token punctuation">;</span>
+		<span class="token keyword">unsigned</span> <span class="token keyword">int</span> omsk <span class="token operator">=</span> <span class="token function">irqd_get_trigger_type</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>irq_data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>nmsk <span class="token operator">!=</span> omsk<span class="token punctuation">)</span>
+			<span class="token comment">/* hope the handler works with current  trigger mode */</span>
+			<span class="token function">pr_warn</span><span class="token punctuation">(</span><span class="token string">"irq %d uses trigger mode %u; requested %u\n"</span><span class="token punctuation">,</span>
+				irq<span class="token punctuation">,</span> omsk<span class="token punctuation">,</span> nmsk<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token operator">*</span>old_ptr <span class="token operator">=</span> new<span class="token punctuation">;</span>
+	<span class="token comment">//새로운 irq action을 해당하는 irq desc에 넣는 코드</span>
+
+	<span class="token function">irq_pm_install_action</span><span class="token punctuation">(</span>desc<span class="token punctuation">,</span> new<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/* Reset broken irq detection when installing new handler */</span>
+	desc<span class="token operator">-&gt;</span>irq_count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	desc<span class="token operator">-&gt;</span>irqs_unhandled <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/*
+	 * Check whether we disabled the irq via the spurious handler
+	 * before. Reenable it and give it another chance.
+	 */</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>shared <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>desc<span class="token operator">-&gt;</span>istate <span class="token operator">&amp;</span> IRQS_SPURIOUS_DISABLED<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		desc<span class="token operator">-&gt;</span>istate <span class="token operator">&amp;=</span> <span class="token operator">~</span>IRQS_SPURIOUS_DISABLED<span class="token punctuation">;</span>
+		<span class="token function">__enable_irq</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token function">raw_spin_unlock_irqrestore</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>lock<span class="token punctuation">,</span> flags<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">chip_bus_sync_unlock</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>request_mutex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token function">irq_setup_timings</span><span class="token punctuation">(</span>desc<span class="token punctuation">,</span> new<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token function">wake_up_and_wait_for_irq_thread_ready</span><span class="token punctuation">(</span>desc<span class="token punctuation">,</span> new<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">wake_up_and_wait_for_irq_thread_ready</span><span class="token punctuation">(</span>desc<span class="token punctuation">,</span> new<span class="token operator">-&gt;</span>secondary<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token function">register_irq_proc</span><span class="token punctuation">(</span>irq<span class="token punctuation">,</span> desc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	new<span class="token operator">-&gt;</span>dir <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+	<span class="token function">register_handler_proc</span><span class="token punctuation">(</span>irq<span class="token punctuation">,</span> new<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+mismatch<span class="token operator">:</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> IRQF_PROBE_SHARED<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token function">pr_err</span><span class="token punctuation">(</span><span class="token string">"Flags mismatch irq %d. %08x (%s) vs. %08x (%s)\n"</span><span class="token punctuation">,</span>
+		       irq<span class="token punctuation">,</span> new<span class="token operator">-&gt;</span>flags<span class="token punctuation">,</span> new<span class="token operator">-&gt;</span>name<span class="token punctuation">,</span> old<span class="token operator">-&gt;</span>flags<span class="token punctuation">,</span> old<span class="token operator">-&gt;</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONFIG_DEBUG_SHIRQ</span></span>
+		<span class="token function">dump_stack</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+	<span class="token punctuation">}</span>
+	ret <span class="token operator">=</span> <span class="token operator">-</span>EBUSY<span class="token punctuation">;</span>
+
+out_unlock<span class="token operator">:</span>
+	<span class="token function">raw_spin_unlock_irqrestore</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>lock<span class="token punctuation">,</span> flags<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>desc<span class="token operator">-&gt;</span>action<span class="token punctuation">)</span>
+		<span class="token function">irq_release_resources</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+out_bus_unlock<span class="token operator">:</span>
+	<span class="token function">chip_bus_sync_unlock</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>desc<span class="token operator">-&gt;</span>request_mutex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+out_thread<span class="token operator">:</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>thread<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">struct</span> <span class="token class-name">task_struct</span> <span class="token operator">*</span>t <span class="token operator">=</span> new<span class="token operator">-&gt;</span>thread<span class="token punctuation">;</span>
+
+		new<span class="token operator">-&gt;</span>thread <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+		<span class="token function">kthread_stop_put</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>new<span class="token operator">-&gt;</span>secondary <span class="token operator">&amp;&amp;</span> new<span class="token operator">-&gt;</span>secondary<span class="token operator">-&gt;</span>thread<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">struct</span> <span class="token class-name">task_struct</span> <span class="token operator">*</span>t <span class="token operator">=</span> new<span class="token operator">-&gt;</span>secondary<span class="token operator">-&gt;</span>thread<span class="token punctuation">;</span>
+
+		new<span class="token operator">-&gt;</span>secondary<span class="token operator">-&gt;</span>thread <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+		<span class="token function">kthread_stop_put</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+out_mput<span class="token operator">:</span>
+	<span class="token function">module_put</span><span class="token punctuation">(</span>desc<span class="token operator">-&gt;</span>owner<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> ret<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto"><a data-tooltip-position="top" aria-label="Encyclopedia of NetworkSystem/Function/kernel-irq/setup_irq_thread().md" data-href="Encyclopedia of NetworkSystem/Function/kernel-irq/setup_irq_thread().md" href="encyclopedia-of-networksystem/function/kernel-irq/setup_irq_thread().html" class="internal-link" target="_self" rel="noopener nofollow">setup_irq_thread()</a><br>
+<a data-tooltip-position="top" aria-label="Encyclopedia of NetworkSystem/Function/kernel-locking/mutex_lock().md" data-href="Encyclopedia of NetworkSystem/Function/kernel-locking/mutex_lock().md" href="encyclopedia-of-networksystem/function/kernel-locking/mutex_lock().html" class="internal-link" target="_self" rel="noopener nofollow">mutex_lock()</a><br>
+<a data-tooltip-position="top" aria-label="Encyclopedia of NetworkSystem/Function/kernel-irq/chip_bus_lock().md" data-href="Encyclopedia of NetworkSystem/Function/kernel-irq/chip_bus_lock().md" href="encyclopedia-of-networksystem/function/kernel-irq/chip_bus_lock().html" class="internal-link" target="_self" rel="noopener nofollow">chip_bus_lock()</a><br>
+<a data-tooltip-position="top" aria-label="Encyclopedia of NetworkSystem/Function/kernel-irq/__irq_set_trigger().md" data-href="Encyclopedia of NetworkSystem/Function/kernel-irq/__irq_set_trigger().md" href="encyclopedia-of-networksystem/function/kernel-irq/__irq_set_trigger().html" class="internal-link" target="_self" rel="noopener nofollow">__irq_set_trigger()</a><br>
+<a data-tooltip-position="top" aria-label="Encyclopedia of NetworkSystem/Function/kernel-irq/irq_activate().md" data-href="Encyclopedia of NetworkSystem/Function/kernel-irq/irq_activate().md" href="encyclopedia-of-networksystem/function/kernel-irq/irq_activate().html" class="internal-link" target="_self" rel="noopener nofollow">irq_activate()</a><br>
+<a data-tooltip-position="top" aria-label="Encyclopedia of NetworkSystem/Function/kernel-irq/irqd_set().md" data-href="Encyclopedia of NetworkSystem/Function/kernel-irq/irqd_set().md" href="encyclopedia-of-networksystem/function/kernel-irq/irqd_set().html" class="internal-link" target="_self" rel="noopener nofollow">irqd_set()</a><br>
+<a data-tooltip-position="top" aria-label="Encyclopedia of NetworkSystem/Function/kernel-irq/irq_startup().md" data-href="Encyclopedia of NetworkSystem/Function/kernel-irq/irq_startup().md" href="encyclopedia-of-networksystem/function/kernel-irq/irq_startup().html" class="internal-link" target="_self" rel="noopener nofollow">irq_startup()</a></p></div><div class="el-p"><p dir="auto">irqaction을 등록하는 내부함수. 주로 아키텍쳐의 일부인 특별한 인터럽트들을 할당하는데 쓰인다.</p></div><div class="el-blockquote"><blockquote dir="auto">
+<p>handler는 앞서 지정한 interrupt handler, thread_fn은 NULL인 상태임. nested의 뜻은, 인터럽트를 처리하는 중에 또다른 인터럽트를 처리할 수 있는지 유무다. 즉, 계속하여 인터럽트가 겹쳐져서 처리가 될 수 있다는 뜻이다. 그러나 nested가 불가능한 경우 이를 거부할 것이다.</p>
+</blockquote></div><div class="el-p"><p dir="auto">쓰레드화된 인터럽트가 만약 핸들러가 없다면, irq_default_primary_handler나 nested threaded의 경우 irq_nested_primary_handler, irq_forced_secondary_handler를 irq_handler로 직접 할당해주게 된다.</p></div><div class="el-p"><p dir="auto">thread_fn이 NULL값으로 전달되었기 때문에, 아래의 과정은 실행되지 않는다. 그러나 software interrupt handler의 핵심 처리과정으로 보여 정리 하였다.</p></div><div class="el-p"><p dir="auto">→<a data-tooltip-position="top" aria-label="Encyclopedia of NetworkSystem/Function/kernel-irq/setup_irq_thread().md" data-href="Encyclopedia of NetworkSystem/Function/kernel-irq/setup_irq_thread().md" href="encyclopedia-of-networksystem/function/kernel-irq/setup_irq_thread().html" class="internal-link" target="_self" rel="noopener nofollow">setup_irq_thread()</a> : <code class="code-styler-inline">*data</code>로 들어온 irqaction 에 해당하는 irq_handler 함수를 처리하기 위한 커널 쓰레드를 생성하는 함수이다. 해당하는 irq_handler를 실행하는게 아닌 irq_thread()라는 함수를 실행함, 프로세스 이름은 “irq/{irq number}-{irq action의 이름}”으로 지정됨.<br>
+⇒ <a data-tooltip-position="top" aria-label="Encyclopedia of NetworkSystem/Function/kernel-irq/irq_thread().md" data-href="Encyclopedia of NetworkSystem/Function/kernel-irq/irq_thread().md" href="encyclopedia-of-networksystem/function/kernel-irq/irq_thread().html" class="internal-link" target="_self" rel="noopener nofollow">irq_thread()</a> (on new kernel thread) : Interrupt handler thread라고 주석 되어 있음. handler_fn 함수 포인터를 선언하여 기다리고 있다가 만약 하드웨어 인터럽트가 끝났다면 irq_thread_fn을 실행함. 이때, irq_thread_fn() 함수는 thread_fn을 실행하게 됨. 여기서부터 software interrupt 처리 과정이 됨.</p></div><div class="mod-footer mod-ui"></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="encyclopedia-of-networksystem/function/kernel-irq/__setup_irq().html#__setup_irq()"><div class="tree-item-contents heading-link" heading-name="__setup_irq()"><span class="tree-item-title">__setup_irq()</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>
